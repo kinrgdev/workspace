@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 2 CSS</title>
+
+    <style>
+        .contenedor{
+            width: 23%;
+            height: 400px;
+            background-color: #dedede;
+            float: left;
+            margin: 10px;
+
+
+            /* Declarar flexbox */
+            display: flex;
+            /* Aplicar */
+            flex-direction: row;
+        }
+
+        .items{
+            background: lightblue;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 22px;
+        }
+
+
+        .c1{
+            justify-content: center;
+            /* Ubica los elementos de acuerdo al eje principal. Como es horizontal, se ubica en el
+            centro al poner center.
+             */
+             align-items: center;
+             /* ...al eje secundario. Vertical. Centra verticalmente */
+        }
+
+        .c2{
+            justify-content: space-around;
+            /* espacio equitativo entre los dos elementos */
+            align-items: flex-start;
+            /* se colocan en la parte incial del eje secundario. */
+        }
+
+        .c3{
+            justify-content: space-between;
+            /* guarda una separáción mayor que around */
+            align-items: flex-end;
+            /* lleva a los elementos al final, al pie del contenedor o página */
+        }
+
+        .c4{
+            justify-content: flex-start;
+            /* se colocan en la parte incial del eje principal. */
+            align-items: stretch;
+            /* Lo estira, pero a mí no me lo hace */
+        }
+
+        .c5{
+            justify-content: flex-end;
+            /* se colocan en la parte final del eje principal. */
+            align-items: stretch;
+            /* Lo estira, pero a mí no me lo hace */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor c1">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div> 
+
+    <div class="contenedor c2">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div>    
+
+    <div class="contenedor c3">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div> 
+    
+    <div class="contenedor c4">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div>
+    
+    <div class="contenedor c5">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div>
+</body>
+</html>

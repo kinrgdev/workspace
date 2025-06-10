@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+<body>
+    <!-- Input de texto -->
+    <form action="">
+        <label for="">Tipo Texto</label>
+        <input type="text">
+        <br>
+
+        <label for="">Búsqueda</label>
+        <input type="search">
+        <br>
+
+        <label for="">URL</label>
+        <input type="url">
+        <br>
+
+        <label for="">Email</label>
+        <input type="email">
+        <br>
+
+        <label for="">Contraseña</label>
+        <input type="contraseña">
+        <br>
+
+        <label for="">Campo de texto</label>
+        <textarea>Campo de texto amplio</textarea>
+
+        <br><br><hr>
+
+        <!-- Tipo númerico -->
+        <label for="">Tipo númerico</label>
+        <input type="number">
+        <br><br>
+
+        <label for="">Rango</label>
+        <input type="range">
+        <br><br><hr>
+
+        <!-- Fecha y hora -->
+        <label for="">Fecha</label>
+        <input type="date">
+        <br><br>
+
+        <label for="">Hora</label>
+        <input type="time">
+        <br><br>
+
+        <label for="">Fecha y hora</label>
+        <input type="datetime-local">
+        <br><br>
+
+        <label for="">Mes</label>
+        <input type="month">
+        <br><br>
+
+        <label for="">Semana</label>
+        <input type="week">
+        <br><br><hr>
+
+        <!-- Tipo de selección -->
+
+        <!-- Elegir entre dos opciones -->
+        <label for="">Radio Button</label>
+        <input type="radio">
+        <br><br>
+
+        <label for="">Checkbox</label>
+        <input type="checkbox">
+        <br><br>
+
+        <!-- Seleccionar entre diferentes opciones -->
+        <label for="">Select - Option</label>
+        <select name="" id="">
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            <option value="3">Opción 3</option>
+        </select>
+        <br><br>
+
+        <!-- Igual que el anterior pero puediendo filtrar escribiendo -->
+        <label for="">Datalist</label>
+        <input type="text" list="items">
+        <datalist id="items">
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            <option value="3">Opción 3</option>
+        </datalist>
+        <br><br>
+        
+        <label for="">Colores</label>
+        <input type="color">
+        <br><br><hr>
+
+        <!-- Carga de archivos -->
+        <label for="">Selección de archivos</label>
+        <input type="file">
+        <br><br>
+
+        <hr><br>
+
+        <!-- Botones -->
+        <label for="">Submit</label>
+        <input type="submit">
+        <br><br>
+
+        <!-- No es recomendable -->
+        <label for="">Imagen</label>
+        <input type="image" src="Imágenes/Avatares/catar.jpg"
+        style="width: 50px; height: 50px;">
+        <br><br>
+
+        <label for="">Borrar Formularios</label>
+        <input type="reset">
+        <br><br>
+
+        <!-- Para aplicar a otros lenguajes como JS -->
+        <label for="">Botón sin funcionalidad</label>
+        <input type="button" value="Input Boton">
+        <button>Botón simple</button>
+        <br><br>
+
+        <hr><br>
+
+        <!-- Barra de progreso estática -->
+        <progress max="100" value="19"></progress>
+        <!-- Con JS se puede programar para que se incrementen de 1 a 1
+        o de 5 en 5 -->
+    </form>
+</body>
+</html>

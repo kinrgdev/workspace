@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos JS</title>
+</head>
+<body>
+    <script>
+        //Tipos de datos
+        //Al escribir edad, lo interpreta como númerico
+        var edad = 40; //Entero - integer
+        var decimal = 40.35; //Decimal - float
+
+        //operaciones
+        var suma = 5+30;
+        var multiplicacion = 4*8;
+
+        //String (texto y caracteres)
+        var nombre = "Joaquín";
+        var apellido = "Rodríguez";
+        //El " " es para poner un espacio
+        var completo = nombre + " " + apellido;
+        //alert(completo);
+    
+        //Array - Arreglos: conjunto de elementos
+        var amigos = ["Ana", " Chary", " Lucía", " Eva", " Madeleine"];
+        //document.write(amigos[4]);
+
+        //Object - Estructura más compleja. "Se usan para Plugind, por ejemplo "
+        var objeto = {
+            color: "Black",
+            size: 12
+        }
+
+        //Boolean - Valores true or false
+        var boleano = true;
+        var boleano = false;
+
+        //Undefined - Sin valor
+        var sinvalor;
+        //sinvalor = 2+5;
+        //document.write(sinvalor);
+    
+        //Null - vacío 'Se utiliza por ejemplo para borrar un valor'
+        var numero = 10;
+        var numero = null; //Vacío
+
+        //Nan - Valor inválido
+        var texto1 = "Hola Mundo";
+        document.write(texto1 * 3); //Nan porque no se puede multiplicar texto
+    
+    
+    </script>
+</body>
+</html>

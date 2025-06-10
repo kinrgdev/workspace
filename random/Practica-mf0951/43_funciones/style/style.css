@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900');
+
+
+:root {
+    --font-family-body: 'Roboto', sans-serif;
+    --font-family-titulos: 'Poppins', sans-serif;
+    --font-family-titulo-alt: 'tektur', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #ccc;
+    overflow-x: hidden;
+    font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-titulos);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* heredado */
+}
+
+img,
+video {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* *************** ----- *********************/
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#salida {
+    width: 30%;
+    height: fit-content;
+    padding: 5em;
+    border: 3px ridge #c0c0c0;
+    background-color: #1b1b1b7a;
+    margin: 2% 0;
+    box-shadow: 3px 3px 36px 36px rgb(23, 6, 43) inset;
+}
+
+button{
+    padding: 1% 2%;
+    background: url(../img/galaxy.jpg) center;
+    font-size: x-large;
+    color: rgb(17, 17, 17);
+}
+
+button:hover{
+    padding: 2% 3%;
+    margin: 2% 0;
+    border-radius: 2em;
+}
+
+#salida2 {
+    width: 30%;
+    height: fit-content;
+    padding: 5em;
+    border: 3px ridge #c0c0c0;
+    background-color: #1b1b1b7a;
+    margin: 2% 0;
+    box-shadow: 3px 3px 36px 36px rgb(23, 6, 43) inset;
+}
+
+#phantom div{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#phantom div button{
+    padding: 1rem;
+    margin: 2%;
+
+}
+
+

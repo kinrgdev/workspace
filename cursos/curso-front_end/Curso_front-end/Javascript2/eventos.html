@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+</head>
+<body>
+    <!-- <button id="boton">Click Aquí</button> -->
+    <a href="https://www.google.com" id="boton">Mi enlace</a>
+    <input id="input" type="text">
+    <script>
+        //Eventos a Boton
+        (function() { //Función autoinvocada (Atajo id en HTML)
+            
+            var holaMundo = function () {
+                console.log("Hola Mundo");
+            }
+
+            var boton = document.getElementById("boton");
+                                //Evento    //Funcion sin " "
+            boton.addEventListener("click" , holaMundo);
+        })();
+
+        //Evento para input
+        /*(function() { //Función autoinvocada (Atajo id en HTML)
+            
+            var holaMundo = function () {
+                console.log("Mi input cambió");
+            }
+
+            var input = document.getElementById("input");
+                                //Evento    //Funcion sin " "
+            //input.addEventListener("click" , holaMundo);
+            //input.addEventListener("focus" , holaMundo);
+            //input.addEventListener("change" , holaMundo);
+            input.addEventListener("keypress" , holaMundo); //búsqueda en vivo como en google.com
+        })();
+        */
+
+        //Saber el tipo de evento que voy a realizar
+        (function() { //Función autoinvocada (Atajo id en HTML)
+            
+            var holaMundo = function (e) {
+                console.log("Evento que se ejecuta es: " + e.target);
+                e.preventDefault(); //quita la acción base por defecto
+            }
+
+            var boton = document.getElementById("boton");
+                                //Evento    //Funcion sin " "
+            boton.addEventListener("click" , holaMundo);
+        })();
+
+
+        
+    </script>
+</body>
+</html>

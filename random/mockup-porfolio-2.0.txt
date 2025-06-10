@@ -1,0 +1,37 @@
+Contenido: 
+— ¿Qué se va a mantener en el porfolio y qué no?
+
+· Fuera:
+# no será one page
+# fondo
+# colores
+# títulos fuente tektur por otra fuente que no sea Poppins
+# fuente Poppins sustituirla por otra: [Buscar]
+# subrayados
+# dedo indicador
+
+· Mantener / Reestructurar: 
+# bordes de header y footer que se fusionen con el main con efecto sobresalto como si fuera un cambio de nivel hacia arriba de un montículo curvo. El header baja, recorre en llano el main y sube la cuesta en el footer. 
+# cambiar mi imagen
+# reestructurar el sobre mí.
+# fuente tektur sólo para enlaces y nombre kinrgdev
+# Formulario diseño y colores
+# footer más alto
+
+— ¿Qué se va a añadir nuevo?
+
+Lo que se añadirá será JS.
+
+_________________________________
+
+En papel:
+Definir mockup.
+Todo el contenido debe de estar redactado por separado.
+Estructura HTML y orden.
+Bordes (para delimitar secciones y artículos).
+Posicionamiento estructural (Flex/Grid/Position) y tamaños.
+
+En código:
+Estructura HTML.
+Fondo de color y de degradado.
+Colores. 

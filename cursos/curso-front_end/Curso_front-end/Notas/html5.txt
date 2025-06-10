@@ -1,0 +1,39 @@
+No es un lenguaje de programación. Es contenido, etiquetado y estructura de la web.
+las línas son sintaxis.
+Etiqueta de apertura > Atributo y su valor > Contenido > Etiqueta de cierre.
+La estructura es el esqueleto: desde Doctype a </html>
+Head: los metadatos.
+Body: Contenido.
+
+Si no pone Doctype, entra en Quirk Mode, donde activa retrocompatibilidad con páginas antiguas.
+
+Head >
+Title: Establece el título en la pestaña del navegador.
+Link: Establece relación con otro documento externo.
+Meta: Establece metadato.
+Style: Permite indicar estilos.
+Script: indica un script a cargar.
+
+<meta charset="UTF-8"> Guarda el archivo HTML con codificación UTF-8 (caracteres).
+
+<meta name="viewport"> Comportamiento de la región visible del navegador, para el responsive design.
+Determina como los elemtos se comportan con el tamaño de pantalla
+________
+
+Maquetar es organizar:
+
+Los div ya no son los más adecuados.
+
+                                            Header (encabezado)
+
+                                                nav (menú de navegación)
+
+Article (Contenido principal)
+Section (multiples contenidos relacionados con el contenido principal)
+
+                                                        Aside (contenido complementario)
+
+footer (Pie de página)
+
+Esto es para que el buscador y navegador los identifiquen por importancia. Con los div no.
+

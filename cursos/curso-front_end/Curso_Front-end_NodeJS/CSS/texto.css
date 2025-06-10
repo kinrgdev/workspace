@@ -1,0 +1,52 @@
+body{
+    background-color: #eee;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 0.9em;
+    font-weight: 900;
+    color: #222fff;
+    text-align: justify; /*mayor espaciado*/
+    text-indent: 40px; /*Indenta la primera línea a la derecha*/
+    line-height: 1.6; /*La altura entre líneas*/
+    word-spacing: 10px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); /*Derecha - abajo - difuminado - color*/
+}
+
+a{
+    color: hotpink;
+    text-decoration: none;
+    /* Por defecto es underline */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform: capitalize; /*La primera en mayúscula*/
+    letter-spacing: 5px;
+    background-color: aqua;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    border: solid 1px blue;
+}
+
+a:link{ /*Cuando no se ha hecho click*/
+    color: green;
+    text-decoration: none;
+}
+
+a:visited{
+    color: aqua;
+}
+
+a:hover{
+    color: red;
+    background-color: purple;
+    color: aqua;
+
+}
+a:active{
+    color: chocolate;
+}

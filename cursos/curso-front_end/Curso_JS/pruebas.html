@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+</head>
+<body>
+    <script>
+    /*Console*/
+        console.log("Hola, JavaScript");
+        const NOMBRE = "JavaScript"
+        console.log(NOMBRE)
+        console.log("Hola, " + NOMBRE)
+        const VERSION = 2023
+        console.log(NOMBRE, VERSION)
+
+        console.error("Esto es un error provocado")
+        console.warn("Esto es una advertencia")
+        console.info("Esto es solo información")
+
+        const EDAD = 17
+    /* IF*/
+        //if (condition){
+            /*Entre llaves este código se ejecuta si la condición es true*/
+        //}
+        if(EDAD >= 18){ //Solo entra si cumple la primera condición. Si la cumple las otras no entra
+            console.log('Es mayor de edad');
+        } else if (EDAD >= 16){
+            console.log('Es CASI mayor de edad')
+        }
+        
+        else{ //SE VA A EJECUTAR EN CASO DE QUE NO SE CUMPLA IF
+            console.log('Es menor de edad')
+        }
+
+        /*While*/
+        //Repite una tarea x veces
+        /*let cuentaAtras = 10
+        while( cuentaAtras > 0){ //Mientras sea true, se ejecuta, si no se irá a la siguiente línea de código
+            cuentaAtras = cuentaAtras - 1
+            console.log(cuentaAtras + ' segundos')
+        }
+        */
+        /* iniciamos la variable fuera del bucle
+        let cuentaAtras = 10
+
+        // mientras la cuenta atrás sea mayor que 0
+        while (cuentaAtras > 0) {
+        // mostramos el valor de la cuenta atrás en cada iteración
+        console.log(cuentaAtras)
+        // restamos 1 a la cuenta atrás
+        cuentaAtras = cuentaAtras - 1
+        }
+
+        console.log('¡Despegue! 🚀')
+        */
+        
+        //Evitar bucle infinito
+        /*let cuentaAtras = 10
+
+        while (cuentaAtras > 0){
+            cuentaAtras = cuentaAtras - 1
+            if (cuentaAtras === 5){
+                break
+            }
+            console.log(cuentaAtras + ' segundos')
+        }
+
+        console.log('Despegue')*/
+
+        //Continuo. Hacer los números pares
+
+        /*let cuentaAtras = 10
+
+        while (cuentaAtras > 0){
+            cuentaAtras = cuentaAtras - 1
+            if (cuentaAtras % 2 === 0){
+                continue //saltar a la siguiente iteración
+            }
+            console.log(cuentaAtras + ' segundos')
+        }
+
+        console.log('Despegue')
+        */
+
+        /*
+        const NUMERO_REVISIONES = 3
+        let cuentaAtras = 10
+
+        // mientras la cuenta atrás sea mayor que 0
+        while (cuentaAtras > 0) {
+        // mostramos el valor de la cuenta atrás
+        console.log(cuentaAtras)
+
+        // creamos una variable para contar las revisiones realizadas
+        // y la inicializamos a cero
+        let revisionesRealizadas = 0
+
+        // hasta que no hayamos realizado las 3 revisiones...
+        while (revisionesRealizadas < NUMERO_REVISIONES) {
+            // y sumamos 1 a las revisiones realizadas
+            revisionesRealizadas = revisionesRealizadas + 1
+            console.log(revisionesRealizadas + ' revisiones realizadas...')
+        }
+
+        // ahora podemos restar 1 a la cuenta atrás
+        cuentaAtras = cuentaAtras - 1
+        }
+        */
+        /*let count = 1
+        do{
+            count = count - 1
+            console.log(count)
+        } while(count > 10)*/
+        /*
+        let count = 15
+        do{
+            count = count - 1
+            console.log(count)
+        } while(count > 10)
+        */
+
+
+        //confirm('Qué pasa?')
+        let resultado 
+        
+        do{
+           resultado = confirm ('Qué pasa?')
+        } while(resultado) 
+
+        
+    </script>
+</body>
+</html>

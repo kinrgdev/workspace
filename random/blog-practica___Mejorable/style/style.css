@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+    --color-body: rgb(59, 55, 55);
+    --font-family-titulo: 'Roboto', sans-serif;
+    --font-family-texto: 'Montserrat', sans-serif;
+    --color-font: rgb(44, 43, 43);
+    --color-font-fig-footer: rgba(255, 255, 255, 0.804);
+
+    /* color nav menú */
+    --color-nav-list: rgba(37, 135, 240, 0.808);
+    --color-nav-list-hover: rgba(240, 182, 37, 0.808);
+    --color-nav-text-hover: rgb(234, 43, 43);
+    --color-nav-link: rgb(11, 27, 244);
+    --color-nav-link-active: rgb(33, 138, 29);
+
+    /* color grid */
+    --color-background-grid: rgb(224, 220, 220);
+    --color-gap: rgb(208, 15, 15);
+
+    /* color nav pag. */
+
+    --color-pag: rgb(167, 161, 161);
+    --color-pag-hover-item: rgb(25, 95, 208);
+    --color-pag-hover-item-p: rgb(0, 0, 0);
+    --color-pag-hover-item-n: rgb(40, 208, 25);
+    --color-pag-active-item: rgb(215, 115, 21);
+
+
+    /* Galería */
+    --color-background-gallery: rgb(59, 55, 55);
+    --color-border-gallery: rgb(44, 43, 43);
+    --color-scroll-thumb: rgb(18, 18, 17);
+    --color-scroll-thumb-hover: rgb(123, 116, 116);
+    --color-scroll-track: rgb(187, 33, 33);
+
+    /* Sombra contenedor*/
+    --color-shadow: rgba(31, 30, 30, 0.5);
+    --box-shadow: 1rem 1rem 0.5rem var(--color-shadow);
+    --box-shadow-pag: 0.4rem 0.4rem 0.5rem var(--color-shadow);
+}
+
+/* ? GLOBALES */
+
+body {
+    background-color: var(--color-body);
+}
+
+/* TITULOS */
+
+header h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 1rem;
+    font-family: "qwitcher grypen", serif;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(222, 20, 20); /*! Agrega un borde al texto */
+}
+
+h2, h3 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-family-titulo);
+}
+
+/* LISTAS */
+
+.pagination {
+    display: flex; /*! hace que los elementos se alienen horizontalmente */
+    list-style: none; /*! Quita los puntos de la lista */
+    padding: 0; /*! Quita el padding */
+    margin: 0; /*! Quita el margen */
+    gap: 0.5rem; /*! Espacio entre elementos */
+}
+
+/* MENÚS */
+
+nav {
+    justify-self: right; /*! Justifica el contenido a la derecha */
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* ENLACES */
+
+a {
+    text-decoration: none;
+}
+
+/* ?????????????? HEADER **************/
+
+header {
+    width: 100%; /*! Ancho del 100% */
+    height: 8rem; /*! Altura de 8rem */
+    background-image: url(../img/header.jpg); /*! Coloca una imagen como fondo con la ruta de la imagen */
+    background-size: contain; /*! Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat; /*! No se repite la imagen */
+    background-position: center; /*! Centra la imagen */
+}
+
+/* ?????????????? NAV **************/
+
+
+/* ELEMENTOS LISTA MENÚ NAVEGACIÓN * */
+
+.nav {
+    background-color: var(--color-nav-list);
+    font-family: "Jersey 15", serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    transform: skew(-30deg);
+ }
+ 
+ .nav:hover {
+    background-color: var(--color-nav-list-hover);
+ }
+
+ .nav a {
+    color: var(--color-nav-link);
+    transform: skew(30deg); /*! reestablece la inclinación del texto */
+    display: inline-block; /*! Es esencial para que se reestablezca */
+ }
+
+ .nav a:link {
+    color: var(--color-nav-link);
+ }
+
+ .nav a:visited {
+    color: var(--color-nav-link);
+ }
+
+ .nav a:hover {
+    color: var(--color-nav-text-hover);
+}
+
+.nav a:active {
+    color: var(--color-nav-link-active);
+ }
+
+/* ?????????????? MAIN **************/
+
+main {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-areas:
+    "article article aside"
+    "pagination pagination pagination"
+    ;
+    gap: 2rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+/* ?????????????? ARTICLE **************/
+
+
+/* * ARTÍCULO * */
+
+article {
+    grid-area: article;
+    width: 95%;
+    background-color: var(--color-background-grid);
+    /* padding: 1rem; */
+    margin-left: 2rem;
+    height: fit-content;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+#post-container h1 {
+    font-family: "Poppins",sans-serif;
+    font-size: 3rem;
+    -webkit-text-stroke: none;
+    color: var(--color-font);
+    text-align: center;
+}
+
+.img-responsive {
+    width: 50rem;
+}
+
+/* ?????????????? ASIDE **************/
+
+
+/* * ASIDE * */
+
+aside {
+    grid-area: aside;
+    width: 95%;
+    height: fit-content;
+    background-color: var(--color-background-grid);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+/* ?????????????? PAGINACIÓN **************/
+
+
+/* * PAGINACIÓN * */
+
+.pagination-container {
+    grid-area: pagination;
+    display: flex;
+    justify-content: right;
+    justify-self: right;
+    width: fit-content;
+    max-width: 15%;
+    margin-right: 25rem;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-pag);
+
+}
+
+.page-item {
+    display: flex;
+    justify-content: right;
+    font-size: 1.1rem;
+}
+
+.page-item a, .page-item-p a, .page-item-n a  {
+    color: var(--color-pag);
+}
+
+.page-item a:link, .page-item-p a:link, .page-item-n a:link {
+    color: var(--color-pag);
+}
+
+.page-item a:visited, .page-item-p a:visited, .page-item-n a:visited {
+    color: var(--color-pag);
+}
+
+.page-item:hover a {
+    color: var(--color-pag-hover-item);
+    text-decoration: underline overline;
+}
+
+.page-item-p:hover a {
+    color: var(--color-pag-hover-item-p);
+    text-decoration: underline;
+}
+
+.page-item-n:hover a {
+    color: var(--color-pag-hover-item-n);
+    text-decoration: underline;
+}
+
+.page-item:active a, .page-item-p:active a, .page-item-n:active a {
+    color:brown
+}
+
+/* ?????????????? FOOTER **************/
+
+
+/* * FOOTER * */
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    margin-top: 5rem;
+}
+
+footer p {
+    text-align: center;
+    color: var(--color-font-fig-footer);
+}
+
+
+

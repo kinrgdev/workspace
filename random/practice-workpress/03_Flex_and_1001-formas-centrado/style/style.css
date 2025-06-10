@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900");
+
+:root {
+  --font-family-body: "Roboto", sans-serif;
+  --font-family-titulos: "Poppins", sans-serif;
+  --font-family-titulo-alt: "tektur", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: all 1s; */
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1b1b1b;
+  color: #ccc;
+  overflow-x: hidden;
+  font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-titulos);
+  color: #999;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-titulo-alt);
+  color: #e9e77e;
+  margin: 2% 0;
+}
+
+strong{
+  color: rgb(218, 58, 58);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(199, 136, 54);
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+code {
+  display: block;
+  text-align: center;
+  margin: 1%;
+  font-size: 1rem;
+  font-style: italic;
+}
+hr {
+  width: 70%;
+  margin: 5% auto;
+  border-color: rgb(129, 77, 9);
+}
+
+/* *************** 1001 formas de centrar elementos & Inline Block *********************/
+
+/* *************** Index *********************/
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 2%;
+}
+
+.nav + img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav a {
+  border-right: 1px solid red;
+  padding: 0 0.3em;
+}
+.nav a:last-child {
+  border-right: none;
+  padding: 0 0.3em;
+}
+
+.nav a:hover {
+  color: rgb(100, 49, 148);
+}
+
+.imgFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.imgFlex img {
+  width: 50%;
+}
+
+/* *************** Text-align *********************/
+h3 {
+  text-align: initial;
+}
+
+.inline {
+  padding: 2%;
+  text-align: center;
+}
+
+.inline img {
+  width: 50%;
+}
+
+.descripcion {
+  width: 50%;
+  margin: 10vh auto;
+}
+
+.descripcion img {
+  width: 20%;
+  vertical-align: middle;
+  padding-left: 3%;
+}
+
+.inline-salto {
+  text-align: center;
+}
+
+.inline-salto img {
+  width: 30vw;
+}
+
+/* *************** Margin *********************/
+.margin {
+  width: 42%;
+  margin: 3vh auto;
+  text-align: justify;
+}
+
+p + img {
+  width: 50%;
+  display: block;
+  margin: 5vh auto;
+}
+
+/* *************** Flex *********************/
+.flex {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1%;
+  background-color: #333;
+}
+
+.flex > * {
+  margin: 2% 0;
+}
+
+/* Flex wrap 0 */
+.flex-wrap0 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.flex-wrap0 > * {
+  flex: 1 100%;
+  text-align: center;
+  padding: 3%;
+}
+
+@media screen and (max-width: 850px) {
+  .flex, .flex-wrap0 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex, .flex-wrap0 {
+    font-size: .9rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .flex, .flex-wrap0 {
+    font-size: .8rem;
+  }
+}
+
+
+/*  */
+h3 {
+  text-align: center;
+}
+/*  */
+
+/* Flex Img */
+.flexImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 1%;
+}
+
+.flexImg img {
+  width: 20%;
+  height: auto;
+  margin: 1%;
+}
+
+.flexImg > * {
+  flex: 0 calc(20% - 1px);
+}
+
+@media screen and (max-width: 850px) {
+  .flexImg > img {
+    width: 50%;
+  }
+}
+
+/* Flex wrap 1 */
+.flex-wrap1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+
+.flex-wrap1 > * {
+  flex: 0 10%;
+  text-align: center;
+}
+
+.flex-wrap1 img {
+  width: 10%;
+}
+
+@media screen and (max-width: 1080px) {
+  .flex-wrap1 img {
+    margin: 1%;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .flex-wrap1 > img {
+    margin: 1%;
+    width: 50%;
+  }
+}
+
+/* Flex wrap 2 */
+.flex-wrap2 {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 3%;
+  gap: 1%;
+}
+
+.flex-wrap2 > img {
+  max-width: 24%;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .flex-wrap2 > img {
+    margin: 1% auto;
+    max-width: 47%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .flex-wrap2 > img {
+    max-width: 100%;
+  }
+}
+
+/* *************** position *********************/
+.relative{
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+
+.absolute {
+  width: 50%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translate(50%, 50%);
+}
+
+/* *************** inline-block *********************/
+.contenedor-inline{
+  text-align: center;
+
+}
+.inline-block{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+.contenedor-inline img {
+  display: inline-block;
+  width: 10%;
+  vertical-align: middle;
+}

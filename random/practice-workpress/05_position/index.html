@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Position</title>
+</head>
+
+<body>
+    <h1>Position</h1>
+    <div class="fixed">
+        <h2>Fixed</h2>
+        <a href="#">enlace1</a>
+        <a href="#">enlace2</a>
+        <a href="#">enlace3</a>
+    </div>
+    <div class="relative">
+        <h2>Relative</h2>
+        <h3>Hola</h3>
+        <img src="../gallery/personas/retrato-mujer-borrosa.jpg" alt="retrato-mujer-borrosa">
+        <p>Si no me posicionan, me quedo en posición incial</p>
+    </div>
+    <hr>
+        <div class="contain-absolute">
+            <div class="absolute">
+                <h2>Abosulote</h2>
+                <p>Soy un elemento absoluto y me posiciono donde me digan. <br><br></p>
+                    <p><strong>"Es relativo al contenedor padre y se posiciona absoluto a él"</strong></p>
+                <code>
+                    .contain-absolute {
+                        position: relative;
+                      } <br><br>
+                      
+                      .absolute {<br>
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(50%, -50%);
+                      }
+                </code>
+
+            </div>
+        </div>
+        <hr class="line-absolute">
+    <div class="sticky">
+        <h2>Sticky</h2>
+        <p>Soy un elemento sticky. Me pego y me posiciono donde me digan, pero para moverme tengo que tener contenido debajo de mí</p>
+    </div>
+    <div class="rellenoSticky">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corrupti delectus minus perspiciatis
+            perferendis adipisci laboriosam impedit quaerat earum eaque nesciunt, ea voluptates. Placeat neque impedit
+            perspiciatis consectetur mollitia excepturi, commodi dicta pariatur deserunt officiis quidem assumenda
+            corrupti, ab eius suscipit veritatis maiores reprehenderit veniam. Eligendi harum aspernatur provident a
+            explicabo repellat soluta corporis odit, tenetur, delectus error sunt! Repudiandae dolorem nisi deleniti at
+            totam libero velit? Blanditiis quam odit ipsam totam eos explicabo perferendis odio esse praesentium non
+            cum, impedit, tempore maiores obcaecati porro repellat sunt quae. Sit, eveniet. Recusandae saepe similique
+            suscipit nemo inventore magni modi fugit non sapiente error adipisci eos porro temporibus accusantium qui
+            nostrum, eius cum illum facilis quidem maxime voluptatem veritatis? Nostrum autem reprehenderit a soluta
+            possimus perspiciatis provident nam sapiente, doloribus dolores quaerat eaque, consectetur quia, saepe totam
+            odio velit nulla quidem! Soluta necessitatibus veritatis iusto amet esse, quod blanditiis excepturi, natus
+            expedita nobis illo laborum voluptatum maiores assumenda quo suscipit nulla fuga unde. Minus dicta provident
+            maxime iure itaque totam et reprehenderit neque, exercitationem est quas aliquam, consequuntur illum odit
+            quasi tenetur mollitia, sed quaerat. Similique modi maxime quod nesciunt recusandae illo nihil! Voluptates
+            asperiores sunt iste, ad sint a aliquid qui.
+        </p>
+        <img src="../gallery/elementos/bg2.jpg" alt="fuego">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>flex | 1001 formas de centrar</title>
+  </head>
+
+  <body>
+    <h1>1001 formas de centrar elementos & Inline Block</h1>
+    
+    <div class="nav">
+      <a href="index.html" target="_blank">Inicio</a>
+      <a href="text-align.html" target="_blank">text-align</a>
+      <a href="margin.html" target="_blank">margin X auto</a>
+      <a href="flex.html" target="_blank">flex</a>
+      <a href="position.html" target="_blank">position</a>
+      <a href="inline-block.html" target="_blank">Inline-Block</a>
+
+    </div>
+    
+    <h2>Flex</h2>
+
+    <div class="imgFlex">
+      <img src="../gallery/dB/dragonball.webp" alt="db-poster" />
+    </div>
+    <code>
+      .imgFlex { display: flex; justify-content: center; } <br />
+
+      .imgFlex img{ width: 50%; }
+      <hr />
+    </code>
+
+    <div class="flex">
+      <h3>flex-direction: column;</h3>
+      <img src="../gallery/dB/bulma-2.jpg" alt="bulma" />
+      <p>La más grande y mejor de toda la serie</p>
+    </div>
+    <code>
+      .flex { <br>
+        height: 50%; <br> 
+        width: 50%; <br>
+        display: flex; <br>
+        flex-direction: column; <br>
+        align-items: center; <br>
+        justify-content: center; <br>
+        margin: 0 auto; <br>
+        padding: 1%; <br>
+        background-color: #333;
+      } <br><br>
+      
+      .flex>*{
+        margin: 2% 0;
+      }
+      
+    </code>
+<hr>
+    <div class="flex-wrap0">
+      <h3>flex-wrap</h3>
+      <img src="../gallery/dB/bulma-2.jpg" alt="bulma" />
+      <p>La más grande y mejor de toda la serie</p>
+    </div>
+    <code>
+      .flex-wrap0 { <br>
+        width: 50%; <br>
+        display: flex; <br>
+        flex-wrap: wrap; <br>
+        justify-content: center; <br>
+        align-items: center; <br>
+        margin: 0 auto; <br>
+        background-color: #333;
+      } <br><br>
+      
+      .flex-wrap0 > * {
+        flex: 1 100%;
+        text-align: center;
+        padding: 3%;
+      }
+    </code>
+<hr>
+<h4>Media query .flex, .flex-wrap0</h4>
+<code>
+  @media screen and (max-width: 850px) {<br>
+    .flex, .flex-wrap0 {
+      font-size: 1rem;
+    }
+  } <br>
+  
+  @media screen and (max-width: 600px) {
+    .flex, .flex-wrap0 {
+      font-size: .9rem;
+    }
+  } <br>
+  @media screen and (max-width: 530px) {
+    .flex, .flex-wrap0 {
+      font-size: .8rem;
+    }
+  }
+  
+</code>
+<hr>
+     
+    <div class="flexImg">
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+      <img src="../gallery/dB/dbz-poster.jpg" alt="dbz-poster" />
+    </div>
+    <h3>
+      Controlar y jugar con los anchos de .flexImg img / .flexImg>* <br />
+      <strong>el width de las imágenes no puede ser mayor que el calc</strong>. Igual o menor.
+      <br />
+      Si se pone flex: 1; cada img ocupará el 100%.
+    </h3>
+    <code>
+      .flexImg { <br>
+        display: flex; <br>
+        flex-wrap: wrap; <br>
+        justify-content: center; <br>
+        align-items: start; <br>
+        gap: 1%;
+      } <br><br>
+      
+      .flexImg img {
+        width: 40%;
+        height: auto;
+        margin: 1%;
+      } <br><br>
+      
+      .flexImg > * {
+        flex: 0 calc(40% - 1px);
+      } <br><br>
+
+      @media screen and (max-width: 850px) {<br>
+        .flexImg > img {
+          width: 50%;
+        }
+      }
+      
+    </code>
+<hr>
+    <div class="flex-wrap1">
+      <!-- <h3>flex-grow, flex-shrink, flex-basis</h3> -->
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <img src="../gallery/dB/freezer.png" alt="freezer" />
+      <!-- <p>Esto no me sale, hostias.</p> -->
+    </div>
+    <code>
+      .flex-wrap1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1%;
+      } <br>
+      
+      .flex-wrap1 > * {
+        flex: 0 10%;
+        text-align: center;
+      } <br>
+      
+      .flex-wrap1 img {
+        width: 10%;
+      } <br>
+      
+      @media screen and (max-width: 1080px) {
+        .flex-wrap1 img {
+          margin: 1%;
+          width: 30%;
+        }
+      } <br>
+      
+      @media screen and (max-width: 850px) {
+        .flex-wrap1 > img {
+          margin: 1%;
+          width: 50%;
+        }
+      }
+    </code>
+<hr>
+<code>
+  .flex-wrap2 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 3%;
+    gap: 1%;
+  } <br>
+  
+  .flex-wrap2 > img {
+    max-width: 24%;
+    height: auto;
+  } <br>
+  
+  @media screen and (max-width: 850px) {
+    .flex-wrap2 > img {
+      margin: 1% auto;
+      max-width: 47%;
+    }
+  } <br>
+  @media screen and (max-width: 650px) {
+    .flex-wrap2 > img {
+      max-width: 100%;
+    }
+  }
+</code>
+    <div>
+      <div class="flex-wrap2">
+        <img src="../gallery/dB/bulma-2.jpg" alt="bulma" />
+        <img src="../gallery/dB/dbz.webp" alt="bulma" />
+        <img src="../gallery/dB/dbz-1.webp" alt="bulma" />
+        <img src="../gallery/dB/kame_House-DBZ.jpg" alt="bulma" />
+      </div>
+      <div class="flex-wrap2">
+        <img src="../gallery/dB/dbz-droides.webp" alt="c18" />
+        <img src="../gallery/dB/Vegeta.jpg" alt="c18" />
+        <img src="../gallery/dB/dbzk.jpg" alt="c18" />
+        <img src="../gallery/dB/c18_3.jpg" alt="c18" />
+      </div>
+      <div class="flex-wrap2">
+        <img src="../gallery/dB/goku2.jpg" alt="videl" />
+        <img src="../gallery/dB/videl2.jpg" alt="videl" />
+        <img src="../gallery/dB/maron4.webp" alt="videl" />
+        <img src="../gallery/dB/bulma4.jpg" alt="videl" />
+      </div>
+      <div class="flex-wrap2">
+        <img src="../gallery/dB/c18.jpg" alt="maron" />
+        <img src="../gallery/dB/freezer.png" alt="videl" />
+        <img src="../gallery/dB/dbz-poster.jpg" alt="maron" />
+        <img src="../gallery/dB/dbSsuper.jpg" alt="maron" />
+      </div>
+    </div>
+  </body>
+</html>

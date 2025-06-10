@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+</head>
+<body>
+    <script>
+
+        /*Variable Global: es un texto que está disponible para cualquier función dentro
+        de mi Js porque es global.
+        Está fuera de las funciones, pero dentro del archivo Js y se puede utilizar con
+        otras funciones ya codificadas */
+        var variableGloabal = "Hola Pesicola";
+
+        //Variable local: está dentro de las funciones de Js
+
+        var valorMinimo = function (valor1, valor2){ //guarda los valores
+            //Variable local: Solo está disponible para esta función.
+            var variableLocal = "Esto es una variable local";
+            if(valor1 < valor2){ //si valor1 es menor, devuelve el valor1
+                return valor1;
+            }
+            else{
+                return valor2; //si valor2 es mayor, devuelve valor2 
+            }
+        }
+        
+        document.write(valorMinimo(150, 80));
+        document.write("<br>");
+        document.write(valorMinimo(50, 20));
+        document.write("<br>");
+        document.write(valorMinimo(60, 90));
+        document.write("<br>");
+        document.write(valorMinimo(50, 120));
+        document.write("<br>");
+
+
+        /*function resta (parámetros que trabajan como una variable){}
+
+            //function (valor1, valor2){
+            var resta = function (valor1, valor2){
+            var resultado = valor1 - valor2;
+            return resultado;
+        }
+
+        document.write (resta(100, 30));
+*/
+        //Valor mínimo/máximo de un número:
+
+        var valorMinimo = function (valor1, valor2){ //guarda los valores
+            if(valor1 < valor2){ //si valor1 es menor, devuelve el valor1
+                return valor1;
+            }
+            else{
+                return valor2; //si valor2 es mayor, devuelve valor2 
+            }
+        }
+
+        document.write(valorMinimo(150, 80));
+        document.write("<br>");
+        document.write(valorMinimo(50, 20));
+        document.write("<br>");
+        document.write(valorMinimo(60, 90));
+        document.write("<br>");
+        document.write(valorMinimo(50, 120));
+
+
+        //*********************************************************************************
+        /*Esto no está bien hecho. Una función no es para imprimir en pantalla.
+        Una función debe ser un fragmento de código que me dé un valor.
+        Ejemplo: una suma y me devuelva el resultado. Una vez se tiene el resultado
+        se devuelve y se muestra en pantalla fuera de la función.
+        
+        Básicamente, la función es un fragmento de código que se puede reutilizar. Es su
+        función principal, que debe de retornar un valor y que debe de ejecutar una acción.
+        
+        /*function HolaMundo(parámetros que trabajan como una variable){
+            //Instrucciones
+        }*/
+        
+        /*function HolaMundo(){
+            document.write("Hola Mundo");
+            
+        }
+        HolaMundo();
+        */
+    </script>
+</body>
+</html>

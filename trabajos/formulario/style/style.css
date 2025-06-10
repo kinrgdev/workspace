@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers:regular');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@import url("https://fonts.googleapis.com/css?family=Squada+One");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #283248;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(177, 183, 188);
+    font-size: 1.2rem;
+}
+
+/* *************** ----- *********************/
+
+h2 {
+    margin: 1% 0;
+    font-family: 'Bangers', system-ui;
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+section {
+    min-height: 100vh;
+}
+
+form {
+    width: 40%;
+    padding: 2%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #142242e0;
+    border-radius: 1em;
+}
+
+legend {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 3%;
+    letter-spacing: 2px;
+    margin: 2% 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 1em;
+}
+
+input, button {
+    font-size: 1.4rem;
+}
+
+input::placeholder {
+    color: #b3a6a6;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+}
+
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: .8em;
+    height: .8em;
+    cursor: pointer;
+    margin-right: .7em;
+    accent-color: rgb(26, 165, 13);
+}
+
+textarea {
+    width: 50%;
+    height: 15vh;
+    resize: none;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    color: #181717;
+    font-size: 1rem;
+    border: 3px double var(--color-secondary);
+    box-shadow: 2px 2px 12px var(--color-secondary);
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    gap: 1em;
+}
+
+button {
+    position: relative;
+    width: 20%;
+    height: 4vh;
+    border: none;
+    border-radius: 1em;
+    color: #fff;
+    font-family: 'Squada One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Botón Enviar - Verde */
+button:nth-of-type(1) {
+    background: linear-gradient(240deg, #28a745, #90ee90, #28a745);
+    background-size: 200% 200%;
+}
+
+button:nth-of-type(1)::before {
+    background: linear-gradient(240deg, #90ee90, #28a745);
+}
+
+/* Botón Limpiar - Rojo-amarillo */
+button:nth-of-type(2) {
+    background: linear-gradient(240deg, #ee2d0b, #ffd700, #ee2d0b);
+    background-size: 200% 200%;
+}
+
+button:nth-of-type(2)::before {
+    background: linear-gradient(240deg, #ffd700, #ee2d0b);
+}
+
+/* Efecto común */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button:nth-of-type(1):hover {
+    box-shadow: 0 0 15px 15px rgba(92, 202, 29, 0.3), 0 0 25px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+button:nth-of-type(2):hover {
+    box-shadow: 0 0 15px 15px rgba(226, 27, 27, 0.3), 0 0 25px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.campos {
+    color: rgb(232, 19, 19);
+    margin: 2% 0;
+}
+
+.mensaje-error {
+    color: rgb(238, 139, 10);
+    background-color: #0f172ace;
+    border: 1px solid #c0c0c0;
+    width: fit-content;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 1em;
+    display: none;
+}
+
+.mensaje-error.visible {
+    display: block;
+}
+
+#mensaje {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+    color: #155724;
+    border-radius: 5px;
+}

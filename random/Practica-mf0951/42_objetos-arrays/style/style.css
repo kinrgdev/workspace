@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900');
+
+
+:root {
+    --font-family-body: 'Roboto', sans-serif;
+    --font-family-titulos: 'Poppins', sans-serif;
+    --font-family-titulo-alt: 'tektur', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #ccc;
+    overflow-x: hidden;
+    font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-titulos);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* heredado */
+}
+
+img,
+video {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* *************** ----- *********************/
+/* *************** ----- *********************/
+/* *************** ----- *********************/
+
+section{
+    min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+    border: 8px ridge #c0c0c0;
+    box-shadow: 3px 3px 36px 12px rgb(78, 67, 110) inset;
+	text-align: center;
+}
+
+section:nth-of-type(odd){
+    background: #ffa723 url(../img/db.webp) center no-repeat;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    
+}
+
+section:nth-of-type(even){
+    background: #ffa723 url(../img/dbz-1.webp) center no-repeat;
+    background-blend-mode: difference;
+    
+}
+
+.salidas {
+	padding: 3em;
+    margin: 5%;
+}
+
+article{
+    background-color: #380606;
+    box-shadow: 3px 3px 36px 60px #f8a01c;
+    padding: 3em;
+    border-radius: 2em;
+}
+
+div {
+    padding: 2em;
+    margin: 1em;
+    border-radius: 5em;
+}
+
+div:nth-of-type(odd){
+    background-color: rgb(25, 5, 56);
+    box-shadow: 3px 3px 36px rgb(196, 178, 22) inset;
+    
+}
+
+div:nth-of-type(even){
+    background-color: rgb(10, 27, 83);
+    box-shadow: 3px 3px 36px rgb(77, 196, 22) inset;
+
+}

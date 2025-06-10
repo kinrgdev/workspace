@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  /*? Se basa en el html o el body. Coge los elementos padre del body para hacer scroll */
+  /* scroll-snap-type: y mandatory; */
+  /* scroll-padding: 5vh; */
+  /** y o x | mandatory (obligado) o proximity (aproximado) **/
+  /*?Van en los elementos HTML (article, aside, etc)  */
+  /* scroll-snap-stop: always; */
+  /* scroll-snap-align: start; */
+}
+
+body {
+  background-color: #1e3cc0;
+  overflow-x: hidden;
+  /* font-family: var(--font-family-body); */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ****************************** ----- ******************************/

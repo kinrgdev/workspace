@@ -1,0 +1,38 @@
+body{
+    background-color: #eee;
+    /* width: 200px; */
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap; /*Para que respete el ancho del contenido*/
+    flex-flow: row wrap; /*Flex direction + wrap*/
+    height: 200px;
+
+
+    
+}
+
+.green{
+    background-color: green;
+}
+
+.primero{
+    /* order: 1; */
+    flex-grow: 1; /*Crecimiento*/
+    flex-basis: 200px; /*Dar tamaño inicial en conjunto con grow*/
+
+}
+
+.segundo{
+    flex-grow: 1;
+    /*SIMPLIFICACIÓN DE GROW Y BASIS*/
+    flex: 1 120px;
+
+}
+
+.tercero{
+    /* order: -1; */
+    flex-grow: 2;
+    align-self: stretch;
+}

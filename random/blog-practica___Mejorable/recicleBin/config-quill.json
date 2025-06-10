@@ -1,0 +1,20 @@
+{
+  "theme": "snow",
+  "modules": {
+    "toolbar": [
+      [{ "header": [1, 2, false] }],
+      ["bold", "italic", "underline"],
+      ["image", "link"],
+      [{ "list": "ordered" }, { "list": "bullet" }],
+      [{ "align": [] }],
+      ["clean"],
+      ["resize"] 
+    ],
+    "history": {
+      "delay": 2000,
+      "maxStack": 500,
+      "userOnly": true
+    }
+  },
+  "placeholder": "Escribe tu contenido aquí..."
+}

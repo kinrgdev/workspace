@@ -1,0 +1,87 @@
+Técnica de diseño web que permite hacer las webs puedan adaptarse a cualquier dispositivo
+móvil o desktop.
+Se adaptan dependiendo del tipo de pantalla.
+
+Redimensiona y coloca los elementos para que se adapten al ancho de pantalla, permitiendo
+la correcta visualización y experiencia para el usuario.
+
+Layouts e imágenes fluidas que se adaptan.
+Reduce el tiempo de desarrollo.
+Evita contenidos duplicados.
+
+Como usarlo:
+
+*Trabajar con porcentajes: Con píxeles o medidas absolutas se ha trabajado, pero estas se
+mantienen al reducir la pantalla.
+Al trabjar con porcentajes, estos son relativos al contenedor padre. Si se especifica un porcentaje
+a un elemento, el ordenador va a tomar dicho porcentaje de dicho contenedor.
+Si se pone 20% en la pantalla grande y 20% en la pantalla pequeña, va a calcular el espacio.
+
+*Media Queries: se especifica determinado tamaño de pantalla, va aplicar ciertos estilos CSS.
+
+*Viewport: La etiqueta del head del html. Determina como va a trabajar con esa región visible
+del navegador.
+
+
+
+*******************************************
+
+Etiqueta -> Meta Viewport:
+
+La etiqueta identifica el dispositivo y pantalla en la que se está mostrando de esa web,
+para desplegarla de manera adecuada y correcta.
+Permite saber en qué dispositivo y pantalla se está trabajando, como el comportamiento de
+mis elementos o web a la hora de cargar inicialmente la web.
+
+
+
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+width:
+device-width (Indica un ancho para el Viewport)
+
+height:
+device-height (Indica un alto para el Viewport)
+
+initial-scale:
+= 1 (Escala inicial que se visualiza la web)
+
+minimum-scale:
+= 0.1 (Escala mínima que se puede reducir al hacer zoom)
+
+maximum-scale:
+=10 (Escala máxima que se puede ampliar al hacer zoom)
+
+user-scalable:
+=No
+=Yes
+(Posibilidad de hacer en la web)
+
+*******************************************
+
+Media Query:
+
+Reglas para especificar qué estilos de CSS se cumplen dependiendo el tipo de
+pantalla que se especifique en una condición.
+Básicamente, en su sintaxis, se coloca una condición de tamaño de pantalla y esos
+estilos se van aplicar dependiendo de ese tamaño de pantalla que coloquemos.
+___
+
+Sintaxis de Media Query:
+
+Regla > @media
+Media type > and screen
+Condición: (max-width:400px)
+
+Quiero iniciar un media query. Luego digo, media type que es la pantalla (and screen)... Quiero
+iniciar un media query en una pantalla. Y con la condición (max-width: 400px).
+
+Al decir esto dentro de mis llaves, voy a colocar cada una de las reglas que quiero que se 
+especifiquen dentro un tamaño máximo de 400px.
+
+Esto quiere decir que si por ejemplo: que a partir de 400px para abajo, mi fondo será de color
+gris, y yo especifiqué en los estilos generales de que mi fondo es de color azul.
+La web es azul de fondo, pero cuando baje de los 400px se convertirá en gris.
+
+
+

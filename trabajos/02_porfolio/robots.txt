@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /pages/avisoLegal.html
+Disallow: /pages/privacidad.html
+Allow: /
+
+Sitemap: https://miguelangelmarquez.com/alumnos/07/sitemap.xml

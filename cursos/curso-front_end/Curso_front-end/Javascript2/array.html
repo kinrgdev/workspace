@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos JS</title>
+</head>
+<body>
+    <script>
+        //Declarar arreglos
+        //                  0           1       2          3        4
+        var colores = ["amarillo", "verde", "azul", "rojo", "gris"];
+
+
+        //Métodos más usados
+
+            //Acceder y cambiar elementos del arreglo
+
+            //Cambio: colores[4] = " negro";
+            //Añadir: colores[5] = " púrpura";            
+            //document.write(colores);
+
+            //Longitud del arreglo
+            /*
+            //Método 1
+            var longitudArreglo = colores.length;
+            //document.write(longitudArreglo);            
+            colores[longitudArreglo] = " púrpura";
+            document.write(colores);            
+            //Método 2
+            //Los crea a partir del final
+            colores.push(" rosa", " blanco", " naranja");
+            document.write(colores);
+            */
+
+            //Eliminar elementos
+
+            /*colores.pop();
+            document.write(colores);
+            */
+
+            //Concatenar Arreglos
+            /*
+            var colores = ["amarillo", " verde", " azul", " rojo", " gris"];
+            var colores2 = [" rosa", " naranja", " blanco", " púrpura"];
+            var coloresTotales = colores.concat(colores2);
+            document.write(coloresTotales);
+            */
+           
+           //Cambiar estilo de arreglo
+           /*
+           var colores = ["amarillo", " verde", " azul", " rojo", " gris"];
+           var arregloColores = colores.join(" - ");
+           document.write(arregloColores);
+           */
+          
+          //Cambiar alfabeticamente
+          var arregloOrdenado = colores.sort();
+          document.write(arregloOrdenado); 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

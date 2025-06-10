@@ -1,0 +1,130 @@
+Aporta interacción con el usuario y dinamismo en la página web.
+
+Variables - Operadores - Funciones - Condicionales - Ciclos - Objetos.
+
+-Se utiliza principalmente para crear webs dinámicas e interactivas.
+-Lenguaje de programación interpretado, no es compilado. No se tiene que crear un paquete
+para que se ejecute, el navegador lo va interpretar y ejecutar.
+-Accede a elementos o eventos de la web. Es una de las principales funciones de Js.
+·Que acceda a esos elementos de HTML5; párrafo, imagen... acceda a ellos, los modifique, los
+eliminr, cree nuevos elementos de manera dinámica, etc.
+·Eventos: acciones que realiza el usuario como el clic, que pase el cursor por encima. Esto se
+considera eventos en Js, y permiten interactuar, que el usuario interactue con la web.
+-Puede realizar llamadas asíncronas al servidor. En backend en el lenguaje PHP, cuando se rellena
+un formulario y se le da a enviar, este formulario va a un servidor y mientras está en ese proceso
+de ir al servidor y recibe respuesta, la web se recarga. Con Js esto no sucede.
+Js no es un lenguaje de backend. Js permite la comunicación entre el servidor y va a permitir que
+ese canal de comunicación sea asíncrono y pueda enviar y recibir datos sin necesidad de recargar
+la web. Esto hace Js.
+-Puede crear animaciones.
+
+Como usarlo:
+
+Se usa igual que CSS en línea (dentro del archivo HTML) o externo (script) como un archivo js.
+Lo recomendado es hacerlo igual que en CSS, externo porque se puede utilizar en múltiples páginas
+HTML que tenga dentro de nuestra webside.
+Sí se hace dentro del propio HTML, solo se podrá usar con esa página de HTML.
+
+Va en head, pero no siempre es así, porque a veces se coloca al final de todos los elementos de
+HTML, donde cierra el Body, ahí se coloca el código Js.
+¿Por qué? El navegador lee los elementos de arriba a abajo, va leyendo todos los elementos.
+Muchas veces con Js se quiere acceder a esos elementos para modificar, evitarlos, agregar nuevos,
+etc... y si el navegador no ha leído esos elementos, Js nos dará un error.
+El típico caso de que creemos la etiqueta de script y creemos mi código Js en el head de mi web,
+entonces el navegador lee el head y luego va leyendo el body, y si en Js estás llamando a cada uno
+de esos elementos, si el navegador no ha creado esos elementos porque no los ha revisado, va a dar
+error.
+Entonces, se coloca al final de todos esos elementos de manera que el navegador los lea uno a uno
+primero y que luego ejecute mi código Js.
+
+******************
+
+Variables:
+
+Es el contenedor de un valor. No es una base de datos, no se almacena en un repositorio, sino que
+se almacena en la RAM, y como es volatil, los datos se elminan.
+La variable es un contenedor de un valor volátil, un valor que será eliminado o modificado.
+
+******************
+
+Tipos de datos:
+
+Es el tipo de infomación que el usuario almacena dentro de esas variables.
+Una de las ventajas de Js es que es un lenguaje dinámico.
+___
+
+Hay dos tipos de lenguajes:
+
+Dinámicos: como Js que detecta automáticamente el tipo de dato.
+Tipeados: hay que indicar el tipo de dato (númerico, entero, string, etc).
+
+Js no es tipeado. Js detecta automáticamente el tipo de dato que se le indica.
+____
+
+Datos:
+
+number: númericos (enteros, decimales, etc.).
+string: valores de texto (cadena de texto, caracteres, etc.).
+Boolean: verdadero o falso.
+Undefined: valor sin definir.
+Function: retorna un valor. Se puede guardar esa función en una variable.
+Object: estructura más compleja.
+
+******************
+
+Array (Arreglos):
+
+Declarar arreglos dentro de Js. Son una cadena de infomación de diferente tipo.
+Se puede colocar tanto string, númerico, boolano. Es una manera de concatenar o de
+almacenar múltiples tipos de datos.
+
+******************
+
+Condocionales:
+
+Son los que nos permiten que el código tenga "vida", que empiece a tomar decisiones.
+
+******************
+
+Ciclos:
+
+Repetir una estructura que se ejecute cada vez que su valor cambie.
+
+-For: para cuando se sabe cual es la longitud.
+-While: Las variables van por fuera. Para cuando no se sabe cual es la longitud.
+Si la condición es falsa, no la ejecuta.
+-Do while: Ciclo abusador. Ejecuta y luego pregunta. Ejecuta, y si es falsa ya no ejecuta más.
+
+******************
+
+Función:
+
+Es un código que se puede reutilizar. Objetivo base. Un código que creaste, tipeaste y hace alguna
+función y se puede reutilizar en cualquier parte de mi código JS. Reutilizarlo y no escribirlo
+desde cero.
+No se tiene que ver como un código que se está ejecutando, si no como un valor que retorna.
+Una función se puede ver como una variable porque la función debe devolver un valor.
+
+Una función no es para imprimir en pantalla:
+        Una función debe ser un fragmento de código que me dé un valor.
+        Ejemplo: una suma y me devuelva el resultado. Una vez se tiene el resultado
+        se devuelve y se muestra en pantalla fuera de la función.
+
+        Básicamente, la función es un fragmento de código que se puede reutilizar. Es su
+        función principal, que debe de retornar un valor y que debe de ejecutar una acción.
+
+Variable global: es un texto que está disponible para cualquier función dentro
+de mi Js porque es global.
+Está fuera de las funciones, pero dentro del archivo Js y se puede utilizar con
+otras funciones ya codificadas.
+
+Variable local: está dentro de las funciones de Js.
+
+******************
+
+Timers:
+
+Nos permiten manejar el delay de las funciones o tiempo que se van a ejecutar.
+
+-Set time out: se ejecuta una vez.
+-Set time interval: varias veces.

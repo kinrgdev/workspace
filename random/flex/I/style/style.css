@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+}
+
+#uno {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(216, 94, 94);
+}
+
+#uno article {
+    background-color: rgb(216, 163, 94);
+    width: 30%;
+}
+
+#uno article:nth-of-type(2) {
+    background-color: rgb(45, 126, 129);
+    align-self: flex-end;
+}
+
+/* DOS */
+
+#dos {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 129, 90);
+}
+
+#dos article {
+    width: 30%;
+    background-color: rgb(236, 147, 13);
+}
+
+#dos article:nth-of-type(1),
+#dos article:nth-of-type(4){
+    background-color: rgb(117, 37, 155);
+    color: rgb(208, 210, 212);
+    align-self: flex-start;
+}
+
+#dos article:nth-of-type(2),
+#dos article:nth-of-type(5){
+    background-color: rgb(182, 150, 6);
+    align-self: flex-end;
+}

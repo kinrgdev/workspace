@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Bangers:regular");
+
+:root {
+  --color-primary: #b1b7bc;
+  --color-secondary: #181717;
+  --text-shadow: 1px 1px 0px var(--color-secondary),
+    -1px -1px 0px var(--color-secondary), 1px -1px 0px var(--color-secondary),
+    -1px 1px 0px var(--color-secondary);
+  --color-background: linear-gradient(360deg, #0f172a 0, #5f82cc 100%);
+  --color-btn-special: #00e6f6;
+  --color-html: #e44d26;
+  --color-canvas: #ff9933;
+  --color-css: #264de4;
+  --color-js: #f0db4f;
+  --color-php: #3498db;
+  --color-requeired: #eb7373b6;
+  --special-font: "Tektur", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--color-background), url('../img/texture.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 3%;
+  font-family: "Bangers", system-ui;
+  font-size: 2.5rem;
+  letter-spacing: 7px;
+}
+
+a {
+  text-align: center;
+  font-family: var(--special-font);
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 600;
+  -webkit-filter: drop-shadow(0.2em 0.2em 2em rgb(216, 216, 210));
+  filter: drop-shadow(0.2em 0.2em 2em rgb(216, 216, 210));
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+
+a:hover .icons {
+  color: var(--color-secondary);
+  -webkit-filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
+  filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/***********************************************/
+/************** MENSAJE DE COOKIES *************/
+/***********************************************/
+#bannerCookies {
+  width: 92%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px ridge var(--color-secondary);
+  border-radius: 1em;
+  background: var(--color-background);
+  z-index: 8888;
+}
+
+.ocultarBanner {
+  display: none !important;
+}
+
+#bannerCookies a {
+  font-size: 1.2em;
+  line-height: 3em;
+}
+
+.contenidoBanner {
+  width: 50%;
+  margin: 15vh auto;
+}
+
+/*& Botones de cookies  */
+
+.btn-wrapp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 2vh;
+}
+
+.btn-wrapp button {
+  width: 8vw;
+  height: 4vh;
+  margin: .7em;
+  border-radius: .5em;
+  box-shadow: 3px 3px 3px var(--color-secondary);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #14eb55 0%, #B5AC49 51%, #3CA55C 100%)
+}
+
+.btn-grad, .btn-grad2 {
+  background-size: 200% auto;
+  color: #272626;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #292727;
+  text-decoration: none;
+}
+
+.btn-grad2 {
+  background-image: linear-gradient(to right, #e4150e 0%, #FFEDBC 51%, #e6133d 100%)
+}
+
+.btn-grad2:hover {
+  background-position: right center;
+  color: #292727;
+  text-decoration: none;
+}
+
+/****************************************/
+/**************** HEADER ****************/
+/****************************************/
+header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**********************/
+/******* Título *******/
+/**********************/
+header h1 {
+  font-family: var(--special-font);
+  font-size: 2.7rem;
+  text-shadow: var(--text-shadow);
+}
+
+/*& Color a 'dev' */
+h1>span {
+  text-shadow: none;
+  color: rgb(223, 118, 242);
+}
+
+header a:hover {
+  transform: translateX(2%);
+}
+
+.header {
+  margin: 0 1vw;
+  padding: 1vh 0;
+}
+
+/***************************/
+/******* Botón atrás *******/
+/***************************/
+.button-extraP2 {
+  width: 10%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translate(-10%, 0);
+  margin: 3%;
+  border: 0;
+  background: linear-gradient(45deg, transparent 5%, #5f82cc 5%);
+  box-shadow: 6px 0px 0px var(--color-btn-special);
+}
+
+.button-extraP2 a:hover {
+  color: var(--color-secondary);
+  font-weight: 800;
+  transform: scale(1.1);
+}
+
+/**************************************/
+/******* Contenedor de progreso *******/
+/**************************************/
+.progress-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: .7em 0;
+  z-index: 100;
+}
+
+.progress-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.progress-icon {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.progress-icon.active {
+  color: var(--color-btn-special);
+  transform: scale(1.4);
+}
+
+/**************************************/
+/************** CAROUSEL **************/
+/**************************************/
+
+/*? ********* TAMAÑO DE LA SECCION **********/
+.pagesProjects {
+  width: 75%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+/*? ********* TAMAÑO DEL CAROUSEL **********/
+.projectsCarousel {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 1% 0;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+/*? ********* TAMAÑO DE CADA CARD **********/
+.projectCard {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  padding: 2%;
+  border-radius: 1em;
+  background: rgba(219, 212, 212, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pagesProjects img {
+  width: 30%;
+  aspect-ratio: 16/9;
+  float: left;
+  margin: 0 1em;
+  border-radius: 3%;
+}
+
+.pagesProjects img.formatNo16-9 {
+  aspect-ratio: unset;
+}
+
+.pagesProjects img.format4-3 {
+  aspect-ratio: 4/3;
+}
+
+.tech {
+  margin: .5em 0;
+}
+
+.tech a i {
+  margin: 2% 1%;
+}
+
+div span {
+  padding: 0 2%;
+  border: 3px solid var(--color-secondary);
+  border-radius: 0.7em;
+  box-shadow: 3px 3px 3px var(--color-secondary);
+}
+
+div span.html {
+  background-color: var(--color-html);
+  color: var(--color-secondary);
+}
+
+div span.canvas {
+  background-color: var(--color-canvas);
+  color: var(--color-secondary);
+}
+
+div span.css {
+  background-color: var(--color-css);
+  color: var(--color-secondary);
+}
+
+div span.js {
+  background-color: var(--color-js);
+  color: var(--color-secondary);
+}
+
+.icons {
+  font-size: 2rem;
+}
+
+/**************** 1230 ****************/
+@media screen and (max-width: 1230px) {
+  .progress-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 9%;
+  }
+
+  .btn-wrapp button {
+    width: clamp(6rem, 30vw, 11rem);
+    height: clamp(3rem, 8vh, 4rem);
+    padding: clamp(0.5rem, 1vh, 1rem);
+    font-size: clamp(1rem, 1vw + 0.7rem, 1.3rem);
+  }
+}
+
+/**************** 800 ****************/
+@media screen and (max-height: 800px) {
+  #bannerCookies {
+    height: 100vh;
+  }
+}
+
+/**************** 768 ****************/
+@media screen and (max-width: 768px) {
+   .pagesProjects img {
+    width: 50%;
+    display: block;
+    float: initial;
+    margin: 4% auto;
+  }
+
+  .btn-wrapp button {
+    width: clamp(4rem, 28vw, 9rem);
+    height: clamp(3rem, 8vh, 4rem);
+    padding: clamp(0.5rem, 1vh, 1rem);
+    font-size: clamp(.9rem, .9vw + 0.7rem, 1.2rem);
+  }
+
+  .button-extraP2 {
+    width: 20%;
+    height: 7vh;
+    top: 2%;
+    left: 58%;
+    margin: 0;
+    transform: translate(100%, 0);
+  }
+
+  .progress-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 8%
+  }
+
+  .pagesProjects {
+    width: 100%;
+  }
+}

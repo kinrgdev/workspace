@@ -1,0 +1,24 @@
+body{
+    background-color: #eee;
+}
+
+#parrafo{
+    color: purple;
+}
+
+.etiqueta{
+    color: chocolate;
+}
+
+.caja{
+    margin: 8px;
+    padding: 8px;
+    background-color: #aaf;
+    border:solid 8px red;
+    border-radius: 6px;
+    border-left: solid 8px green;
+    height: 100px;
+    width: 100px;
+    color: purple;
+
+}

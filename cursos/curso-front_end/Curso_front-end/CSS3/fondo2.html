@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-Blend-Mode CSS3</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 100%;
+            /* vh ocupar el alto completo de la web */
+            height: 100vh;
+            background:
+            url(Multimedia/Imágenes/Chucky/chucky-serie-tv-2547701.jpg),
+            url(Multimedia/Imágenes/Cine/Doctor_Sue_o-760645815-large.jpg),
+            linear-gradient(red,blue);
+            background-size: cover;
+            /* colapsa imágenes y se puede poner un color sobre el fondo */
+            /* múltiples imágenes */
+            background-blend-mode: multiply;
+            /* Más brillante */
+            background-blend-mode: screen;
+            /* mezcla todo */
+            background-blend-mode: overlay;
+            /* oscurece */
+            background-blend-mode: darken;
+            /* colores muy vivos */
+            background-blend-mode: lighten;
+            /*  */
+            background-blend-mode: color-dodge;
+            /*  */
+            background-blend-mode: saturation;
+            /*  */
+            background-blend-mode: color;
+            /*  */
+            background-blend-mode: luminosity;
+            
+            
+            background-blend-mode: multiply;
+        
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

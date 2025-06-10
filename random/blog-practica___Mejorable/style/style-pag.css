@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+    --color-body: rgb(59, 55, 55);
+    --font-family-titulo: 'Roboto', sans-serif;
+    --font-family-texto: 'Montserrat', sans-serif;
+    --color-font: rgb(44, 43, 43);
+    --color-font-fig-footer: rgba(255, 255, 255, 0.804);
+
+    /* color nav menú */
+    --color-nav-list: rgba(37, 135, 240, 0.808);
+    --color-nav-list-hover: rgba(240, 182, 37, 0.808);
+    --color-nav-text-hover: rgb(234, 43, 43);
+    --color-nav-link: rgb(11, 27, 244);
+    --color-nav-link-active: rgb(33, 138, 29);
+
+    /* color grid */
+    --color-background-grid: rgb(224, 220, 220);
+    --color-gap: rgb(208, 15, 15);
+
+    /* color nav pag. */
+
+    --color-pag: rgb(167, 161, 161);
+    --color-pag-hover-item: rgb(25, 95, 208);
+    --color-pag-hover-item-p: rgb(0, 0, 0);
+    --color-pag-hover-item-n: rgb(40, 208, 25);
+    --color-pag-active-item: rgb(215, 115, 21);
+
+
+    /* Galería */
+    --color-background-gallery: rgb(59, 55, 55);
+    --color-border-gallery: rgb(44, 43, 43);
+    --color-scroll-thumb: rgb(18, 18, 17);
+    --color-scroll-thumb-hover: rgb(123, 116, 116);
+    --color-scroll-track: rgb(187, 33, 33);
+    --box-shadow-avatar-hover: 0.1rem 0.1rem 1rem rgb(159, 159, 48);
+    --color-figcaption-hover: rgba(64, 235, 26, 0.815);
+
+
+    /* Sombra contenedor*/
+    --color-shadow: rgba(31, 30, 30, 0.5);
+    --box-shadow: 1rem 1rem 0.5rem var(--color-shadow);
+    --box-shadow-pag: 0.4rem 0.4rem 0.5rem var(--color-shadow);
+
+}
+
+/* ? GLOBALES */
+
+html, body {
+    background-color: var(--color-body);
+}
+
+/*  TÍTULOS */
+h1 {
+   text-align: center;
+   font-size: 6rem;
+   margin-top: 1rem;
+   font-family: "qwitcher grypen", serif;
+   font-weight: bold;
+   -webkit-text-stroke: 1px rgb(222, 20, 20); /*! Agrega un borde al texto */
+}
+
+h2, h3 {
+   text-align: center;
+   font-family: "Roboto", sans-serif;
+   color: var(--font-family-titulo);
+}
+
+/* LISTAS */
+
+ul {
+    display: flex; /*! hace que los elementos se alienen horizontalmente */
+    list-style: none; /*! Quita los puntos de la lista */
+    padding: 0; /*! Quita el padding */
+    margin: 0; /*! Quita el margen */
+    gap: 0.5rem; /*! Espacio entre elementos */
+}
+/* MENÚS */
+
+nav {
+    justify-self: right; /*! Justifica el contenido a la derecha */
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* ENLACES */
+
+a {
+    text-decoration: none;
+}
+
+/* ?????????????? HEADER **************/
+
+header {
+    width: 100%; /*! Ancho del 100% */
+    height: 8rem; /*! Altura de 8rem */
+    background-image: url(../img/header.jpg); /*! Coloca una imagen como fondo con la ruta de la imagen */
+    background-size: contain; /*! Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat; /*! No se repite la imagen */
+    background-position: center; /*! Centra la imagen */
+}
+
+
+/* ?????????????? NAV **************/
+
+/* * CONTENDOR DEL NAV * */
+.nav {
+    background-color: var(--color-nav-list);
+    font-family: "Jersey 15", serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    transform: skew(-30deg); /*! reestablece la inclinación del texto */
+}
+
+.nav:hover {
+    background-color: var(--color-nav-list-hover);
+}
+
+.nav a {
+    color: var(--color-nav-link);
+    transform: skew(30deg); /*! reestablece la inclinación del texto */
+    display: inline-block; /*! Es esencial para que se reestablezca */
+ }
+
+ .nav a:link {
+    color: var(--color-nav-link);
+ }
+
+ .nav a:visited {
+    color: var(--color-nav-link);
+ }
+
+ .nav a:hover {
+    color: var(--color-nav-text-hover);
+}
+
+.nav a:active {
+    color: var(--color-nav-link-active);
+ }
+
+
+/* ?????????????? MAIN **************/
+
+main {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas: 
+    "aside aside aside"
+    "article article article"
+    "pagination pagination pagination"
+    ;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* ?????????????? ASIDE **************/
+
+aside {
+    grid-area: aside;
+    background-color: var(--color-background-gallery);
+    border: 0.5rem ridge var(--color-font);
+    box-sizing: border-box;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    overflow-x: scroll;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+    
+}
+
+.img-avatar a {
+    padding: 0;
+    margin: 0;
+}
+
+.img-avatar {
+    width: 100%;
+    display: flex;
+
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.avatar-gallery {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.avatar-gallery {
+    width: 7rem;
+    transition: all 1s ease;
+
+}
+
+figcaption {
+    text-align: center;
+    color: var(--color-font-fig-footer);
+    transition: all 1s ease;
+}
+
+a:hover + figcaption {
+    color: var(--color-figcaption-hover);
+}
+
+a:hover .avatar-gallery {
+    box-shadow: var(--box-shadow-avatar-hover);
+
+}
+
+
+/* Personalizar scroll */
+
+aside::-webkit-scrollbar {
+    width: 10px;  /* Ancho del scrollbar horizontal */
+    height: 10px; /* Alto del scrollbar vertical */
+}
+
+/* Color de la parte del scrollbar que se mueve (thumb) */
+aside::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll-thumb); /* Color del thumb */
+    border-radius: 10px;    /* Bordes redondeados */
+}
+
+/* Color cuando el thumb está sobre el scroll (hover) */
+aside::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-scroll-thumb-hover); /* Color más oscuro cuando se pasa el ratón */
+    width: 5px;
+}
+
+/* Estilo de la parte del scrollbar que no se mueve (track) */
+aside::-webkit-scrollbar-track {
+    background-color: var(--color-scroll-track); /* Color de fondo del track */
+    border-radius: 10px;
+}
+
+/* ?????????????? GALERÍA **************/
+
+article {
+    grid-area: article;
+    width: 95%;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: var(--color-background-gallery);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: solid 0.1rem var(--color-border-gallery);
+    border-radius: 1rem;
+}
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1rem;
+}
+
+.img-gallery, .gallery {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+}
+
+
+/* * PAGINACIÓN * */
+
+.pagination-container {
+    grid-area: pagination;
+    display: flex;
+    justify-content: right;
+    justify-self: center;
+    width: fit-content;
+    max-width: 15%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-pag);
+}
+
+.page-item {
+    display: flex;
+    justify-content: right;
+    font-size: 1.1rem;
+}
+
+.page-item a, .page-item-p a, .page-item-n a  {
+    color: var(--color-pag);
+}
+
+.page-item a:link, .page-item-p a:link, .page-item-n a:link {
+    color: var(--color-pag);
+}
+
+.page-item a:visited, .page-item-p a:visited, .page-item-n a:visited {
+    color: var(--color-pag);
+}
+
+.page-item:hover a {
+    color: var(--color-pag-hover-item);
+    text-decoration: underline overline;
+}
+
+.page-item-p:hover a {
+    color: var(--color-pag-hover-item-p);
+    text-decoration: underline;
+}
+
+.page-item-n:hover a {
+    color: var(--color-pag-hover-item-n);
+    text-decoration: underline;
+}
+
+.page-item:active a, .page-item-p:active a, .page-item-n:active a {
+    color: var(--color-pag-active-item);
+} 
+
+footer {
+    width: 60%;
+    justify-self: center;
+}
+
+footer p {
+    text-align: center;
+    color: var(--color-font-fig-footer);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbordamiento CSS</title>
+
+    <style>
+
+        p{
+            /* todos los párrafos tienen un magen. Con 0 se quita */
+            margin: 0;
+        }
+
+        #desbordamiento{
+            width: 200px;
+            height: 200px;
+            background-color: #727208;
+
+            /* Desbordamiento
+            visible: el normal por defecto
+            hidden: cuando llegue al límite de la caja y todavía tenga texto
+            lo que está en el límite inferior lo va a suprimir (corta el texto)
+            scroll: crea un campo de scroll. Lo hace si corta o no.
+            auto: detecta cuando necesita scroll o no.
+            */
+            overflow: auto;
+
+        }
+
+        #despliegue{
+            /* número de columnas */
+            column-count: 3;
+            /* espacio entre columnas */
+            column-gap: 5em;
+            /* línea divisoria */
+            column-rule: 5px dotted red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="desbordamiento">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nesciunt ea repellat quod dolores in error iure animi quia consequatur iste, modi adipisci corrupti exercitationem voluptatibus dolore corporis deserunt atque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nesciunt ea repellat quod dolores in error iure animi quia consequatur iste, modi adipisci corrupti exercitationem voluptatibus dolore corporis deserunt atque!</p>
+    </div>
+    <br><br>
+    <hr>
+    <div id="despliegue">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium nisi maxime ullam repudiandae ea fugit iste accusamus delectus mollitia quasi, optio necessitatibus. Sit ex cumque, eum vel magnam enim?
+        </p>
+    </div>
+</body>
+</html>

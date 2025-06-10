@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS3</title>
+    <style type="text/css">
+        :root{
+            --color-primario: #dd5618;
+            --color-primario-oscuro: #8b4b0f;
+
+            /* background: var(--color-primario); */
+            /* background: var(--color-primario-oscuro); */
+
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            height: 150px;
+            background: #2d3344;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 80px;
+            text-align: center;
+        }
+
+        header h1{
+            text-align: center;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        header p{
+            color: #dedede;
+            font-size: 18px;
+        }
+
+        header a{
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            width: 10%;
+            margin: auto;
+            margin-top: 20px;
+            background: var(--color-primario);
+        }
+
+        header a:hover{
+            background: var(--color-primario-oscuro);
+        }
+
+        div{
+            width: 24%;
+            float: left;
+            background: #4a4e59;
+            margin: 30px;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div h1{
+            text-align: center;
+            color: #fff;
+        }
+
+        div p{
+            font-size: 18px;
+        }
+
+        div a{
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+            margin: auto;
+            margin-top: 10px;
+            background: var(--color-primario);
+        }
+
+        div a:hover{
+            background: var(--color-primario-oscuro);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

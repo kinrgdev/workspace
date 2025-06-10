@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar DOM JS</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="uno">Joaquín Rodríguez</li>
+        <li>Madeleine García</li>
+    </ol>
+
+    <script>
+        //Editar contenido
+        var primerElemnto = document.getElementById("uno");
+            /*
+            //Método 1
+            primerElemnto.innerHTML = "Nuevo <i>Elemento</i>"; //inner tiene en cuenta las etiquetas
+            //Método 2
+            //primerElemnto.textContent = "Nuevo Elemento de texto" //No toma en cuenta las etiquetas
+            */
+        
+            //Remplazar elementos
+                //Crear elemento
+            var elemento = document.createElement("li");
+            var contenido = document.createTextNode("Chary");
+            elemento.appendChild(contenido);
+
+                //Remplazo
+            var contenedor = document.getElementById("lista");
+            var posicion = document.getElementsByTagName("li")[0];
+            //contenedor.replaceChild(elemento, posicion);
+
+            //Eliminar
+            contenedor.removeChild(posicion);
+    </script>
+</body>
+</html>

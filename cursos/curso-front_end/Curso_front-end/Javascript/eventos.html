@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+</head>
+<body>
+    <!-- <button id="boton">Click Aquí</button> -->
+    <a href="https://www.google.com" id="boton">Mi enlace</a>
+    <input id="input" type="text">
+
+    <script>
+        //Eventos a Boton
+
+        //Función autoinvocada
+        /*(function () {
+            
+            var holaMundo = function(){
+                console.log("Hola Mundo");
+            }
+
+            var boton = document.getElementById("boton");
+            boton.addEventListener("click", holaMundo);
+        }())*/
+
+
+        //Evento para input
+/*
+        (function () {
+            var holaMundo = function(){
+                console.log("Mi input cambió");
+            }
+
+            var input = document.getElementById("input");
+            input.addEventListener("keypress", holaMundo);
+//Change: Esto sirve para webs en el que te registras y te comprueba si ese nombre de usuario ya existe.
+//keypress: cada vez que se escribe lanza el mensaje en la consola. Lo usan para la búsqueda en vivo.
+        }())
+*/
+        //Saber el tipo de evento
+        (function () {
+            var holaMundo = function (e) { //e: da igual la letra...
+                console.log("El evento que se está ejecutando es:" + e.target);
+                //type: tipo de evento. target: a qué le estoy dando el evento
+                
+                e.preventDefault();
+                //permite quitarle la acción que hace por defecto. Como un enlace a una web.
+            }
+
+            var boton = document.getElementById("boton");
+            boton.addEventListener("click", holaMundo);
+            
+        }())
+
+    </script>
+</body>
+</html>

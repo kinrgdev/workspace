@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis CSS3</title>
+
+    <style>
+
+        h1 {
+            color: blueviolet;
+        }
+
+        /* id ya no se usa tanto */
+
+        #primerparrafo {
+            color: chocolate;
+        }
+
+        .grupoparrafos {
+            color: blue;
+        }
+
+        /* Estados */
+        
+        /* Selector de estado: Cambi el estado del elemento */
+        
+        h1:hover {
+            color: black;
+        }
+
+        /* Aplicar a atributos específicos */
+        
+        input[type="text"] {
+            background: grey;
+        }
+
+        /* Al poner: !Important. Se le da mayor jerarquía */
+
+        * {
+            color: red !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>Título de mi web</h1>
+    <p id="primerparrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur excepturi sint aperiam totam similique. Deserunt ad illo voluptatem voluptatum accusamus eveniet? Doloremque, hic debitis! Incidunt perferendis nisi officia quas quam.</p>
+    
+    <p class="grupoparrafos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur excepturi sint aperiam totam similique. Deserunt ad illo voluptatem voluptatum accusamus eveniet? Doloremque, hic debitis! Incidunt perferendis nisi officia quas quam.</p>
+    
+    <p class="grupoparrafos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur excepturi sint aperiam totam similique. Deserunt ad illo voluptatem voluptatum accusamus eveniet? Doloremque, hic debitis! Incidunt perferendis nisi officia quas quam.</p>
+    
+    <input type="text">
+    <input type="number">
+
+</body>
+</html>

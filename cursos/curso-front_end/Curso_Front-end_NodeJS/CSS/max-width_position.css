@@ -1,0 +1,16 @@
+body{
+    background-color: #eee;
+}
+
+p{
+    max-width: 350px;
+    background-color: #f00;
+    margin: auto; /*Se coloca en el centro porque es block, los inline hay que poner 0 auto*/
+    /* position: relative; */
+    position: fixed;
+    right: 15px;
+    top: 50px;
+    bottom: 125px;
+    left: 115px;
+
+}

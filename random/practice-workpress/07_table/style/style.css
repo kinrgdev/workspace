@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import url("https://fonts.googleapis.com/css?family=Fenix:regular");
+
+:root {
+  --font-family-body: "Roboto", sans-serif;
+  --font-family-titulos: "Poppins", sans-serif;
+  --font-family-titulo-alt: "tektur", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: all 1s; */
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1b1b1b;
+  color: #ccc;
+  overflow-x: hidden;
+  font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-titulos);
+  color: #999;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-titulo-alt);
+  color: #e9e77e;
+  margin: 2% 0;
+}
+
+hr {
+  width: 70%;
+  margin: 5% auto;
+  border-color: rgb(129, 77, 9);
+}
+
+strong {
+  color: rgb(218, 58, 58);
+}
+
+code {
+  width: 40%;
+  display: inline-block;
+  text-align: justify;
+  margin: 1% 30%;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* *************** ----- *********************/
+/* *************** ----- *********************/
+/* *************** ----- *********************/
+
+table {
+  width: 90%;
+  height: 20vh;
+  margin: 5% auto;
+}
+
+table,
+th,
+td {
+  border: 3px ridge slategrey;
+  border-collapse: collapse;
+  /* ? Separa los datos. Como un gap */
+  /* border-spacing: 25px; */
+}
+
+td {
+  padding-left: 10px;
+}
+
+/** Orden de números de th's */
+/*? th:nth-of-type(3) (Elige desde el principio */
+/*? th:nth-last-of-type() (Elige desde el final de la tabla */
+th:nth-of-type(3),
+th:nth-of-type(2) {
+  width: 40%;
+  color: beige;
+}
+
+th:nth-of-type(1) {
+  color: blue;
+}
+
+/* .col */
+
+/*? No sólo númericos, pares y nones */
+/** odd = nones / even = pares */
+
+tr:nth-of-type(odd) {
+  background-color: rgb(160, 95, 143);
+}
+
+tr:nth-of-type(even) {
+  background-color: chocolate;
+}
+
+/* * EJERCICIO */
+
+#ejercicio {
+  width: 60%;
+  margin: 5% auto;
+}
+
+#ejercicio caption {
+  background-color: rgb(35, 232, 134);
+  font-family: "Roboto", sans-serif;
+  color: rgb(73, 20, 89);
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 2px 3px 3px rgb(170, 27, 214);
+  padding: 7px;
+}
+
+#ejercicio th {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(217, 181, 63);
+}
+
+#ejercicio tr:nth-of-type(odd) {
+  background-color: rgb(99, 77, 119);
+}
+
+#ejercicio tr:nth-of-type(even) {
+  background-color: rgb(144, 34, 255);
+}
+
+#ejercicio td {
+  font-family: "fenix", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(78, 35, 232);
+  text-align: center;
+  padding: 5px;
+}

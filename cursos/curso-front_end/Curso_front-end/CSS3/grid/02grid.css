@@ -1,0 +1,34 @@
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.grid .elemento{
+    background: #8a3bb5;
+
+    /* grid-column-start: 1;
+    grid-column-end: -1;
+
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    /* Simplificación 1 */
+    /* grid-column: 3 / 5;
+    grid-row: 1 / 3; */
+
+    /* Atajo de una sola fila (Complicado)
+        -Primer parámetro row start
+        -Segundo parámttro column start
+        -Tercer parámetro row end
+        -Cuarto parámetro column end   
+    
+
+    grid-area: 1 / 2 / 4 / 5;
+    */
+
+    /* Atajo 3 (Expansión) */
+    grid-column: span 4;
+    grid-row: span 2 / span 3;
+}

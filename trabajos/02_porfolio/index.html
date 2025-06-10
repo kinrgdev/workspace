@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Porfolio de Joaquín Rodríguez" />
+  <!--* Mi Estilo  -->
+  <link rel="stylesheet" href="style/style.css" />
+  <!--* Favicon -->
+  <link rel="icon" href="img/kinrgdev-logo.ico" type="image/x-icon" />
+  <!--* Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!--* Librería AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Porfolio | kinrgdev</title>
+</head>
+
+<body>
+  <!--& Loader -->
+  <div id="loader-wrapper">
+    <canvas id="loader"></canvas>
+  </div>
+
+  <!--& Banner cookies -->
+  <div id="bannerCookies" class="ocultarBanner">
+    <div class="contenidoBanner">
+      <p class="no-type">
+        Este sitio utiliza únicamente cookies funcionales y esenciales para garantizar su correcto funcionamiento. No se
+        recogen datos personales ni se comparten con terceros.
+      </p>
+      <a href="pages/avisoLegal.html" target="_blank">Aviso legal</a><br />
+      <div class="btn-wrapp">
+        <button class="btn-grad">Acepto</button>
+        <button class="btn-grad2">No acepto</button>
+      </div>
+    </div>
+  </div>
+
+  <!--& barra de progreso -->
+  <div class="progreso-container">
+    <div class="progreso-bar" id="barra"></div>
+  </div>
+
+  <main>
+    <!--& Encabezado -->
+    <header>
+      <h1 class="index">kinrg<span>dev</span></h1>
+      <!--//// Menú navegación lateral -->
+      <nav id="nav">
+        <a href="index.html">— Inicio</a>
+        <a href="#aboutMe">— Sobre mí</a>
+        <a href="#projects">— Proyectos</a>
+        <a href="#skills">— Habilidades</a>
+        <a href="#contact">— Contacto</a>
+      </nav>
+      <!-- //// Buguer Menu -->
+      <div class="menu-wrap"><a href="javascript:void(0)" id="hamb"><i class="fa-solid fa-bars hamb"></i></a></div>
+    </header>
+
+    <!--& Cabecera -->
+    <section id="aboutMe">
+      <h2>Joaquín Rodríguez</h2>
+      <img src="img/kinrgdev-logo.png" alt="logo" class="zoom" />
+      <h3>frontend junior: diseño y desarrollo web</h3>
+      <p>En formación. <br> Sin experiencia pero con muchísima hambre de aprender...</p>
+      <a href="pages/aboutMe.html">Saber más...</a>
+    </section>
+
+    <!--& Proyectos -->
+    <section id="projects">
+      <h2 class="textContainer">— Proyectos —</h2>
+      <article>
+        <h3>Pizza World</h3>
+        <img src="img/world-pizza-web.png" alt="World Pizza Web" data-aos="fade-down-left" data-aos-duration="2000"
+          data-aos-offset="300" />
+        <p>
+          Este proyecto es una web ficticia de una pizzería, desarrollada como
+          parte del proyecto final de un curso de Udemy. Durante su
+          desarrollo, consolidé mis conocimientos en HTML y CSS, además de
+          descubrir las posibilidades de JavaScript para mejorar la
+          interacción del usuario. <br />
+          Características del proyecto: Diseño moderno y responsive: La web se
+          adapta a distintos dispositivos, garantizando una experiencia fluida
+          tanto en computadoras como en móviles. Menú interactivo: Presenta
+          una lista de pizzas con imágenes atractivas en formato carousel.
+          Animaciones y efectos visuales: Implementados con CSS y JavaScript
+          para mejorar la estética y la experiencia del usuario. Formulario de
+          contacto y Navegación intuitiva.
+        </p>
+        <div>
+          <span class="html">HTML5</span>
+          <span class="css">CSS3</span>
+          <span class="js">JavaScript</span><br />
+          <a href="https://kinrgdev.github.io/pizza-world/" target="_blank"><i class="fa-solid fa-globe icons"></i></a>
+          <a href="https://github.com/kinrgdev/pizza-world.git" target="_blank"><i
+              class="fa-brands fa-github icons"></i></a>
+        </div>
+        <a href="pages/projects.html">Más proyectos...</a>
+      </article>
+    </section>
+
+    <!--& Habilidades -->
+    <section id="skills">
+      <h2 class="textContainer">— Habilidades —</h2>
+      <article>
+        <div class="galeria" data-aos="zoom-out-right" data-aos-easing="ease-in-sine" data-aos-duration="2000">
+          <img class="skill-icon-trigger vibrando" src="img/lenguajes/html5.png" alt="html icon"
+            data-target="modal-html" />
+          <img class="skill-icon-trigger vibrando" src="img/lenguajes/css3.png" alt="css3 icon"
+            data-target="modal-css" />
+          <img class="skill-icon-trigger vibrando" src="img/lenguajes/js.png" alt="javaScript icon"
+            data-target="modal-js" />
+          <img class="skill-icon-trigger vibrando" src="img/lenguajes/php.png" alt="php icon" data-target="modal-php" />
+        </div>
+        <div class="skill-modal-content html" id="modal-html">
+          <p>
+            En mis proyectos, estructuro el HTML5 de forma clara y coherente, utilizando
+            etiquetas semánticas, identificadores y clases que facilitan la lectura y el
+            mantenimiento del código. Aunque sigo reforzando el trabajo con formularios,
+            aplico una base sólida que me permite construir interfaces limpias y funcionales.
+          </p>
+        </div>
+        <div class="skill-modal-content css" id="modal-css">
+          <p>
+            Me desenvuelvo con soltura en CSS, escribiendo código claro, bien comentado y
+            estructurado para facilitar su mantenimiento. Priorizo la coherencia visual y
+            organizo las reglas de forma lógica, cuidando la relación entre contenido y diseño.
+            Aunque sigo puliendo aspectos como animaciones, máscaras, formularios y
+            menús desplegables, mantengo un enfoque práctico y en constante mejora.
+          </p>
+        </div>
+        <div class="skill-modal-content js" id="modal-js">
+          <p>
+            Me encuentro en una etapa de aprendizaje activo en JavaScript, con una base
+            sólida en lógica y comprensión de código existente. Actualmente puedo
+            desarrollar soluciones funcionales cuando el alcance es concreto y el código
+            sencillo, aunque estructuras condicionales complejas y lógica más avanzada aún
+            representan un reto. Estoy centrado en mejorar a través de la práctica constante,
+            priorizando un enfoque limpio y comprensible.
+          </p>
+        </div>
+        <div class="skill-modal-content php" id="modal-php">
+          <p>
+            Desarrollé un pequeño proyecto utilizando PHP, phpMyAdmin y MySQL en un
+            entorno local con XAMPP. Aprendí a crear y gestionar bases de datos, realizar
+            consultas básicas y conectar la lógica del servidor con datos almacenados. Aún
+            recurro a recursos de apoyo para resolver dudas, pero tengo una base sólida
+            para seguir avanzando en el desarrollo web dinámico.
+          </p>
+        </div>
+      </article>
+      <!-- //// Herramientas y Plataformas -->
+      <article>
+        <h3>Herramientas / Plataformas</h3>
+        <ul>
+          <li>Git</li>
+          <li>Trello</li>
+          <li>GitHub</li>
+          <li>XAMPP</li>
+          <li>VS Code</li>
+          <li>VirtualBox</li>
+          <li>Wordpress</li>
+          <li>Sistemas Linux</li>
+          <li>Windows Server</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- & Contacto -->
+    <section id="contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
+      <form action="sendForm.php" method="post" name="miFormulario" id="formulario" novalidate>
+        <h2 class="textContainer">— Contacto —</h2>
+        <fieldset>
+          <legend>Rellene el formulario:</legend>
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre">
+          <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+          <hr>
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido">
+          <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+          <hr>
+          <label for="email">e-mail</label>
+          <input type="email" name="email" id="email" autocomplete="email">
+          <p id="error" class="mensaje-error">Debe introducir un correo electrónico válido</p>
+          <hr>
+          <legend for="plataforma" class="reinicio">¿Cómo me encontraste?</legend>
+          <label for="google" class="radio-label">
+            <input type="radio" name="plataforma" id="google" value="Google"> Google
+          </label>
+          <label for="gitHub" class="radio-label">
+            <input type="radio" name="plataforma" id="gitHub" value="GitHub"> GitHub
+          </label>
+          <label for="codepen" class="radio-label">
+            <input type="radio" name="plataforma" id="codepen" value="Codepen"> Codepen
+          </label>
+          <label for="bluesky" class="radio-label">
+            <input type="radio" name="plataforma" id="bluesky" value="bluesky"> BlueSky
+          </label>
+          <label for="otros" class="radio-label">
+            <input type="radio" name="plataforma" id="otros" value="otros"> Otros
+          </label>
+          <p id="error" class="mensaje-error">Debe seleccionar una opción</p>
+          <hr>
+          <label for="numProjects">¿Cuántos proyectos te gustaría ver?</label>
+          <input type="number" min="1" max="3" name="numProjects" id="numProjects">
+          <p id="error" class="mensaje-error">Debe introducir un valor entre 1 y 3</p>
+          <hr>
+          <label for="privacidad" class="checkbox-container">
+            <span>Acpeto la declaración de privacidad</span>
+            <a href="pages/privacidad.html" target="_blank">Declaración de privacidad</a>
+            <input type="checkbox" name="privacidad" id="privacidad" value="aceptado">
+          </label>
+          <p id="error" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
+          <hr>
+          <label for="seleccion">¿Qué tipo de proyecto te interesa ver?</label>
+          <select name="seleccion" id="seleccion">
+            <option value="">-- Selecciona una opción --</option>
+            <option value="web">Sitio web</option>
+            <option value="codepen">Codepen</option>
+          </select>
+          <p id="error" class="mensaje-error">Debe elegir una opción</p>
+          <hr>
+          <textarea name="comentarios" placeholder="¿Comentarios?"></textarea>
+          <p class="required">Todos los campos son obligatorios</p>
+        </fieldset>
+
+        <!-- //// Botones de envío y reset *-->
+        <div class="contact">
+          <div class="button-wrap button-Margin">
+            <button type="submit" class="send">Enviar</button>
+          </div>
+          <div class="button-wrap">
+            <button type="reset" class="reset">Reset</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- & Footer -->
+    <footer>
+      <nav>
+        <a href="https://github.com/kinrgdev" target="_blank"><i class="fab fa-github icons"></i></a>
+        <a href="https://codepen.io/kinrgdev" target="_blank"><i class="fab fa-codepen icons"></i></a>
+      </nav>
+      <article>
+        <i class="fa-regular fa-copyright">kinrgdev &#x2022; <span id="year"></span></i><br />
+        <p>Todos los derechos reservados.</p>
+      </article>
+      <article>
+        <a href="pages/avisoLegal.html" target="_blank">Aviso legal</a><br />
+        <a href="pages/privacidad.html" target="_blank">Declaración de privacidad</a>
+      </article>
+    </footer>
+  </main>
+  <!--! Mis scripts -->
+  <script src="js/loader.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

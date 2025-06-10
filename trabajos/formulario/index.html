@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--? Mi Estilo  -->
+    <link rel="stylesheet" href="style/style.css">
+    <title>Evaluación UF1306 — Formularios</title>
+</head>
+
+<body>
+    <section>
+        <h2>Formulario de alta</h2>
+        <form action="sendForm.php" method="post" name="miFormulario" id="formulario" novalidate>
+            <fieldset>
+                <legend>Rellene con sus datos:</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+                <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" autocomplete="email">
+                <p id="error" class="mensaje-error">Debe introducir un correo electrónico válido</p>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <p id="error" class="mensaje-error">
+                    Password inválido. <br>
+                    Debe de introducir entre un mínimo de 7 caracteres y un máximo de 32. <br>
+                    Debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.
+                </p>
+
+                <label for="confirmPassword">Confirmar Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+                <p id="error" class="mensaje-error">Las contraseñas no coinciden...</p>
+
+                <label for="edad">Ingrese su edad</label>
+                <input type="number" name="edad" id="edad"><br>
+                <p id="error" class="mensaje-error">Debe de introducir una edad</p>
+                <p id="error" class="mensaje-error">Hay que ser mayor de 18 años...</p>
+
+                <label for="privacidad" class="checkbox-container">
+                    <input type="checkbox" name="privacidad" id="privacidad" value="aceptado">
+                    <span>Acpeto la declaración de privacidad</span>
+                </label>
+                <p id="error" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
+
+                <label for="seleccion">Elija el fondo de pantalla que tendrá su perfil:</label>
+                <select name="seleccion" id="seleccion">
+                    <option value="" disabled selected>Seleccione un fondo de pantalla</option>
+                    <option value="img/db1.webp">Fondo 1</option>
+                    <option value="img/db2.webp">Fondo 2</option>
+                    <option value="img/db3.webp">Fondo 3</option>
+                </select>
+                <p id="error" class="mensaje-error">Debe seleccionar un fondo de pantalla</p>
+                <p class="campos">Todos los campos son obligatorios.</p>
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios:</legend>
+                <textarea name="comentarios" id="comentarios"
+                    placeholder="Escriba su comentario si lo desea"></textarea><br>
+            </fieldset>
+            <div class="botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+        </form>
+        <div id="mensaje">¡Formulario enviado con éxito! (Simulado)</div>
+    </section>
+    <!--? Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

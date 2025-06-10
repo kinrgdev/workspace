@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrado</title>
+    <style>
+        body {
+            background-color: #cf2b2b;
+        }
+
+        /* Contenedor de la imagen */
+        #absoluto {
+            background-color: rgb(121, 113, 40);
+            color: rgb(47, 0, 255);
+            width: 50%;
+            position: absolute;
+            text-align: center;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        /* Contenedor de la imagen */
+        #absoluto > .img-container {
+            position: relative;
+        }
+
+        /* Pseudo-elemento ::after en el contenedor de la imagen */
+        #absoluto > .img-container::after {
+            content: ' ¡Hola!'; /* Contenido añadido al final */
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-0%);
+            font-size: 20px;
+            color: rgb(27, 24, 24);
+            opacity: 0; /* Inicialmente oculto */
+            transition: opacity 1.3s ease, transform 0.3s ease; /* Transiciones suaves */
+        }
+
+        /* Hover en la imagen */
+        /* #absoluto > img:hover {
+            transform: scale(0.5);
+            transition: all 1.5s ease-in;
+        } */
+
+        /* Hover en el contenedor de la imagen para mostrar el pseudo-elemento */
+        #absoluto > .img-container:hover::after {
+            opacity: 1; /* Hace visible el pseudo-elemento */
+            transform: translateX(-50%) scale(1.2); /* Lo agranda */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="absoluto">
+        <div class="img-container">
+            <a href="https://www.google.com">Google</a>
+            <img src="../img-random/maron_run_beach_water.gif" alt="Maron corriendo hacia el mar" width="20%">
+        </div>
+        <p>Cuidao que se salen!!</p>
+    </div>
+</body>
+
+</html>

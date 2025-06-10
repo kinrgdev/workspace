@@ -1,0 +1,876 @@
+/* VARIABLES */
+:root{
+    --color-primario: #FCB03B;
+    --color-secundario: #E92F3D;
+    --color-background-sombra:#E92F3D30 ;
+    --color-background: #EFF6F5;
+    --color-texto: #A1A5A6;
+    --text-defaul: 'Open Sans';
+}
+
+/* GENERALES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-defaul);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color-background);
+}
+
+.titulos{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.subtitulos{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FFF;
+    background: var(--color-primario);
+    font-weight: 700;
+    padding: 15px 30px;
+    outline: none; /*Quita el borde de la caja*/
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+    position: relative; /* Permite que en la posición que está, a partir de esa posición va indicar los px que yo quiera separar */
+    top: 20px;
+    transition: all 0.3s;
+}
+
+.btn span{
+    padding-left: 10px;
+}
+
+.btn:hover{
+    padding: 15px 45px;
+}
+
+
+
+
+/* MENÚ PRINCIPAL */
+.menu-principal{
+    width: 100%;
+    display: flex; /*Uno al lado del otro*/
+    justify-content: space-between; /*Se separan de uno a otro en cada punta de la pantalla*/
+    align-items: center; /*Alineación de elementoS en la vertiente vertical*/
+    height: 75px;
+    padding: 0 30px;
+    margin-top: 10px;
+    background: var(--color-background);
+    z-index: 1; /*La vertiente Z. Es indicar en la capa de profundidad en la que se situará. Se le da dimensión.
+                Por defecto es 0, así que con 1, se pondrá por delante con el responsive*/
+}
+
+.logo img{ /*al poner img, sí se aplica a la imagen*/
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-bar .enlaces ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu-bar .enlaces ul li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    background: linear-gradient(currentColor, currentColor); /*currentColor es el color por defecto definido en var*/
+    background-position: 100% 100%; /*eje x . y*/
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.5;
+}
+
+.menu-bar .enlaces ul li a:hover{
+    color: var(--color-secundario);
+    background-size: 50% 2px; /*El background es la línea que dibuja el hover. Cuanto más % más grande es*/
+}
+
+.menu-bar .sociales a{
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: all 0.5s;
+}
+
+.menu-bar .sociales a:hover{
+    color: var(--color-secundario);
+}
+
+.menu-principal i{
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 30px;
+    float: right;
+    display: none;
+    transition: all 0.5s;
+}
+
+.menu-principal i:hover{
+    color: var(--color-secundario);
+}
+
+
+/* SLIDER DE PRODUCTOS */
+#menu-productos .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.contenedor-principal #btn-izquierda,
+.contenedor-principal #btn-derecha{
+    position: absolute; /* Al poner relative en el padre y en el hijo absolute, estos se meteran todos dentro del contenedor*/
+    height: 10%;
+    width: 50px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 0 15px;
+    color: var(--color-secundario);
+    z-index: 500;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.contenedor-principal #btn-izquierda:hover,
+.contenedor-principal #btn-derecha:hover{
+    background: var(--color-background-sombra);
+    transform: translateY(5px);
+        
+}
+
+.contenedor-principal #btn-izquierda{
+    left: 0;
+}
+
+.contenedor-principal #btn-derecha{
+    right: 0;
+}
+
+.slider{
+    display: flex;
+    overflow: hidden; /* Para colocar la flecha al otro lado*/
+    height: calc(100vh - 80px); /*Ocupa el ancho completo de la pantalla menos lo que ocupa el nav*/
+    scroll-behavior:smooth; /*Permite detectar el scrollLeft*/
+}
+
+.container-productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100% ;/*caja base*/
+    flex-shrink: 0;
+}
+
+.descripcion-productos{
+    width: 30%;
+}
+
+.descripcion-productos h1{
+    font-size: 3vw; /*vw crece según sea la pantalla*/
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.descripcion-productos h2{
+    text-transform: lowercase;
+    font-size: 1.2vw;
+    font-weight: 100;
+}
+
+.descripcion-productos p{
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+
+.imagen-productos{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-productos img{
+    width: 90%;
+    transform: scale(0.7);
+    transition: all 0.3;
+}
+
+.container-productos:hover .imagen-productos img{
+    transform: scale(1.0);
+}
+
+
+
+/* SECCIÓN SERVICIOS*/
+#servicios{
+    height: 110vh;
+    background: #FFF;
+    padding: 40px;
+}
+
+.servicios-titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicios-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    grid-template-areas: "ingredientes      imagen       rapidez"
+                         "calidad           imagen       delivery";
+}
+
+.calidad{
+    grid-area: calidad;
+}
+
+.ingredientes{
+    grid-area: ingredientes;
+
+}
+
+.rapidez{
+    grid-area: rapidez;
+}
+
+.delivery{
+    grid-area: delivery;
+}
+
+.imagen-central{
+    grid-area: imagen;
+    transition: all 0.5s;
+}
+
+.imagen-central:hover{
+    transform: scale(1.1);
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items span{
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-secundario);
+    padding: 20px;
+    border: 5px double #dedede;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.items span:hover{
+    background: var(--color-secundario);
+    color: #FFF;
+}
+
+.calidad span, .ingredientes span{
+    color: var(--color-primario);
+}
+
+.ingredientes span:hover,
+.calidad span:hover{
+    color: #FFF;
+    background: var(--color-primario);
+}
+
+.items .titulo-item{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.items .texto-item{
+    font-size: 14px;
+    color: var(--color-texto);
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px;
+}
+
+
+/* SECCIÓN EQUIPO */
+#equipo{
+    height: 110vh;
+    display: flex;
+}
+
+.persona{
+    flex-grow: 1; /*Permite manejar el crecimiento del contenedor. 1 o 2 tamaño estándar.
+                    todas las cajas tendrán el mismo tamaño*/
+    overflow: hidden; /*quitar el scroll*/
+    position: relative;
+    transition: all 0.5s;
+}
+
+.persona:hover{
+    flex-grow: 3;
+}
+
+.persona-imagen{
+    height: 100%;
+    position: absolute;
+    left: 50%; /* hace que con absolute se mueva un 50% a la izquierda*/
+    transform: translateX(-50%); /*Con este se le quita y se centra*/
+    filter: grayscale(80%);
+}
+
+.persona:hover .persona-imagen{
+    filter: none;
+}
+
+.persona-info{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+.persona:hover .persona-info{
+    opacity: 1;
+    bottom: 60px;
+    transition-delay: 0.3s;
+}
+
+.persona-info h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+.persona-info p{
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+
+}
+
+.social-media a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    background: var(--color-secundario);
+    line-height: 30px; /*Al poner el mismo tamaño del height, se centra*/
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.social-media a:hover{
+    color: var(--color-secundario);
+    background: transparent;
+    transform: scale(2);
+}
+
+
+/* SECCIÓN DE INGREDIENTES */
+#ingredientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingre{
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+}
+
+.imagen-ingre{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info-ingre{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.info-ingre p{
+    font-size: 28px;
+    color: #FFF;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.info-ingre:hover{
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.info-ingre:hover p{
+    transform: translateY(10px);
+}
+
+/* SECCIÓN CONTACTO */
+#contacto{
+    height: 110vh;
+    padding: 60px;
+    position: relative;
+}
+
+#formulario{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.two-fiels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text, .input-email, .textarea{
+    border: 1px solid #b4b4b4;
+    color: #888;
+    background: #FFF;
+    outline: none;
+    padding: 15px 60px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.input-text, .input-email{
+    width: 100%;
+}
+
+.inputConIcon{
+    position: relative;
+    width: 48%;
+}
+
+.inputConIcon i{
+    position: absolute;
+    left: 0px;
+    padding: 14px 15px;
+    background: #888;
+    color: #FFF;
+    transition: all 0.5s;
+
+}
+
+.textareaIcon{
+    width: 100%;
+}
+
+.textareaIcon i{
+    background: transparent;
+    color: #888;
+    padding: 0;
+    font-size: 25px;
+    left: 17px;
+    top: 13px;
+    transition: all 0.5s;
+}
+
+.inputConIcon input:focus,
+.inputConIcon textarea:focus{
+    border: 1px solid var(--color-primario);
+}
+
+.inputConIcon input:focus + i{
+    background: var(--color-primario);
+}
+
+.inputConIcon textarea:focus + i{
+    color: var(--color-primario);
+}
+
+.fiels-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-input{
+    padding: 15px 50px;
+}
+
+.btn-input:hover{
+    padding: 15px 65px;
+}
+
+/* ALERTAS */
+.alertas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+    width: 60%;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.alert.show{
+    transform: translateY(50%);
+}
+
+.alert.hide{
+    transform: translateY(-100%);
+}
+
+.alert .icono-alert{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+
+}
+
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#alertError{
+    background: #f8d7da;
+    border-right: 4px solid #da3748;
+}
+
+#alertError .icono-alert{
+    color: #d23748;
+}
+
+#alertError .msg{
+    color: #721c24;
+}
+
+#alertSuccess{
+    background: #d4edda;
+    border-right: 4px solid #279e43;
+}
+
+#alertSuccess .icono-alert{
+    color: #279e43;
+}
+
+#alertSuccess .msg{
+    color: #155724;
+}
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    margin-top: -60px;
+}
+
+.sociales-metodo{
+    width: 25%;
+    height: 100px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sociales-metodo i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 100px;
+    transition: all 0.5s;
+}
+
+.sociales-metodo span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--color-primario);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transform: translateY(60px);
+    transition: all 0.5s;
+}
+
+.sociales-metodo i:hover + span{
+    transform: translateY(0px);
+}
+
+.sociales-metodo i:hover{
+    transform: translateY(-20px);
+}
+
+
+/* BOTÓN IR ARRIBA */
+#btn-top{
+    width: 50px;
+    height: 50px;
+    background: var(--color-primario);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(200%);
+    transition: all 0.5;
+}
+
+#btn-top.show{
+    transform: translateY(0);
+}
+
+#btn-top.scrollFinal{
+    transform: translateY(-250%);
+}
+
+#btn-top span{
+    color: #FFF;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5;
+}
+
+#btn-top:hover{
+    background: #d89127;
+}
+
+#btn-top:hover span{
+    transform: translateY(-3px);
+}
+
+
+
+
+/* MEDIA QUERY 850px */
+@media screen and (max-width: 850px){
+    /* SLIDER DE PRODUCTOS */
+
+    .container-productos{
+        flex-direction: column;
+    }
+
+    .descripcion-productos{
+        width: 70%;
+        order: 1;
+    }
+
+    /* .descripcion-productos p{
+        font-size: 2.7vw;
+    } */
+
+    .descripcion-productos .btn{
+        padding: 10px 20px;
+    }
+
+    .descripcion-productos .btn:hover{
+        padding: 10px 30px;
+    }
+
+    /* SECCIÓN SERVICIOS */
+
+    .servicios-container{
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "ingredientes  rapidez"
+                             "calidad       delivery";
+    }
+
+    .imagen-central{
+        display: none;
+    }
+
+}
+
+/* MEDIA QUERY 650px */
+
+
+@media screen and (max-width: 650px){
+    /* MENÚ PRINCIPAL */
+    .menu-principal{
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+    }
+    
+    .menu-principal i{
+        display: block;
+    }
+
+    .menu-bar{
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        /*Para que ocupe toda la pantalla*/
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000; /*Estará por delante de cualquier objeto*/
+        background: #333;
+        transition: all 1s;
+        transform: translateX(100%); /*No aparecerá porque se ha movido a la derecha*/
+    }
+
+    .menu-bar.active{
+        transform: translateX(0%); /*Con esto hará que aparezca cuando llegue a XXXpx*/
+
+    }
+
+
+    .menu-bar i{
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+
+    .menu-bar .enlaces ul li{
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .menu-bar .enlaces ul li a,
+    .menu-bar .sociales a{
+        font-size: 20px;
+    }
+
+    /* SLIDER DE PRODUCTOS */
+    .slider{
+        height: calc(140vh - 0px);
+    }
+    .imagen-productos{
+        width: 85%;
+    }
+
+    .descripcion-productos h1{
+        font-size: 7vw;
+    }
+
+    .descripcion-productos h2{
+        font-size: 3vw;
+    }
+
+    /* INGREDIENTES */
+    .info-ingre .txt-ingre{
+        display: none;
+    }
+
+    /* CONTACTOS */
+    #form{
+        width: 100%;
+    }
+
+    .two-fiels{
+        flex-direction: column;
+    }
+
+    .inputConIcon{
+        width: 100%;
+    }
+    
+    /* ALERTAS */
+    .alert{
+        width: 100%;
+    }
+    
+    .alert.show{
+        transform: translateY(150%);
+    }
+    
+    /* FOOTER */
+    footer{
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+    
+    .sociales-metodo{
+        width: 50%;
+    }
+
+    /* BOTÓN IR ARRIBA */
+    #btn-top{
+        display: none;
+    }
+}
+

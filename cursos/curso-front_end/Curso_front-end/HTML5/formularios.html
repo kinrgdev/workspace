@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+<body>
+    <!-- Action: dirección donde lo envía
+        Method: el método que usa > dialog, get y post.
+        Post: envía los datos
+        Get: envía a través de la url de mi página. Es método no seguro. -->
+    <form action="formularios.html" method="get">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+        <br>
+        <!-- Value = valor. Para que aparezca dentro de la caja.
+            Y en el backend también lo identifica -->
+        <input type="submit" value="Enviar Datos">
+    </form>
+</body>
+</html>

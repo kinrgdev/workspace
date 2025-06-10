@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Dropdown</title>
+</head>
+<body>
+    <section id="container">
+        <div class="dropdown">
+            <a href="#">desplegable</a>
+            <div class="down">
+                <a href="#">Enlace 1</a>
+                <a href="#">Enlace 2</a>
+                <a href="#">Enlace 3</a>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div class="code">
+        <img src="../gallery/_code_/dropdown-html.jpg" alt="dropdown">
+        <code>
+            #container { <br>
+                min-height: 35vh; <br>
+                padding: 3% 6%; <br>
+                background-color: #502222; <br>
+                display: flex; <br>
+                justify-content: center; <br>
+                align-items: flex-start; /*? Evita que se estire */ <br>
+              } <br> <br>
+              
+              /* Estilo */ <br>
+              <strong>.dropdown</strong> { <br>
+                background-color: #7e8ee9; <br>
+                width: 25%; <br>
+                text-align: center; <br>
+                border-radius: 16px; <br>
+                box-shadow: 2px 3px 5px rgb(78, 77, 77); <br>
+              } <br> <br>
+              
+              .dropdown a { <br>
+                display: block; <br>
+              } <br> <br>
+              
+              /**Oculto */ <br>
+              .dropdown div { <br>
+                width: 100%; <br>
+                max-height: 0; <br>
+                overflow: hidden; <br>
+              } <br> <br>
+              
+              
+              /** ESTILIZA EL HOVER */ <br>
+              .dropdown:hover { <br>
+                background-color: rgb(197, 80, 80); <br>
+                border-radius: 16px; <br>
+                transform: scale(125%); <br>
+              } <br> <br>
+              
+              /** ESTILIZA EL PRIMER A */ <br>
+              .dropdown:hover >a { <br>
+              border-bottom: 1px dotted #fff; <br>
+              } <br> <br>
+              
+              /** ESTILIZA EL SUBMENU */ <br>
+              .dropdown:hover div{ <br>
+                max-height: 150px; <br>
+                background-color: rgb(34, 33, 22); <br>
+                color: rgb(190, 202, 61); <br>
+              } <br> <br>
+              
+              /** ESTILIZA EL SUBMENU EN HOVER */ <br>
+              .dropdown a:hover{ <br>
+                color: rgb(127, 192, 7); <br>
+                font-size: 24px; <br>
+                background-color: rgb(255, 163, 127); <br>
+              }
+        </code>
+    </div>
+    <code>
+        
+    </code>
+    
+</body>
+</html>

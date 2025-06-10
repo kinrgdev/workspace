@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+</head>
+<body>
+    <script>
+        /*
+        var resta = function (valor1, valor2){
+        var resultado = valor1 - valor2;
+        return resultado;
+        
+        }
+        document.write(resta(50, 30));
+        */
+
+        /*Variable Global. Está disponible para cualquier función de Js porque es global.
+        Está fuera de las funciones y se puede utilizar en esta función o en cualquier otra
+        */
+        var variableGlobal = "Hola Mundo";
+
+        //Variable Local. Está dentro de la función. Solo está disponible para esa función.
+        var variableLocal = "Esto es una variable local";
+
+        var valorMinimo = function (valor1, valor2){
+            if (valor1 < valor2){
+                return valor1;
+            }else{
+                return valor2;
+            }
+        }
+
+        document.write(valorMinimo(150, 80));
+        document.write("<br>");
+        document.write(valorMinimo(50, 20));
+        document.write("<br>");
+        document.write(valorMinimo(50, 90));
+
+
+
+
+
+
+
+        
+        
+        /*
+        function holaMundo () {
+            //Instrucciones dentro de ()
+            /*Código que se puede reutilizar en el código. No hay que verlo como un código que se
+            ejecuta si no que es como una variable que deber retornar un valor*/
+            //document.write("Hola Mundo");
+        //}
+
+        //holaMundo(); //Cada vez que se ponga este código, este se ejecuta.
+        /*Esto no es para imprimir una función en pantalla, una función no debe hacer esto.
+        Una función debe ser un fragmento de código que me dé un valor.
+        Ejemplo: una suma, y devuelva el resultado. Una vez que tengo el resultado, lo devuelvo
+        y lo muestro en pantalla fuera de la función. 
+        
+        */
+
+    </script>
+</body>
+</html>

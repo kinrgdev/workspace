@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 300px repeat(3, 1fr) 500px;
+    /* Simplificado */
+
+    /* grid-template-columns: minmax(200px, 1fr) 1fr; */
+    /* grid-template-rows: minmax(200px, auto); */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: 20% 25% 20%; */
+    /* grid-template-rows: 200px 300px; */
+    /* grid-template-rows: 1fr 2fr; */
+    grid-gap: 20px;
+}

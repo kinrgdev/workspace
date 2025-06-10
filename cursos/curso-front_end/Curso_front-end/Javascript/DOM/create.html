@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear elemento en DOM JS</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Elemento N1</li>
+        <li>Elemento N2</li>
+    </ol>
+
+    <script>
+        //Creación de elemento
+        var lista = document.createElement("li");
+        var contenido = document.createTextNode("Elemento N3");
+        lista.appendChild(contenido);
+
+        //Método 1
+        /*var contenedor = document.getElementById("lista");
+        contenedor.appendChild(lista);*/
+
+        //Método 2 (Complicado)
+        /*var contenedor = document.getElementsByTagName("li")[0].parentNode;
+        contenedor.appendChild(lista);*/
+
+        //Método 3
+        var contenedor = document.getElementsByTagName("li")[0].parentNode;
+        var posicion = document.getElementsByTagName("li")[0];
+        contenedor.insertBefore(lista, posicion);
+    </script>
+</body>
+</html>

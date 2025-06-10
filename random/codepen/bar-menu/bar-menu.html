@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          
+        }
+        div{
+            min-height: 12vh;
+            width: 100%;
+            padding: 0 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--base-color);
+            border-bottom: 0.1px ridge var(--theme-dark);
+            box-shadow: 2px 2px 36px var(--theme-dark);
+            position: relative;
+        }
+        
+        /* ????????????????? NAV *********************/
+        nav {
+            width: fit-content;
+        }
+
+        @media screen and (max-width: 720px) {
+            header nav {
+                display: none;
+            }
+        }
+
+        nav a {
+            padding: 0 1em;
+            font-size: 1.5rem;
+        }
+
+        nav a:hover {
+            background: url(../img/fondo.jpg) center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: hsla(0, 0%, 0%, 0.285);
+            -webkit-text-stroke: 1px var(--text-color);
+            text-shadow: 1px 1px 14px var(--theme-dark-alt);
+        }
+
+        @media screen and (max-width: 1000px) {
+            .fa-bars {
+                transition: color 0.3s ease;
+            }
+
+            .fa-bars:hover {
+                color: var(--theme-dark);
+            }
+        }
+
+        /* Oculta el checkbox */
+        .menu-shower {
+            display: none;
+        }
+
+        /* Estilos del botón bars */
+        #menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: var(--text-color);
+            z-index: 1000;
+        }
+
+        @media (max-width: 1000px) {
+            #menu-btn {
+                display: block;
+            }
+
+            /* Oculta el menú normal */
+            nav {
+                display: none;
+            }
+
+            /* Muestra el menú cuando está activo el checkbox */
+            .menu-shower:checked~.overlay {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                padding: 2rem 0;
+                position: absolute;
+                top: 100%;
+                right: 1%;
+                transform: translate(0%, 1%);
+                background-color: rgba(14, 13, 13, 0.979);
+                border-bottom: 0.1px ridge var(--theme-dark);
+                box-shadow: 2px 2px 36px var(--theme-dark);
+                border-radius: 1em;
+            }
+
+            .overlay a {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                font-size: 2rem;
+            }
+
+            .overlay a:active {
+                text-shadow: 1px 1px 14px var(--theme-dark);
+            }
+        }
+    </style>
+    <div>
+        <input type="checkbox" id="menu-input" class="menu-shower" />
+        <label for="menu-input" id="menu-btn">
+          <i class="fas fa-at"></i>
+        </label>
+        <nav class="overlay">
+            <a href="https://github.com/kinrgdev" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://codepen.io/kinrgdev" target="_blank"><i class="fab fa-codepen"></i></a>
+            <a href="https://bsky.app/profile/kinrgdev.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a>
+            <a href="https://goo.su/C2PI2pr" target="_blank"><i class="fab fa-youtube"></i></a>
+        </nav>
+      </div>
+</body>
+
+</html>

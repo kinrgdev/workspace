@@ -1,0 +1,68 @@
+body{
+    background-color: #eee;
+}
+
+.grid{
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-areas: "header header"
+                         "content content"
+                         "footer footer";
+    grid-template-rows: 150px 1fr 100px;
+    grid-template-columns: 1fr 200px;
+    /* grid-gap: 15px; */
+
+    /* ÍMPLICITA */
+    grid-auto-rows: 140px;
+    grid-auto-flow: row; /* Por defecto es row. Cambia el flujo del contenido*/
+
+    /* POSICIONAMIENTO */
+
+    /*Eje horizontal*/
+    /* justify-items: stretch; */
+    /*start alinea al inicio y solo usa el espacio del contenido*/
+    /*end igual que start pero al final*/
+    /*stretch usa todo el espacio disponible*/
+
+    /*Eje Vertical*/
+    /* align-items: end; */
+    /*start usa todo el espacio disponible en eje Y*/
+    /*end lo mismo que start pero al final*/
+    /*Es por la defecto. stretch usa todo el espacio disponible*/
+
+}
+
+/* POSICIONAMIENTO INDIVIDUAL */
+
+/* Eje X */
+.item-1{
+    justify-self: stretch;
+    /* stretch Para que use todo el área.
+    Las demás opciones se adapta al contenido*/
+}
+
+/*Eje Y*/
+.item-2{
+    align-self: stretch;
+    /* Los párametros son los mismos que el eje X */
+
+    /* Para alinear eje y contenido */
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.header{
+    grid-column: col-inicio / col-fin 3;
+    grid-row: row-inicio / row-fin 3;
+}

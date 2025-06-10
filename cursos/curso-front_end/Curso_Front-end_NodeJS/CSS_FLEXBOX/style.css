@@ -1,0 +1,21 @@
+body{
+    background-color: #eee;
+    width: 200px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap; /*Para que respete el ancho del contenido*/
+    flex-flow: row wrap; /*Flex direction + wrap*/
+
+    justify-content: space-evenly;
+    /* Para que align-content tenga sentido hay que darle altura */
+    height: 200px;
+    align-content: space-evenly;
+
+    
+}
+
+.green{
+    background-color: green;
+}

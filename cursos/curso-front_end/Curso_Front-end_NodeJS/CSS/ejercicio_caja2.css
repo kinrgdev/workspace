@@ -1,0 +1,44 @@
+body{
+    background-color: #eee;
+}
+
+.box{
+    display: block;
+    background-color: #eee;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    height: 25px;
+    margin: 10px 15px;
+    width: 300px;
+    /* position: relative;
+    left: 50px; */
+    padding: 10px 15px;
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: small;
+}
+
+.red{
+    border-left: 2px solid red;
+}
+
+.green{
+    border-left: 2px solid green;
+}
+
+.blue{
+    border-left: 2px solid blue;
+}
+
+.red:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.green:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blue:hover{
+    background-color: rgba(131, 192, 250, 0.2);
+}

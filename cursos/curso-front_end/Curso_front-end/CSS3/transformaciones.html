@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones CSS3</title>
+</head>
+
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        float: left;
+    }
+
+    #transladar{
+        background: #1aa9ed;
+        /* transform: translateX(50px) translateY(320px); */
+        transform: translate(-70px, 350px);
+    }
+
+    #escalar{
+        background: #00dd73;
+        /* transform: scaleX(2) scaleY(2); */
+        transform: scale(2, 3);
+    }
+
+    #rotar{
+        background: #ef7f1a;
+        /* transform: rotateX(120deg) rotateY(50deg); */
+        transform: rotate(150deg);
+    }
+
+    #deformar{
+        background: #d1308c;
+        /* transform: skewX(20deg) skewY(21deg); */
+        transform: skew(8deg);
+    }
+</style>
+
+<body>
+    <div id="transladar"></div>
+
+    <div id="escalar"></div>
+
+    <div id="rotar"></div>
+
+    <div id="deformar"></div>
+</body>
+</html>

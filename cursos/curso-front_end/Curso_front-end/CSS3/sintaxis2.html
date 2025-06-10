@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Avanzados</title>
+    <style>
+
+        #contenedor p{
+            color: green;
+        }
+
+        #contenedor p:first-child {
+            color: blue;
+        }
+
+        /* nth-child = especificar hijo
+           nth-child (3)= especifica el hijo 3.
+           nth-child (odd)= especifica a los impares.
+           nth-child (even)= especifica a los pares.
+        */
+        #contenedor p:nth-child(even) {
+            color: violet;
+        }
+
+        #contenedor p:last-child {
+            color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officiis at sapiente obcaecati? Aperiam reiciendis error sunt, beatae officia totam doloremque sit iste harum rem vitae reprehenderit. Molestias, modi vel!</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officiis at sapiente obcaecati? Aperiam reiciendis error sunt, beatae officia totam doloremque sit iste harum rem vitae reprehenderit. Molestias, modi vel!</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officiis at sapiente obcaecati? Aperiam reiciendis error sunt, beatae officia totam doloremque sit iste harum rem vitae reprehenderit. Molestias, modi vel!</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officiis at sapiente obcaecati? Aperiam reiciendis error sunt, beatae officia totam doloremque sit iste harum rem vitae reprehenderit. Molestias, modi vel!</p>
+        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia HTML</title>
+</head>
+<body>
+    <!-- Imagen -->
+    
+    <img src="Imágenes/Cine/6.gif" alt="Blade_Runner_Like_Tears_in_rain" width="400">
+
+    <!-- Imágenes combinadas -->
+    
+    <!-- Es un contenedor. La ventaja es si se le quiere aplicar estilo
+    se puede aplicar a todo -->
+    <figure>
+        <img src="Imágenes/Actores y famosos/200w (3).gif" alt="Emma_Stone_laugh_sarcastic" width="210" >
+        <img src="Imágenes/Actores y famosos/200w (3).gif" alt="Emma_Stone_laugh_sarcastic" width="210" >
+        <img src="Imágenes/Actores y famosos/200w (3).gif" alt="Emma_Stone_laugh_sarcastic" width="210" >
+        <!-- Permite poner una leyenda -->
+        <figcaption>Emma Stone, sarcastic laugh</figcaption>
+    </figure>
+
+    <!-- Vídeos -->
+
+    <!-- Poster es una imagen antes de cargar el vídeo -->
+    <video controls autoplay loop muted poster="Imágenes/GIF/200w.gif" width="500">
+        <source src="Videos/Bully Maguire in Mario Kart Wii https __t.co_85AOFz9lRK.mp4" type="video/mp4">
+    </video>
+<br>
+    <!-- Subtítulo en vídeo -->
+    <video controls autoplay muted>
+        <source src="Videos/rollo, rollo.mp4">
+        <track src="Videos/La senda tenebrosa (VOS).srt" srclang="es" label="Español" default>
+    </video>
+<br>
+    <!-- Vídeo Youtube -->
+    <!-- Se copia desde Compartir > Insertar -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cpxNHevBdXo"></iframe>
+
+    <!-- Audio -->
+    <audio controls loop autoplay muted>
+        <source src="Audio/02 - Amsterdam.mp3" type="audio/mp3">
+    </audio>
+
+</body>
+</html>

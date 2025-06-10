@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Listas</title>
+</head>
+
+<body>
+    <h2>Listas</h2>
+    <div class="list">
+        <h3>Ordenadas</h3>
+        <ol>
+            <li>Elemento A</li>
+            <li>Elemento B</li>
+            <li>Elemento C</li>
+            <li>Elemento D</li>
+        </ol>
+    </div>
+    <hr>
+    <div class="list">
+        <h3>desordenadas</h3>
+
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ul>
+    </div>
+    <div class="txt">
+        <p>Al poner margin y padding 0 en el selector universal (*) <br>
+            pierden el estilo de posición de la lista (1, ·, etc.) <br>
+            Hay que poner <strong>list-style-position: inside;</strong>
+        </p>
+        <code>
+            .list {
+                width: 20%;
+                padding: 3% 0;
+                background-color: rgb(14, 29, 59);
+                border-radius: 2em;
+                margin: 0 auto;
+            } <br><br>
+            
+            ol,
+            ul {
+              text-align: center;
+              list-style-position: inside;
+            } <br><br>
+            
+            .txt {
+                text-align: justify;
+                margin: 3%;
+            }
+        </code>
+    </div>
+    <hr>
+    <div class="anid">
+        <h3>Anidadas</h3>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ol>
+            </li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ul>
+    </div>
+        <code>
+            <img src="../gallery/_code_/anid.jpg" alt="listas Anidadas">
+            <h5>CSS</h5>
+            .anid ul li ol li {
+                list-style-type: square;
+            }
+        </code>
+
+</body>
+
+</html>

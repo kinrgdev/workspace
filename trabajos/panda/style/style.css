@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(360deg, #0f172a 0, #5f82cc 100%);
+}
+
+img {
+    width: 40%;
+}
+
+.gif-container {
+    will-change: transform;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.bouncing-gif {
+    width: 100%;
+}

@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ccc;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* heredado */
+}
+
+img,
+video {
+  width: 100%;
+}
+
+:root {
+  --font-family: "Roboto", serif;
+  --color-primario: rgb(231, 230, 219);
+  --color-secundario: rgb(55, 176, 247);
+  --color-font: rgb(0, 0, 0);
+  --color-borde: rgb(255, 215, 0);
+}
+
+/* CENTRADO */
+
+div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+  color: rgb(207, 0, 0);
+  font-size: 32px;
+}
+
+div > a:hover {
+  color: rgb(237, 112, 23);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  justify-self: center;
+  width: fit-content;
+  padding: 35px;
+  margin: 36px 0;
+  background-color: var(--color-primario);
+  border: ridge 5px var(--color-borde);
+}
+
+header + p {
+  width: 50%;
+  border: 10px solid rgb(207, 0, 0);
+  padding: 5%;
+}
+
+p:nth-of-type(2) {
+  box-sizing: border-box;
+  /* position: relative;
+	left: 75%; */
+  height: 100px;
+  overflow-y: scroll;
+}
+
+/* CENTRADO CON WRAP */
+
+#cero {
+  min-height: 100vh;
+  background-color: rgb(108, 116, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#cero h2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+#cero img {
+  width: 30%;
+}
+
+#cero p {
+  width: 60%;
+}
+
+#uno {
+  background-color: rgb(209, 156, 91);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#uno article {
+  width: 50%;
+  background-color: rgb(246, 234, 132);
+  padding: 5%;
+  border-radius: 5% 0;
+  box-shadow: 0 0 15px #333;
+}
+
+#uno p {
+  padding: 10% 0;
+}
+
+#uno img {
+  border: 5px solid rgb(237, 112, 23);
+}
+
+/*** DOS ***/
+
+#dos {
+  background-color: rgb(127, 157, 255);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px ridge rgb(23, 73, 3);
+}
+
+#dos article {
+  width: 50%;
+  background-color: rgb(240, 128, 24);
+  border: 5px ridge rgb(212, 192, 11);
+  border-radius: 5%;
+  box-shadow: 0 0 30px #efefef;
+  padding: 3% 3%;
+}
+
+#dos img {
+  padding: 15%;
+}
+
+/* *** TRES ***/
+
+#tres {
+  min-height: 100vh;
+  background-color: rgb(23, 73, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  text-align: center;
+}
+
+#tres article {
+  width: 30%;
+  border: 1px solid #999;
+  border-radius: 3%;
+  background-color: #ccc;
+}
+
+#tres img {
+  width: 40%;
+}
+
+/* *** CUATRO ***/
+
+#cuatro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15%;
+  align-content: space-between;
+  /* mueve los ejes */
+}
+
+#cuatro article {
+  width: 40%;
+  background-color: rgb(180, 168, 152);
+  border-radius: 10px;
+}
+
+#cuatro p,
+h2 {
+  padding: 5%;
+}
+
+/* ******************** pag 2. *******************/
+
+/*? Centrado Único */
+
+#centradoUnico {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    150deg,
+    rgba(194, 47, 22, 0.313),
+    rgba(184, 184, 8, 0.79)
+  );
+}
+
+#centradoUnico article {
+  width: 30%;
+  margin: 3% 0;
+}
+
+#centradoUnico * {
+  text-align: center;
+  padding: 2% 0;
+}
+
+#centradoUnico a {
+  position: relative;
+  display: inline-block;
+  color: rgb(118, 14, 14);
+}
+
+#centradoUnico a img {
+  position: absolute;
+  display: none;
+  left: 100%; /* Centra la imagen respecto al enlace */
+  bottom: 0; /* Aparece debajo del enlace */
+  transform: translate(50%, 10%); /* Ajusta el centrado */
+  width: 300px;
+}
+
+#centradoUnico a:hover img {
+  display: block;
+}
+
+/*? Centrado 2 img */
+
+#centrado2 {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#centrado2 article {
+   width: 20%;
+}
+
+
+
+
+

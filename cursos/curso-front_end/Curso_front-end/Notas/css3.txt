@@ -1,0 +1,118 @@
+Hoja de estilo en cascada. Aplicar estilo en cascada. Los estilos
+se aplican de arriba hacia abajo, dando más importancia al que esté abajo.
+
+·
+Propiedad Font-family indica con el tipo de fuente que quiero trabajar.
+Tipos de fuentes.
+Basícas: las que están en vscode.
+Externas: Webs como Google Fonts.
+Iconos: Paquetes de iconos que se descargan y actuán como una
+fuentes css.
+·
+
+Unidades de medida:
+
+Absolutas: son medidas fijas que no cambian y no dependen de otro factor. Como los
+píxeles como 20px.
+
+ln: pulgadas - 25.4mm
+cm: centímetros - 10mm
+pc: picas - 4.23mm
+mm: milímetros - 1mm
+pt: puntos - 0.35mm
+px: píxeles - 0.26mm
+Q: cuarte de mm -0.248mm
+
+El + importante el px
+
+Relativas: felexibles, son ideales para dispositivos con diferentes tamaños de pantalla.
+Como el porcentaje. Si se pone el 20% de pantalla, solo ocupará el 20% de la pantalla, sea
+como sea esa pantalla a la que se envíe.
+
+em = tamaño de la fuente del navegador.
+ex = mitad del tamaño de la fuente del navegador.
+ch = ancho del cero.
+rem = tamaño fuente raíz.
+% = Relativa a herencia. Se usa más para elementos de caja (container).
+
+em, rem, ex: los más usados para fuentes.
+El + utilizado el %
+·
+
+Cajas:
+
+margin = separación del borde desde fuera de la caja.
+padding = separación del borde desde dentro de la caja.
+border = el marco
+contenido = la caja
+
+·
+
+*********************************************
+
+Posicionamiento:
+
+display: block > en bloque. Uno de bajo de otro. El por defecto.
+display: inline-block > uno al lado del otro.
+*inline los alínea y no cuenta con el tamaño de caja
+*inline-block sí respeta el tamaño
+display: table-cell > se colocan como si fueran celdas de una tabla.
+
+Valores de Posicionamiento:
+
+Position: relative >
+Position: absolute >
+Position: fixed > Se queda fijado y al hacer scroll se mantiene en la posición en la pantalla.
+
+Se manipula con valores de píxeles o unidades donde queremos ponerlos.
+
+Float: left
+Float: right
+
+Los demás lo bordean.
+
+***************************************************************
+
+FLEXBOX
+
+Permite crear un conjunto de elementos felexibles que se adaptan automáticamente a su contenedor.
+El navegador tiene en cuenta el espacio disponible y calcula las dimensiones para el tipo de
+pantalla.
+Los elementos se estiran o achican dependiendo del tamaño de pantalla y ayuda con el responsive
+design.
+
+Contenedor: Elemento padre.
+Item: Cada uno de los hijos que van a ser flexibles.
+Eje principal: por defecto
+Eje secunadario: lo contrario. Si el principal es horizontal, éste es vertical o viceversa.
+
+Como usarlo:
+
+1. Crear caja flexible: Display: flex; inline-flex.
+2. Dirección a los ejes (si es horizontal o vertical): flex-direction; flex-wrap; flex-flow.
+3. Alínear ítems: justify-content; align-content; align-items; align-self;
+
+*******************************************
+
+GRID
+
+Permíte dar una estructura más potente donde se define una cuadrícula determinada, y modificando
+los nombres de las clases de los elementos HTML, podemos darle tamaño, posición o colocación.
+
+grid-template-columns: define columnas.
+grid-template-rows: define filas.
+grid-column-gap: espacio entre columnas.
+grid-row-gap: espacio entre filas.
+grid-gap: para ambas.
+
+*************************************
+
+TRANSFORMACIONES
+
+Manipular posición y forma de elementos. Escalar y aumentar de tamaño, manipular forma y posición
+tanto en 2D como en 3D.
+
+Translate: mover en x , y
+scale: escalar x , y
+rotate: rotar en grados
+skew: deformar torcer o inclinar con ángulos

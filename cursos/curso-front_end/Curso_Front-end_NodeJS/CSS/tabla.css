@@ -1,0 +1,28 @@
+body{
+    background-color: #eee;
+}
+
+table{
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){ /*even: Impares - odd: pares*/
+    background-color: grey;
+}
+
+td{
+    border: 2px solid red;
+    padding: 8px;
+}
+
+table th{
+    background-color: green;
+    color: aliceblue;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}

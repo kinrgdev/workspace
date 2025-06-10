@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos y Validación en HTML</title>
+</head>
+<body>
+    <form action="">
+        <!-- Atributos de input -->
+
+        <input type="text" placeholder="Inserte texto">
+        <!-- Texto que añade a la cajita para orientar qué escribir -->
+
+        <input type="text" autofocus>
+        <!-- Se seleccione automáticamente el input que lo tiene.
+        Es decir al usuario; aquí es donde quiero que selecciones primero -->
+
+        <input type="text" autocomplete="off">
+        <!-- Ofrece múltiples sugerencias que están guardadas en el navegador -->
+
+        <select multiple>
+            <option value="">Elemento 1</option>
+            <option value="">Elemento 2</option>
+            <option value="">Elemento 3</option>
+        </select>
+        <!-- Permite elegir múltiples elementos -->
+    </form>
+
+    <hr>
+    <br>
+
+    <!-- Validación.
+    Se debe de hacer de dos formas. Del lado del
+    cliente y del servidor. Hay que validar que los datos se han correctos
+    en el front-end: letras - letras | Números - Números -->
+
+    <input type="text" required>
+    <!-- Requerido. No se puede enviar sin rellenar. Se burla poniendo
+    espacio. Se requiere JS -->
+
+    <input type="text" disabled>
+    <!-- Deshabilitado -->
+
+    <input type="text" readonly value="Texto escrito por el usuario">
+    <!-- Solo lectura -->
+
+    <input type="number" min="5" max="20" placeholder="5 al 20"
+    title="Numeros del 5 al 20">
+
+    <input type="password" placeholder="Contraseña" minlength="5" maxlength="8">
+    <!-- Contraseña mínima de 5 y máxinmo de 8 -->
+
+    <input type="text" pattern="[A-Z]{2}[0-9]{3}" placeholder="Patron"
+    title="Dos letras y tres numeros">
+    <!-- Un patrón [A-Z]{2}[0-9]{3}
+    Tiene que tener dos caracteres en mayúscula de la A a Z.
+    Y quiero tres caracteres númericos del 0 al 9 -->
+    
+    <input type="submit">
+
+
+</body>
+</html>

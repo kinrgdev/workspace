@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--? Mi Estilo  -->
+    <link rel="stylesheet" href="style/style.css">
+    <title>Repaso JS | objects - arrays</title>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="01_get-query.html">getElement/querySelector</a></li>
+            <li><a href="02_objects-arrays.html">objects/arrays</a></li>
+        </ul>
+    </div>
+
+    <h1>Repaso JS</h1>
+    <h2>Objects/Arrays</h2>
+
+    <section class="containerLesson">
+        <h2>Lesson</h2>
+        <article>
+            <div id="array"></div>
+            <br>
+            <code>
+                const objetos = {<br>
+                    animal: 'perro',<br>
+                    comida: 'pizza',<br>
+                    país: 'Islandia',<br>
+                    coche: "Impala '67",<br>
+                    anime: 'Dragon Ball'<br>
+                };<br>
+                <br>
+                objetos.comida = 'helado'; //? reasignar valores de una propiedad <br>
+                objetos.arbol = 'platanero'; //? nuevas propiedades <br>
+                salida.innerHTML = objetos.arbol;
+            </code>
+            
+        </article>
+        <br>
+    </section>
+    <section id="uno">
+        <div id="salida">
+            <div class="arrays"></div>
+            <div class="arrays"></div>
+            <div class="arrays"></div>
+            <div class="arrays"></div>
+        </div>
+        <code>
+            const miArray2 = [7, 'Hola Mundo', true, false, undefined]; <br>
+
+            miArray2[1] = 'Hola Mundo'; <br>
+            
+            salida2.innerHTML = miArray2[1]; <br>
+            salida3.innerHTML = miArray2.length; <br>
+            
+            let salidas = document.getElementsByClassName('arrays'); <br>
+            //? Hay que hacerlo con clases <br>
+        </code>
+        <div id="salida2">
+            <div id="array2"></div>
+            <div id="array3"></div>
+        </div>
+            
+            <code>
+                const goku = { <br>
+                    nombre: 'Goku,', <br>
+                    raza: 'saiyan,', <br>
+                    flaqueza: 'ingenuo,', <br>
+                    edad: 45 <br>
+                };
+                <br><br>
+                const arreglos = [ <br>
+                    'Vegeta.', <br>
+                    'saiyan', <br>
+                    'orgullo' <br>
+                ]; <br>
+                 <br>
+                salidas[0].innerHTML = goku.nombre; <br>
+                salidas[1].innerHTML = goku.raza; <br>
+                salidas[2].innerHTML = goku.flaqueza; <br>
+                salidas[3].innerHTML = arreglos[0]; <br>
+            </code>
+    </section>
+        
+    </div>
+    <!-- <div>
+        <h3>Give Me!</h3>
+        <button>Buuuu!</button>
+    </div> -->
+
+    <!--? Scripts -->
+    <script src="js/objects-array.js"></script>
+</body>
+
+</html>

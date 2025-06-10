@@ -1,0 +1,25 @@
+DOM: Document object model.
+Es la estructura del sitio web que está conformada en nodos.
+Como HTML está estructurado de forma jearárquica (arbólea), y gracias a eso permite
+acceder a esos elementos con Js. Es la estructura arbólea que tiene la web.
+
+Todos los elementos HTML están incluidos en el interior de una variable llamada <document>.
+Ahí se representan todos los elementos de mi web, todos del HTML.
+
+Para acceder a un <li> por ejemplo:
+
+Se entra en:
+
+<document>
+<html>
+<body>
+<ul>
+<li>
+
+Cómo se puede acceder a esos elementos, ya sea para crear un nuevo <li> o para modificarlo o para
+borrarlo...
+Js, a través de DOM, que es el repositorio de elementos de HTML que tengo, voy a entrar a cada uno
+de los elementos para poder alterarlos, modificarlo, etc.
+
+¿Cómo se accede a esos elementos? Para ello hay que identificar esos elementos (h1, li, etc.) a través
+de un id o clase para acceder a ellos.

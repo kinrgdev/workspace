@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--? Mi Estilo  -->
+    <link rel="stylesheet" href="style/style.css">
+    <title>Repaso JS</title>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="01_get-query.html">getElement/querySelector</a></li>
+            <li><a href="02_objects-arrays.html">objects/arrays</a></li>
+
+        </ul>
+    </div>
+
+    <h1>Repaso JS</h1>
+    <h2>getElement - querySelector</h2>
+
+    <section class="containerLesson">
+        <h2>Lesson</h2>
+        <div id="lesson"></div>
+        <code>
+                let hello = document.getElementById('lesson'); <br>
+                hello.innerHTML = "Hola Mundo"; <br> 
+                hello.style.textAlign = 'center';
+            </code>
+
+        <br>
+    </section>
+    <section id="uno">
+        <div id="salida">
+            <p></p>
+        </div>
+        <code>
+            let salida = document.getElementById('salida');<br>
+            let salidaP = document.querySelector('#salida p'); <br><br>
+            salida.innerHTML = 'Centrate Joaquín'; <br>
+            salida.style.backgroundColor = _COLOR; <br>
+
+            <span>//salida.innerHTML = 'Centrate Joaquín';</span><br>
+            salidaP.innerHTML = 'Tú puedes Joaquín';
+        </code>
+        <hr>
+        <div id="salida2">
+            <img>
+            <img>
+        </div>
+        <code>
+            let salida2 = document.getElementById('salida2');<br>
+            let salida2img = document.querySelectorAll('#salida2 img'); <br>
+            const _COLOR2 = 'rgba(31, 10, 68, 0.871)'; <br><br>
+            salida2img[0].src = ('img/shenron.png'); <br>
+            salida2img[0].style.width = ('80%'); <br>
+            salida2img[1].src = ('img/dragonBalls.png'); <br>
+            salida2img[1].style.width = ('30%'); <br>
+            salida2.style.backgroundColor = _COLOR2; <br>
+            salida2.style.borderRadius = '100%';
+        </code>
+        <hr>
+        <div id="salida3">
+            <P class="text"></P>
+            <P class="text"></P>
+            <div class="color"></div>
+            <div id="img">
+                <img>
+            </div>
+        </div>
+        <code>
+
+        </code>
+        <hr>
+
+    </section>
+
+    <!--? Scripts -->
+    <script src="js/get-query.js"></script>
+</body>
+
+</html>

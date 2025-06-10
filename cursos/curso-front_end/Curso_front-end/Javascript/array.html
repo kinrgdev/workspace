@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos JS</title>
+</head>
+<body>
+    <script>
+        //DECLARAR ARREGLO
+        //var colores = ["amarillo", "verde", "azul", "rojo", "gris", 2, 2.58, true];
+        //                  0         1       2        3       4
+        var colores = [" amarillo", " verde", " azul", " rojo", " gris",];
+
+        //MÉTODOS MÁS USADOS
+        
+            //ACCEDER Y CAMBIAR ELEMENTOS DE ARREGLO
+                //colores[4] = "rosa"; //Cambia de manera dinámica
+                //colores[5] = "negro"; //Añade de manera dinámica
+                //colores[6] = "purpura"; //Añade de manera dinámica
+                //document.write(colores);
+                //document.write(colores[3]);
+            
+            //Método 1
+            //Si no se va la longitud de elementos, te da la longitud (la cantidad que hay)
+
+            //var longitudArreglo = colores.length; //Longitud del arreglo
+            //document.write(longitudArreglo);
+            //colores[longitudArreglo] = " purpura."; //longitudArreglo es igual al número. Es como poner el número
+            //document.write(colores);
+
+            //Método 2
+            //colores.push(" rosa", " blanco", " naranja" ); //Crea elementos y los agrega al final
+            //document.write(colores);
+
+
+            //ELIMINAR ELEMENTOS
+            //colores.pop();
+            //document.write(colores);
+
+            //CONCATENAR ARREGLOS
+            /*var colores = ["amarillo", " verde", " azul", " rojo", " gris",];
+            var colores2 = [" rosa", " naranja", " blanco", " púrpura"];
+
+            var coloresTotales = colores.concat(colores2);
+            document.write(coloresTotales);*/
+
+            //CAMBIAR ESTILO DE ARREGLO
+            /*
+            var colores = ["amarillo", " verde", " azul", " rojo", " gris",];
+            var arregloMejorado = colores.join(" - ");
+            document.write(arregloMejorado);*/
+
+            //ORDENAR ALFABETICAMENTE
+            var arregloOrdenado = colores.sort();
+            document.write(arregloOrdenado);
+            
+
+    </script>
+</body>
+</html>

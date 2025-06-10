@@ -1,0 +1,60 @@
+body {
+  background-color: #c43333;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 30%;
+}
+
+/***************** ********************/
+
+/*? Text-align **/
+
+div {
+  text-align: center;
+}
+
+/* Centrando listas **/
+ul {
+  list-style-position: inside;
+}
+
+/* Centrando tabla */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/*? Margin */
+
+h2 ~ img {
+  display: block;
+  margin: 0 auto;
+  padding: 1em ;
+}
+
+.snippet{
+    width: 90%;
+}
+
+/*? padding */
+div:nth-of-type(2) {
+  padding: 0 25%;
+}
+
+div:nth-of-type(2) img {
+  width: 50%;
+}
+
+
+/* padding vh con más de una imagen */
+
+/*? Jugando con las dimensiones */
+div:nth-of-type(3) img {
+  width: 33.33%;
+}

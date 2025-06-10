@@ -1,0 +1,75 @@
+Elementos inline comunes:
+<a> – Enlace (anchor)
+
+<abbr> – Abreviatura
+
+<acronym> – Acrónimo (obsoleto en HTML5, usa <abbr>)
+
+<b> – Texto en negrita (sin importancia semántica)
+
+<bdo> – Anulación de dirección de texto (bidireccional)
+
+<big> – Texto grande (obsoleto en HTML5)
+
+<br> – Salto de línea
+
+<button> – Botón interactivo
+
+<cite> – Cita o referencia a una fuente
+
+<code> – Código de programación
+
+<dfn> – Definición de un término
+
+<em> – Énfasis (cursiva semántica)
+
+<i> – Texto en cursiva (sin importancia semántica)
+
+<img> – Imagen
+
+<input> – Campo de entrada de formulario
+
+<kbd> – Entrada de teclado
+
+<label> – Etiqueta para un elemento de formulario
+
+<map> – Mapa de imagen (usado con <area>)
+
+<object> – Objeto embebido (como multimedia)
+
+<output> – Resultado de un cálculo
+
+<q> – Cita corta (inline)
+
+<s> – Texto tachado (obsoleto en HTML4, pero válido en HTML5)
+
+<samp> – Muestra de salida de un programa
+
+<script> – Código JavaScript (puede ser inline o externo)
+
+<select> – Lista desplegable
+
+<small> – Texto pequeño
+
+<span> – Contenedor genérico inline
+
+<strong> – Texto con fuerte importancia (negrita semántica)
+
+<sub> – Subíndice
+
+<sup> – Superíndice
+
+<textarea> – Área de texto multilínea
+
+<time> – Representación de fecha/hora
+
+<tt> – Texto en tipo de máquina de escribir (obsoleto en HTML5)
+
+<var> – Variable (usado en matemáticas/programación)
+
+Notas importantes:
+Algunos elementos como <button>, <input>, <select>, <textarea> y <object> son inline, pero tienen display "inline-block" por defecto (pueden tener dimensiones definidas).
+
+En HTML5, algunos elementos obsoletos (como <big> y <tt>) no deben usarse.
+
+Si necesitas que un elemento inline se comporte como bloque, puedes usar CSS (display: block o display: inline-block).

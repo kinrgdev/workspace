@@ -1,0 +1,20 @@
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    height: 800PX;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    
+    /* ALINEACIÓN HORIZONTAL */
+    justify-content: space-around;
+    
+    /* ALINEACIÓN VERTICAL */
+    align-content: space-evenly;
+
+    /* Start - end.
+    
+    Space-around: separación entre elementos.
+    Space-between: separación mayor de elementos sin espacio a los lados.
+    Space-evenly: como between pero manteniendo un margen a los lados.    
+    */
+}

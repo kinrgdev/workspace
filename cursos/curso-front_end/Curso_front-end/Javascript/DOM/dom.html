@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS</title>
+</head>
+<body>
+    <h1 id="titulo">Título de la web</h1>
+    <div id="subtitulo"></div>
+    
+    <p class="miparrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corporis doloribus
+        quaerat quam nam consequatur accusamus, quos eius omnis illum commodi adipisci hic repellat iure
+        exercitationem voluptatibus consectetur, incidunt eligendi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil iste sequi voluptate inventore
+        debitis cumque corrupti soluta atque ipsam nemo, in sint quasi. Ullam voluptate debitis harum,
+        quisquam error pariatur!</p>
+
+    <p id="elemento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corporis doloribus
+        quaerat quam nam consequatur accusamus, quos eius omnis illum commodi adipisci hic repellat iure
+        exercitationem voluptatibus consectetur, incidunt eligendi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil iste sequi voluptate inventore
+        debitis cumque corrupti soluta atque ipsam nemo, in sint quasi. Ullam voluptate debitis harum,
+        quisquam error pariatur!</p>
+
+    <p class="miparrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corporis doloribus
+        quaerat quam nam consequatur accusamus, quos eius omnis illum commodi adipisci hic repellat iure
+        exercitationem voluptatibus consectetur, incidunt eligendi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil iste sequi voluptate inventore
+        debitis cumque corrupti soluta atque ipsam nemo, in sint quasi. Ullam voluptate debitis harum,
+        quisquam error pariatur!</p>
+
+
+    <script>
+        //Acceder a los elementos con DOM
+        var parrafos = document.getElementsByTagName("p");
+
+        //El recomendado
+        var elemento1 = document.getElementById("elemento");
+        var elementoClase = document.getElementsByClassName("miparrafo");
+
+        //Crear un nuevo nodo con DOM
+
+            //1. Crear elemento
+            var nuevo = document.createElement("h3");
+
+            //2. Crear el contenido
+            var contenido = document.createTextNode("Este es mi nuevo elemento");
+
+            //3. Juntar elemento con contenido
+            nuevo.appendChild(contenido);
+
+            //4. Agregar el elemento creado al documento HTML
+            document.getElementById("subtitulo").appendChild(nuevo);
+
+            //5. Dar atributos
+            nuevo.setAttribute("class", "misubtitulo");
+
+
+    </script>
+</body>
+</html>

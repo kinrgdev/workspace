@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>text-align | 1001 formas de centrar</title>
+  </head>
+
+  <body>
+    <h1>1001 formas de centrar elementos & Inline Block</h1>
+    <div class="nav">
+      <a href="index.html" target="_blank">Inicio</a>
+      <a href="text-align.html" target="_blank">text-align</a>
+      <a href="margin.html" target="_blank">margin X auto</a>
+      <a href="flex.html" target="_blank">flex</a>
+      <a href="position.html" target="_blank">position</a>
+      <a href="inline-block.html" target="_blank">Inline-Block</a>
+    </div>
+
+    <h2>text-align: center;</h2>
+    <div class="inline">
+      <img src="../gallery/abstracto/abstract1.jpg" alt="abstract1" /> <br />
+      <a href="https://www.filmafinity.com/es">Filmaffinity</a>
+      <cite>
+        El ayer es historia, el mañana un misterio, sin embargo el hoy es un
+        regalo, por eso se le llama presente.
+      </cite>
+      <code>
+        .hola display: flex; justify-content: center; align-items: center;
+        margin: 0 auto;
+      </code>
+      <button>Aceptar</button>
+      <button>Cancelar</button>
+    </div>
+    <div class="descripcion">
+      <p>
+        Una imagen es en inline, pero debe de estar en un contendor de block. Un
+        p, article, section, etc. <br />
+        para centrar una imagen sola, sin un contendor:
+        <img
+          src="../gallery/_code_/center_image_alone.jpg"
+          alt="propiedades margin 0 auto"
+        />
+      </p>
+      <br />
+      <p>
+        Todo lo demás se pone en línea. Los elementos que van dentro de < p>;
+        strong, em, etc. son inline aunque <br />
+        < p> es en bloque. <br />
+        Con un
+        <strong
+          >text-align: center; se centra todo, excepto la imagen, como ya se ha
+          mencionado.</strong
+        >
+        <br />
+        Las imágenes sin embargo, hay que controlar el tamaño de la misma, ya
+        que si ocupa el 100% del ancho del viewport y de su contenedor no se
+        apreciará. Su tamaño va a acorde al tamaño de su contenedor. Sí el
+        contendor hace 50% de ancho, la imagen debe de ser de un ancho menor
+        <br />
+        Para que los elementos en línea bajen de "línea, hay que usar < br >,
+        elemento en bloque u otro contenedor."<br />
+        Algunos elementos como button , input, select, textarea y object son
+        inline, pero tienen display "inline-block" por defecto (pueden tener
+        dimensiones definidas).
+      </p>
+    </div>
+    <div class="inline-salto">
+      <img src="../gallery/abstracto/abstract1.jpg" alt="abstract1" /> <br />
+      <a href="https://www.filmaffinity.com/es">Filmaffinity</a> <br />
+      <cite>
+        El ayer es historia, el mañana un misterio, sin embargo el hoy es un
+        regalo, por eso se le llama presente.
+      </cite>
+      <br />
+      <code>
+        .hola <br />
+        display: flex; <br />
+        justify-content: center; <br />
+        align-items: center; <br />
+        margin: 0 auto;
+      </code>
+      <br />
+      <button>Aceptar</button> <br />
+      <button>Cancelar</button> <br />
+    </div>
+  </body>
+</html>
