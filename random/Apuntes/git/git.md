@@ -37,11 +37,11 @@ git config --global user.email "email"
 
 # ------------------- Crear repositorio en Github desde Terminal -----------------------------:
 
-gh repo create learnspace --public --source=. --push --add-readme
+gh repo create nombreDelRepositorio --public --source=. --push --add-readme
 
 ó
 
-gh repo create learnspace --private --source=. --push --add-readme
+gh repo create nombreDelRepositorio --private --source=. --push --add-readme
 
 
 (Se inicializa sola)
