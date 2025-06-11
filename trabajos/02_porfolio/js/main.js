@@ -1,9 +1,4 @@
 //$ *************************************************
-//$ ****************** H1 ANIMADO *******************
-//$ *************************************************
-gsap.from(".index", { y: -100, opacity: 0, duration: 4, ease: "power3.in" });
-
-//$ *************************************************
 //$ *************** AURA AL PUNTERO *****************
 //$ *************************************************
 const aura = document.createElement('div');
@@ -16,6 +11,39 @@ document.body.addEventListener('mousemove', function (a) {
   aura.style.left = `${x}px`;
   aura.style.top = `${y}px`;
 });
+
+//$ *************************************************
+//$ **************** AÑO ACTUAL *********************
+//$ *************************************************
+const year = document.getElementById('year');
+if (year) {
+  const date = new Date();
+  year.textContent = date.getFullYear();
+}
+
+//$ *************************************************
+//$ ****************** CORREO ***********************
+//$ *************************************************
+const email = "jrg83x@gmail.com";
+const copyEmail = document.getElementById("copyEmail");
+const notification = document.getElementById("notification");
+
+copyEmail.addEventListener("click", function () {
+  navigator.clipboard.writeText(email).then(() => {
+    notification.classList.add("show");
+    setTimeout(() => {
+      notification.classList.remove("show");
+    }, 2000);
+  }).catch(err => {
+    alert("Error al copiar el correo.");
+    console.error(err);
+  });
+});
+
+//$ *************************************************
+//$ ****************** H1 ANIMADO *******************
+//$ *************************************************
+gsap.from(".index", { y: -100, opacity: 0, duration: 4, ease: "power3.in" });
 
 //$ ***********************************************************
 //$ ****************** ENLACES NAV ANIMADOS *******************
@@ -138,7 +166,7 @@ setTimeout(() => {
 //$ ******************************************************
 //$ *************** TEXTO MÁQUINA ESCRIBIR ***************
 //$ ******************************************************
-const paragraphs = document.querySelectorAll("p:not(.no-type)");
+const paragraph = document.getElementById("machine");
 
 const observador = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
@@ -149,11 +177,11 @@ const observador = new IntersectionObserver(function (entries) {
       }
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0 }); // <- empieza en cuanto entra
 
-paragraphs.forEach(function (p) {
-  observador.observe(p);
-});
+if (paragraph) {
+  observador.observe(paragraph);
+}
 
 function typeWriter(element) {
   const text = element.dataset.fullText || element.textContent;
@@ -167,7 +195,7 @@ function typeWriter(element) {
     if (i < text.length) {
       element.textContent += text[i];
       i++;
-      setTimeout(type, 1);
+      setTimeout(type, 5); // <- velocidad rápida
     } else {
       element.classList.remove("typing");
     }
@@ -175,251 +203,6 @@ function typeWriter(element) {
 
   type();
 }
-
-//$ *************************************************
-//$ *************** MODAL HABILIDADES ***************
-//$ *************************************************
-let modalActivo = null;
-let hideTimeout = null;
-
-function ocultarModal() {
-  if (modalActivo) {
-    modalActivo.classList.remove('active');
-    modalActivo = null;
-  }
-}
-
-// Selecciona todos los íconos con la clase "skill-icon-trigger"
-document.querySelectorAll('.skill-icon-trigger').forEach(trigger => {
-  const modalId = trigger.getAttribute('data-target'); // Obtiene el ID del modal desde data-target
-  const modal = document.getElementById(modalId); // Busca el modal por ID
-  const skillArticle = trigger.closest('article'); // Encuentra el <article> padre
-
-  // Si no existe el modal o el artículo, salta esta iteración
-  if (!skillArticle || !modal) return;
-
-  // Asegura que el artículo tenga posición relativa para posicionar el modal
-  skillArticle.style.position = 'relative';
-
-  // Función para mostrar el modal
-  const mostrarModal = () => {
-    clearTimeout(hideTimeout); // Cancela cualquier ocultación programada
-    ocultarModal(); // Oculta otros modales activos
-
-    // Muestra el modal
-    modal.classList.add('active');
-    modalActivo = modal;
-  };
-
-  // Función para programar la ocultación del modal
-  const programarOcultar = () => {
-    hideTimeout = setTimeout(() => {
-      // Oculta solo si el ratón no está sobre el ícono o el modal
-      if (!trigger.matches(':hover') && !modal.matches(':hover')) {
-        ocultarModal();
-      }
-    }, 200); // Retraso de 200ms para evitar cierres accidentales
-  };
-
-  // Eventos para mostrar/ocultar
-  trigger.addEventListener('mouseenter', mostrarModal);
-  trigger.addEventListener('mouseleave', programarOcultar);
-  modal.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
-  modal.addEventListener('mouseleave', programarOcultar);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalActivo) {
-      ocultarModal();
-    }
-  });
-});
-
-//$ **************************************************
-//$ ** ADAPTAR EL H3 DE 'HERRAMIENTAS' A LA VENTANA **
-//$ **************************************************
-(function () {
-  const h3 = document.querySelector('#skills article:nth-of-type(2) h3');
-  const fit = () => {
-    const parentW = h3.parentElement.clientWidth;
-    const textW = h3.scrollWidth;
-    // escala máximo 1, o bien parentW/textW si el texto desborda
-    const scale = Math.min(1, parentW / textW);
-    h3.style.transform = 'scaleX(' + scale + ')';
-    const extraSpace = (1 - scale) * 0.1;          // va de 0 (sin compresión) a 0.1em (máxima compresión)
-    h3.style.letterSpacing = (0.14 + extraSpace) + 'em';
-  };
-  // corre en carga y en todo resize
-  window.addEventListener('resize', fit);
-  fit();
-})();
-
-//$ *************************************************
-//$ ******************* FORMULARIO ******************
-//$ *************************************************
-let miFormulario = document.querySelector('form');
-const nombreInput = document.getElementById('nombre');
-const apellidoInput = document.getElementById('apellido');
-const emailInput = document.getElementById('email');
-const projectsInput = document.getElementById('numProjects');
-const checkboxInput = document.getElementById('privacidad');
-const seleccion = document.getElementById('seleccion');
-const error = document.querySelectorAll('fieldset p');
-
-function vNombre() {
-  const valor = nombreInput.value;
-  if (valor.replace(/\s+/g, ' ').length < 3) {
-    error[0].classList.add('visible');
-    nombreInput.classList.add('backgroundColorError');
-    nombreInput.classList.remove('backgroundColorOk');
-    return false;
-  } else {
-    error[0].classList.remove('visible');
-    nombreInput.classList.add('backgroundColorOk');
-    nombreInput.classList.remove('backgroundColorError');
-    return true;
-  }
-}
-
-function vApellido() {
-  const valor = apellidoInput.value;
-  if (valor.replace(/\s+/g, ' ').length < 3) {
-    error[1].classList.add('visible');
-    apellidoInput.classList.add('backgroundColorError');
-    apellidoInput.classList.remove('backgroundColorOk');
-    return false;
-  } else {
-    error[1].classList.remove('visible');
-    apellidoInput.classList.add('backgroundColorOk');
-    apellidoInput.classList.remove('backgroundColorError');
-    return true;
-  }
-}
-
-function vEmail() {
-  const valor = emailInput.value.trim().toLowerCase();
-  const emailValido = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(valor);
-  if (!emailValido) {
-    error[2].classList.add('visible');
-    emailInput.classList.add('backgroundColorError');
-    emailInput.classList.remove('backgroundColorOk');
-    return false;
-  } else {
-    error[2].classList.remove('visible');
-    emailInput.classList.add('backgroundColorOk');
-    emailInput.classList.remove('backgroundColorError');
-    return true;
-  }
-}
-
-function vRadio() {
-  const radios = document.querySelectorAll('input[name="plataforma"]');
-  const checked = [...radios].some(radio => radio.checked);
-  if (!checked) {
-    error[3].classList.add('visible');
-    return false;
-  } else {
-    error[3].classList.remove('visible');
-    return true;
-  }
-}
-
-function vProjects() {
-  const valorStr = projectsInput.value.trim();
-  const valorNum = Number(valorStr);
-
-  if (valorStr === '') {
-    error[4].classList.add('visible');
-    projectsInput.classList.add('backgroundColorError');
-    projectsInput.classList.remove('backgroundColorOk');
-    return false;
-  }
-
-  if (isNaN(valorNum) || valorNum < 1 || valorNum > 3) {
-    error[4].classList.add('visible');
-    projectsInput.classList.add('backgroundColorError');
-    projectsInput.classList.remove('backgroundColorOk');
-    return false;
-  } else {
-    error[4].classList.remove('visible');
-    projectsInput.classList.add('backgroundColorOk');
-    projectsInput.classList.remove('backgroundColorError');
-    return true;
-  }
-}
-
-function vCheckbox() {
-  if (!checkboxInput.checked) {
-    error[5].classList.add('visible');
-    return false;
-  } else {
-    error[5].classList.remove('visible');
-    return true;
-  }
-}
-
-function vSelect() {
-  const valor = seleccion.value;
-  if (valor) {
-    error[6].classList.remove('visible');
-    seleccion.style.backgroundColor = 'rgb(26, 165, 13)';
-    seleccion.style.color = 'rgb(228, 232, 235)';
-    return true;
-  } else {
-    error[6].classList.add('visible');
-    seleccion.style.backgroundColor = 'rgb(231, 9, 9)';
-    seleccion.style.color = 'rgb(228, 232, 235)';
-    return false;
-  }
-}
-
-function validarFormulario() {
-  let valido = true;
-  if (!vNombre()) valido = false;
-  if (!vApellido()) valido = false;
-  if (!vEmail()) valido = false;
-  if (!vRadio()) valido = false;
-  if (!vProjects()) valido = false;
-  if (!vCheckbox()) valido = false;
-  if (!vSelect()) valido = false;
-  return valido;
-}
-
-nombreInput.addEventListener('input', vNombre);
-apellidoInput.addEventListener('input', vApellido);
-emailInput.addEventListener('input', vEmail);
-projectsInput.addEventListener('blur', vProjects);
-
-document.querySelectorAll('input[name="plataforma"]').forEach(radio => {
-  radio.addEventListener('change', vRadio);
-  radio.addEventListener('blur', vRadio);
-});
-
-checkboxInput.addEventListener('change', vCheckbox);
-checkboxInput.addEventListener('blur', vCheckbox);
-
-seleccion.addEventListener('change', vSelect);
-seleccion.addEventListener('blur', vSelect);
-
-nombreInput.addEventListener('focus', function () {
-  nombreInput.setAttribute('placeholder', ' Ej: Jose Luis');
-  nombreInput.classList.add('foco');
-});
-
-apellidoInput.addEventListener('focus', function () {
-  apellidoInput.setAttribute('placeholder', ' Ej: De Pedro');
-  apellidoInput.classList.add('foco');
-});
-
-emailInput.addEventListener('focus', function () {
-  emailInput.setAttribute('placeholder', ' Ej: micorreo@gmail.com');
-  emailInput.classList.add('foco');
-});
-
-miFormulario.addEventListener('submit', function (evento) {
-  if (!validarFormulario()) {
-    evento.preventDefault();
-    alert('Por favor, completa el formulario correctamente.');
-  }
-});
 
 //$ *************************************************
 //$ ************** MENÚ RESPONSIVE ******************
@@ -506,11 +289,77 @@ mediaQuery.addEventListener('change', menuResponsive);
 document.addEventListener('click', clicFueraMenu);
 
 //$ *************************************************
-//$ **************** AÑO ACTUAL *********************
+//$ *************** MODAL HABILIDADES ***************
 //$ *************************************************
-const year = document.getElementById('year');
-if (year) {
-  const date = new Date();
-  year.textContent = date.getFullYear();
+let modalActivo = null;
+let hideTimeout = null;
+
+function ocultarModal() {
+  if (modalActivo) {
+    modalActivo.classList.remove('active');
+    modalActivo = null;
+  }
 }
 
+// Selecciona todos los íconos con la clase "skill-icon-trigger"
+document.querySelectorAll('.skill-icon-trigger').forEach(trigger => {
+  const modalId = trigger.getAttribute('data-target'); // Obtiene el ID del modal desde data-target
+  const modal = document.getElementById(modalId); // Busca el modal por ID
+  const skillArticle = trigger.closest('article'); // Encuentra el <article> padre
+
+  // Si no existe el modal o el artículo, salta esta iteración
+  if (!skillArticle || !modal) return;
+
+  // Asegura que el artículo tenga posición relativa para posicionar el modal
+  skillArticle.style.position = 'relative';
+
+  // Función para mostrar el modal
+  const mostrarModal = () => {
+    clearTimeout(hideTimeout); // Cancela cualquier ocultación programada
+    ocultarModal(); // Oculta otros modales activos
+
+    // Muestra el modal
+    modal.classList.add('active');
+    modalActivo = modal;
+  };
+
+  // Función para programar la ocultación del modal
+  const programarOcultar = () => {
+    hideTimeout = setTimeout(() => {
+      // Oculta solo si el ratón no está sobre el ícono o el modal
+      if (!trigger.matches(':hover') && !modal.matches(':hover')) {
+        ocultarModal();
+      }
+    }, 200); // Retraso de 200ms para evitar cierres accidentales
+  };
+
+  // Eventos para mostrar/ocultar
+  trigger.addEventListener('mouseenter', mostrarModal);
+  trigger.addEventListener('mouseleave', programarOcultar);
+  modal.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+  modal.addEventListener('mouseleave', programarOcultar);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalActivo) {
+      ocultarModal();
+    }
+  });
+});
+
+//$ **************************************************
+//$ ** ADAPTAR EL H3 DE 'HERRAMIENTAS' A LA VENTANA **
+//$ **************************************************
+(function () {
+  const h3 = document.querySelector('#skills article:nth-of-type(2) h3');
+  const fit = () => {
+    const parentW = h3.parentElement.clientWidth;
+    const textW = h3.scrollWidth;
+    // escala máximo 1, o bien parentW/textW si el texto desborda
+    const scale = Math.min(1, parentW / textW);
+    h3.style.transform = 'scaleX(' + scale + ')';
+    const extraSpace = (1 - scale) * 0.1;          // va de 0 (sin compresión) a 0.1em (máxima compresión)
+    h3.style.letterSpacing = (0.14 + extraSpace) + 'em';
+  };
+  // corre en carga y en todo resize
+  window.addEventListener('resize', fit);
+  fit();
+})();

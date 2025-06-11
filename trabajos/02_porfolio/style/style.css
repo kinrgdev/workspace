@@ -12,7 +12,6 @@
   --color-css: #264de4;
   --color-js: #f0db4f;
   --color-php: #3498db;
-  --color-requeired: #eb7373b6;
   --special-font: "Tektur", sans-serif;
   --text-shadow: 1px 1px 0px var(--color-secondary),
     -1px -1px 0px var(--color-secondary), 1px -1px 0px var(--color-secondary),
@@ -76,7 +75,7 @@ a:hover {
   transition: all 1s ease;
 }
 
-a:hover .icons {
+a:hover .icons, .mail:hover {
   color: var(--color-secondary);
   -webkit-filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
   filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
@@ -132,7 +131,7 @@ img {
 /************** MENSAJE DE COOKIES *************/
 /***********************************************/
 #bannerCookies {
-  width: 92%;
+  width: 50%;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -807,285 +806,6 @@ img.vibrando:hover {
   font-size: 1.7rem;
 }
 
-/************************/
-/******* CONTACT0 *******/
-/************************/
-#contact {
-  grid-row: 8 / 12;
-
-}
-
-#contact h2 {
-  width: 100%;
-  text-align: right;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10%;
-}
-
-legend {
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  text-shadow: 1px 1px 12px var(--color-primary);
-  font-weight: 900;
-}
-
-.reinicio {
-  all: unset;
-  margin-bottom: .5em;
-}
-
-label {
-  margin: 0 20%;
-}
-
-fieldset {
-  width: 100%;
-  min-height: clamp(25vh, 35vh, 45vh);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  border: 1px solid transparent;
-  border-radius: .3em;
-  box-shadow: 1px 1px 12px var(--color-primary);
-}
-
-fieldset input {
-  padding: 1%;
-  border: 3px ridge var(--color-secondary);
-  border-radius: 1em;
-  background: var(--color-background);
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Animación del borde metálico */
-#contact fieldset input[type="text"]:focus,
-#contact fieldset input[type="email"]:focus,
-#contact fieldset input[type="number"]:focus {
-  outline: none;
-  -webkit-animation: efecto-borde-metal 1s forwards;
-  animation: efecto-borde-metal 1s forwards;
-}
-
-@-webkit-keyframes efecto-borde-metal {
-  0% {
-    box-shadow: 0 0 0 0 var(--color-secondary),
-      inset 0 2px 4px var(--color-background);
-  }
-
-  100% {
-    background: linear-gradient(145deg, #0f172a 0, #5f82cc 100%);
-    box-shadow: 0 0 0 3px var(--color-secondary),
-      inset 0 4px 8px var(--color-secondary),
-      inset 0 -4px 8px var(--color-secondary),
-      0 12px 24px var(--color-secondary);
-  }
-}
-
-@keyframes efecto-borde-metal {
-  0% {
-    box-shadow: 0 0 0 0 var(--color-secondary),
-      inset 0 2px 4px var(--color-background);
-  }
-
-  100% {
-    background: linear-gradient(145deg, #0f172a 0, #5f82cc 100%);
-    box-shadow: 0 0 0 3px var(--color-secondary),
-      inset 0 4px 8px var(--color-secondary),
-      inset 0 -4px 8px var(--color-secondary),
-      0 12px 24px var(--color-secondary);
-  }
-}
-
-input::-webkit-input-placeholder {
-  color: #cac9d6cb;
-}
-
-input::-moz-placeholder {
-  color: #cac9d6cb;
-}
-
-input:-ms-input-placeholder {
-  color: #cac9d6cb;
-}
-
-input::-ms-input-placeholder {
-  color: #cac9d6cb;
-}
-
-input::placeholder {
-  color: #cac9d6cb;
-}
-
-hr {
-  width: 100%;
-  margin: 3% 0;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-}
-
-.radio-label {
-  width: 100%;
-  max-width: 200px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5em;
-}
-
-input[type="radio"] {
-  accent-color: var(--color-secondary);
-}
-
-select {
-  width: 30%;
-  height: 3vh;
-  margin-top: .5em;
-  accent-color: rgba(244, 10, 10, 0.800);
-}
-
-.checkbox-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.checkbox-container a {
-  font-size: 1.2rem;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-  width: 1em;
-  height: 1em;
-  margin: 1% 0;
-  accent-color: rgba(10, 155, 10, 0.800);
-}
-
-/*? Comentario de obligatoriedad de todos los campos */
-textarea+p {
-  margin-top: .7em;
-  font-size: 1.1rem;
-  line-height: 3;
-}
-
-.required {
-  color: var(--color-requeired);
-  font-weight: 700;
-}
-
-.mensaje-error {
-  display: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 1%;
-  padding: 2%;
-  border: 1px solid #c0c0c0;
-  border-radius: 1em;
-  background-color: #0f172ace;
-  color: rgba(238, 139, 10, 0.800);
-}
-
-.mensaje-error.visible {
-  display: block;
-}
-
-#contact fieldset input.backgroundColorOk {
-  all: unset !important;
-  padding: 1% !important;
-  border: 3px ridge var(--color-secondary) !important;
-  border-radius: 1em !important;
-  background-color: rgb(26, 165, 13) !important;
-  color: rgb(228, 232, 235) !important;
-  font-size: 1.5rem !important;
-  color: var(--color-primary) !important;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-}
-
-#contact fieldset input.backgroundColorError {
-  all: unset !important;
-  padding: 1% !important;
-  border: 3px ridge var(--color-secondary) !important;
-  border-radius: 1em !important;
-  background-color: rgb(231, 9, 9) !important;
-  color: rgb(228, 232, 235) !important;
-  font-size: 1.5rem !important;
-  color: var(--color-primary) !important;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-}
-
-/*? Comentarios */
-#contact fieldset textarea {
-  width: 90%;
-  min-height: clamp(25vh, 90%, 45vh);
-  resize: none;
-  display: block;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 3px double var(--color-secondary);
-  color: var(--color-secondary);
-  box-shadow: 2px 2px 12px var(--color-secondary);
-
-}
-
-/*? Botones de contacto */
-.contact {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.button-wrap {
-  width: 100%;
-  min-height: 12vh;
-  display: flex;
-  align-items: center;
-}
-
-.button-Margin {
-  justify-content: flex-end;
-  margin-right: 5%;
-}
-
-.contact button {
-  cursor: pointer;
-  width: clamp(6rem, 30vw, 11rem);
-  height: clamp(3rem, 8vh, 4rem);
-  padding: clamp(0.5rem, 1vh, 1rem);
-  border: 0;
-  font-size: clamp(1rem, 1vw + 0.7rem, 1.3rem);
-  letter-spacing: 3px;
-  color: var(--color-primary);
-  transition: transform 0.3s, color 0.3s, font-weight 0.3s;
-}
-
-.contact button:hover {
-  color: var(--color-secondary);
-  font-weight: 800;
-  transform: scale(1.1);
-}
-
-.contact .send {
-  background: linear-gradient(45deg, transparent 5%, #29752d 5%);
-  box-shadow: 6px 0px 0px var(--color-btn-special);
-}
-
-.contact .reset {
-  background: linear-gradient(45deg, transparent 5%, #c74129 5%);
-  box-shadow: 6px 0px 0px var(--color-btn-special);
-}
-
 /**********************/
 /******* FOOTER *******/
 /**********************/
@@ -1100,8 +820,46 @@ footer nav {
   width: 20%;
 }
 
+footer nav #copyEmail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
 footer nav a {
   padding-right: 1%;
+}
+
+.mail {
+  font-size: 1.7rem;
+}
+
+.mail:hover {
+  color: rgb(195, 17, 17);
+  -webkit-filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
+  filter: drop-shadow(0.2em 0.2em 0.5em rgb(216, 216, 210));
+}
+
+.notification {
+  position: absolute;
+  top: -20px;
+  left: 100%;
+  transform: translateX(-25%);
+  background-color: #0d6010;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.notification.show {
+  opacity: 1;
 }
 
 footer article {
@@ -1196,15 +954,11 @@ footer article:nth-of-type(2) a:hover {
     width: clamp(5%, 8vw, 15%);
   }
 
-  .contact button, .btn-wrapp button {
+  .btn-wrapp button {
     width: clamp(6rem, 30vw, 11rem);
     height: clamp(3rem, 8vh, 4rem);
     padding: clamp(0.5rem, 1vh, 1rem);
     font-size: clamp(1rem, 1vw + 0.7rem, 1.3rem);
-  }
-
-  .button-wrap {
-    margin: 2%;
   }
 
   #pagesAboutMe {
@@ -1246,24 +1000,11 @@ footer article:nth-of-type(2) a:hover {
     font-size: clamp(1.7rem, 3.7vw, 2.7rem);
   }
 
-  #contact fieldset {
-    flex: 1 1 100%;
-    margin: 3% auto;
-  }
-
-  #contact fieldset textarea {
-    min-height: clamp(20vh, 27vh, 30vh);
-  }
-
-  .contact button, .btn-wrapp button {
+  .btn-wrapp button {
     width: clamp(4rem, 28vw, 9rem);
     height: clamp(3rem, 8vh, 4rem);
     padding: clamp(0.5rem, 1vh, 1rem);
     font-size: clamp(.9rem, .9vw + 0.7rem, 1.2rem);
-  }
-
-  .button-wrap {
-    margin: 2%;
   }
 
   #pagesAboutMe {
@@ -1275,9 +1016,8 @@ footer article:nth-of-type(2) a:hover {
 
 @media screen and (max-height: 800px) {
   #bannerCookies {
-    height: 100vh;
+    height: 80vh;
   }
-
 }
 
 
@@ -1291,22 +1031,17 @@ footer article:nth-of-type(2) a:hover {
   #projects,
   #projects article,
   #skills,
-  #contact,
   #tools {
     grid-column: 1 / -1;
     margin: 3% auto;
     width: 90%;
   }
 
-  .contact button, .btn-wrapp button {
+  .btn-wrapp button {
     width: clamp(5rem, 29vw, 10rem);
     height: clamp(3rem, 8vh, 4rem);
     padding: clamp(0.5rem, 1vh, 1rem);
     font-size: clamp(1rem, 1vw + 0.7rem, 1.3rem);
-  }
-
-  .button-wrap {
-    margin: 2%;
   }
 
   #aboutMe img {
@@ -1346,7 +1081,6 @@ footer article:nth-of-type(2) a:hover {
   #pagesAboutMe {
     width: 95%;
   }
-
 }
 
 /**************** 600 ****************/
@@ -1368,7 +1102,7 @@ footer article:nth-of-type(2) a:hover {
   }
 
   #aboutMe, #projects, #projects article,
-  #skills, #tools, #contact {
+  #skills, #tools {
     grid-column: 1 / -1;
     width: 95%;
     margin: 0 auto;
@@ -1432,39 +1166,6 @@ footer article:nth-of-type(2) a:hover {
 
   #skills article:nth-of-type(2) ul li {
     font-size: 1.3rem;
-  }
-
-  #contact form {
-    flex-direction: column;
-    gap: 5%;
-  }
-
-  #contact fieldset {
-    min-height: auto;
-    padding: 5%;
-  }
-
-  #contact fieldset input {
-    width: 100%;
-    font-size: 1.1rem !important;
-  }
-
-  input[type="radio"] {
-    width: 2rem !important;
-  }
-
-  textarea {
-    min-height: 30vh !important;
-  }
-
-  .contact button {
-    width: 45% !important;
-    height: 50px !important;
-    font-size: 1rem !important;
-  }
-
-  .button-wrap {
-    justify-content: space-around;
   }
 
   footer {
@@ -1540,7 +1241,7 @@ footer article:nth-of-type(2) a:hover {
   }
 
   #aboutMe, #projects, #projects article,
-  #skills, #tools, #contact {
+  #skills, #tools {
     grid-column: 1 / -1;
     width: 95%;
     margin: 0 auto;
@@ -1604,39 +1305,6 @@ footer article:nth-of-type(2) a:hover {
 
   #skills article:nth-of-type(2) ul li {
     font-size: 1.3rem;
-  }
-
-  #contact form {
-    flex-direction: column;
-    gap: 5%;
-  }
-
-  #contact fieldset {
-    min-height: auto;
-    padding: 5%;
-  }
-
-  #contact fieldset input {
-    width: 100%;
-    font-size: 1.1rem !important;
-  }
-
-  input[type="radio"] {
-    width: 2rem !important;
-  }
-
-  textarea {
-    min-height: 30vh !important;
-  }
-
-  .contact button {
-    width: 45% !important;
-    height: 50px !important;
-    font-size: 1rem !important;
-  }
-
-  .button-wrap {
-    justify-content: space-around;
   }
 
   footer {

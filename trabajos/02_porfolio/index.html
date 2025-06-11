@@ -54,7 +54,6 @@
         <a href="#aboutMe">— Sobre mí</a>
         <a href="#projects">— Proyectos</a>
         <a href="#skills">— Habilidades</a>
-        <a href="#contact">— Contacto</a>
       </nav>
       <!-- //// Buguer Menu -->
       <div class="menu-wrap"><a href="javascript:void(0)" id="hamb"><i class="fa-solid fa-bars hamb"></i></a></div>
@@ -169,82 +168,15 @@
       </article>
     </section>
 
-    <!-- & Contacto -->
-    <section id="contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
-      <form action="sendForm.php" method="post" name="miFormulario" id="formulario" novalidate>
-        <h2 class="textContainer">— Contacto —</h2>
-        <fieldset>
-          <legend>Rellene el formulario:</legend>
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre">
-          <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
-          <hr>
-          <label for="apellido">Apellido</label>
-          <input type="text" name="apellido" id="apellido">
-          <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
-          <hr>
-          <label for="email">e-mail</label>
-          <input type="email" name="email" id="email" autocomplete="email">
-          <p id="error" class="mensaje-error">Debe introducir un correo electrónico válido</p>
-          <hr>
-          <legend for="plataforma" class="reinicio">¿Cómo me encontraste?</legend>
-          <label for="google" class="radio-label">
-            <input type="radio" name="plataforma" id="google" value="Google"> Google
-          </label>
-          <label for="gitHub" class="radio-label">
-            <input type="radio" name="plataforma" id="gitHub" value="GitHub"> GitHub
-          </label>
-          <label for="codepen" class="radio-label">
-            <input type="radio" name="plataforma" id="codepen" value="Codepen"> Codepen
-          </label>
-          <label for="bluesky" class="radio-label">
-            <input type="radio" name="plataforma" id="bluesky" value="bluesky"> BlueSky
-          </label>
-          <label for="otros" class="radio-label">
-            <input type="radio" name="plataforma" id="otros" value="otros"> Otros
-          </label>
-          <p id="error" class="mensaje-error">Debe seleccionar una opción</p>
-          <hr>
-          <label for="numProjects">¿Cuántos proyectos te gustaría ver?</label>
-          <input type="number" min="1" max="3" name="numProjects" id="numProjects">
-          <p id="error" class="mensaje-error">Debe introducir un valor entre 1 y 3</p>
-          <hr>
-          <label for="privacidad" class="checkbox-container">
-            <span>Acpeto la declaración de privacidad</span>
-            <a href="pages/privacidad.html" target="_blank">Declaración de privacidad</a>
-            <input type="checkbox" name="privacidad" id="privacidad" value="aceptado">
-          </label>
-          <p id="error" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
-          <hr>
-          <label for="seleccion">¿Qué tipo de proyecto te interesa ver?</label>
-          <select name="seleccion" id="seleccion">
-            <option value="">-- Selecciona una opción --</option>
-            <option value="web">Sitio web</option>
-            <option value="codepen">Codepen</option>
-          </select>
-          <p id="error" class="mensaje-error">Debe elegir una opción</p>
-          <hr>
-          <textarea name="comentarios" placeholder="¿Comentarios?"></textarea>
-          <p class="required">Todos los campos son obligatorios</p>
-        </fieldset>
-
-        <!-- //// Botones de envío y reset *-->
-        <div class="contact">
-          <div class="button-wrap button-Margin">
-            <button type="submit" class="send">Enviar</button>
-          </div>
-          <div class="button-wrap">
-            <button type="reset" class="reset">Reset</button>
-          </div>
-        </div>
-      </form>
-    </section>
-
     <!-- & Footer -->
     <footer>
       <nav>
         <a href="https://github.com/kinrgdev" target="_blank"><i class="fab fa-github icons"></i></a>
         <a href="https://codepen.io/kinrgdev" target="_blank"><i class="fab fa-codepen icons"></i></a>
+        <div id="copyEmail" title="Copiar correo">
+          <i class="fa-regular fa-envelope mail"></i>
+          <div class="notification" id="notification">¡Correo copiado!</div>
+        </div>
       </nav>
       <article>
         <i class="fa-regular fa-copyright">kinrgdev &#x2022; <span id="year"></span></i><br />

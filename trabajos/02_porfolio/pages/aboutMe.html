@@ -45,7 +45,7 @@
     <section id="pagesAboutMe">
         <h2>Joaquín Rodríguez García</h2>
         <img src="../img/yo.png" alt="mi foto personal" class="zoom2" />
-        <p>
+        <p id="machine">
             Me defino como una persona autodidacta y tenaz, apasionada por la tecnología y el
             desarrollo. Mi verdadera motivación reside en el aprendizaje continuo y la búsqueda
             constante de mejora, lo que me impulsa a explorar nuevas soluciones, optimizar
@@ -68,9 +68,13 @@
     <!-- & Footer -->
     <footer class="footer">
         <nav>
-            <a href="https://github.com/kinrgdev" target="_blank"><i class="fab fa-github icons"></i></a>
-            <a href="https://codepen.io/kinrgdev" target="_blank"><i class="fab fa-codepen icons"></i></a>
-        </nav>
+        <a href="https://github.com/kinrgdev" target="_blank"><i class="fab fa-github icons"></i></a>
+        <a href="https://codepen.io/kinrgdev" target="_blank"><i class="fab fa-codepen icons"></i></a>
+        <div id="copyEmail" title="Copiar correo">
+          <i class="fa-regular fa-envelope mail"></i>
+          <div class="notification" id="notification">¡Correo copiado!</div>
+        </div>
+      </nav>
         <article>
             <i class="fa-regular fa-copyright">kinrgdev &#x2022; <span id="year"></span></i><br />
             <p>Todos los derechos reservados.</p>
