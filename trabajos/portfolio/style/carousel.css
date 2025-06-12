@@ -15,7 +15,6 @@
   --color-css: #264de4;
   --color-js: #f0db4f;
   --color-php: #3498db;
-  --color-requeired: #eb7373b6;
   --special-font: "Tektur", sans-serif;
 }
 
@@ -240,7 +239,6 @@ header a:hover {
 }
 
 .progress-icon {
-  cursor: pointer;
   font-size: 1rem;
   color: #ccc;
   transition: all 0.3s ease;
@@ -285,7 +283,7 @@ header a:hover {
   flex: 0 0 100%;
   padding: 2%;
   border-radius: 1em;
-  background: rgba(219, 212, 212, 0.1);
+  background: rgba(54, 72, 80, 0.9);
   transition: transform 0.3s ease;
 }
 
@@ -295,6 +293,7 @@ header a:hover {
   float: left;
   margin: 0 1em;
   border-radius: 3%;
+  filter: drop-shadow(3px 3px 7px var(--color-primary));
 }
 
 .pagesProjects img.formatNo16-9 {
@@ -306,15 +305,24 @@ header a:hover {
 }
 
 .tech {
-  margin: .5em 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+  margin-top: 12px;
 }
 
-.tech a i {
-  margin: 2% 1%;
+.web-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  gap: 10px;
 }
+
 
 div span {
-  padding: 0 2%;
+  width: fit-content;
+  padding: .2em .6em;
+  margin: .1em;
   border: 3px solid var(--color-secondary);
   border-radius: 0.7em;
   box-shadow: 3px 3px 3px var(--color-secondary);
