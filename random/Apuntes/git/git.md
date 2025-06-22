@@ -1,133 +1,121 @@
-# - ------------------- Instalar Git -----------------------------:
+# 🧠 Chuleta Git + GitHub CLI + Flujo de Trabajo en VSCode
 
-- Descargarlo: https://git-scm.com/downloads/win
-- Instalar
-  git --version
+---
 
-# - ------------------- Instalar GitCli -----------------------------:
+## 🛠️ 1. Instalación de Git
 
-- En Powershell o CMD:
-  winget install --id GitHub.cli
-- Marcar Y
-- Copiar path del archivo
-- Abrir el menú de Variables de Entorno:
-- Presiona Win + R, escribe sysdm.cpl y pulsa Enter.
-- Ve a la pestaña Opciones avanzadas y haz clic en Variables de entorno.
-- Editar la variable Path:
-- En la sección Variables del sistema, busca Path y haz clic en Editar.
-- Pulsa Nuevo y añade la ruta donde está instalado gh.
-- Pulsa Aceptar en todas las ventanas.
-- Cierra y vuelve a abrir PowerShell o CMD
+```bash
+# Descargar e instalar desde:
+https://git-scm.com/downloads
 
+# Verificar instalación:
+git --version
+```
+
+---
+
+## ⚙️ 2. Instalación de GitHub CLI (gh)
+
+```bash
+winget install --id GitHub.cli
 gh --version
+```
 
-# - ------------------- Loguearse -----------------------------:
+> ⚠️ Si no funciona, añade la ruta a `gh.exe` en Variables de entorno > Path
 
+---
+
+## 🔐 3. Autenticación
+
+```bash
 gh auth login
+# Sigue los pasos
 
-- elegir la opción
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
 
-git config --global user.name "nombre de usuario"
-git config --global user.email "email"
+# Verificar:
+git config --global --list
+```
 
-- O a través de la interfaz de VSCODE en Accounts
+---
 
-- Verificar:
-  git config --global --list
+## 🆕 4. Crear repositorio en GitHub desde terminal
 
-# ------------------- Crear repositorio en Github desde Terminal -----------------------------:
+```bash
+# Público
+gh repo create nombreDelRepo --public --source=. --push --add-readme
 
-gh repo create nombreDelRepositorio --public --source=. --push --add-readme
+# O privado
+gh repo create nombreDelRepo --private --source=. --push --add-readme
+```
 
-ó
+---
 
-gh repo create nombreDelRepositorio --private --source=. --push --add-readme
+## 📁 5. Crear repositorio local
 
-
-(Se inicializa sola)
-
-# ------------------- Carpeta local a repositorio Git -----------------------------:
-
-- Cambiar a la rama main:
-
-git branch -m master main
-
-- Se crea la carpeta, se abre en VSCODE:
-
+```bash
 git init
+git branch -m master main  # Cambiar nombre de rama si es necesario
 
-# (o cualquier otro archivo se que quiera agregar)
+echo "# Título del proyecto" > README.md
 git add .
-# saldrán muchos warning si hay archivos
-echo "# learnspace" > README.md
 git commit -m "Primer commit"
-git pull origin main
 
-# (debe coincidir repositorio y enlace)
-
+git remote add origin https://github.com/usuario/repositorio.git
 git push -u origin main
+```
 
-# Sí hay cambios externos como en la web de GitHub u otro usuario en VSCODE:
+---
 
-git pull origin main
+## 🔄 6. Clonar un repositorio
 
-# Después (para actualizar el local):
+```bash
+git clone https://github.com/usuario/repositorio.git
+cd repositorio
+```
 
-git push origin main
+---
 
-# ------------------- Clonar repositorio -----------------------------:
+## ✍️ 7. Flujo de trabajo común
 
-- Navegamos hasta la carpeta donde queremos o con la nativa de Clonar de VSCODE.
-- Copiamos la url del repositorio de GitHub.
-- Escribimos: git clone https://...
-- Navegar a la carpeta:
-  cd Repositorio
-  git status
-  git add .
+```bash
+git status                  # Ver cambios
+git add .                  # Añadir todos los archivos
+git commit -m "Mensaje"
+git pull origin main       # Traer cambios remotos
+git push origin main       # Subir cambios
+```
 
-# git add archivo_resuelto.txt
+---
 
-# git commit -m "Conflictos resueltos"
+## ⚠️ 8. Si hay conflictos al hacer pull
 
-git commit -m "descripción del commit"
-git pull origin main
-git push origin main
-
-- Subir cambios: git push origin [nombre de la rama]
-- Obtener las últimas actualizaciones del repositorio: git pull origin [nombre de la rama]
-
-# ---------------- Descargar los cambios si el remoto tiene cambios que el equipo local no tiene --------------------------:
-
-# (Updates were rejected because the remote contains work that you do not have locally)
-
+```bash
 git pull origin main --rebase
-
-# Si Git detecta conflictos, revisa los archivos afectados, edítalos manualmente y luego ejecuta:
-
+# Editar conflictos
 git add .
 git rebase --continue
-
-- Empujar cambios
-
 git push origin main
+```
 
-- Y sino (sobreescribe los cambios remotos)
+---
 
-git push origin main --force
+## 🧨 9. Forzar sincronización (⚠️ borra cambios locales)
 
- # ---------------- Miscelanea --------------------------:
-
-* Confirmar rama
-git branch
-
-* Confirmar repositorio
-git remote -v
-
-* Si no se está en main (o en otra)
-git checkout main
-
-* Forzar sincronización
-
+```bash
 git fetch --all
 git reset --hard origin/main
 git clean -df
+```
+
+---
+
+## 🧰 10. Comandos útiles
+
+```bash
+git branch         # Ver en qué rama estás
+git checkout main  # Cambiar a otra rama
+git remote -v      # Ver origen remoto
+git log --oneline  # Historial compacto
+```
