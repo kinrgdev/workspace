@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Repaso de lo esencial de HTML" />
+    <meta name="author" content="kinrgdev" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Vuelta a lo esencial</title>
+</head>
+
+<body>
+    <header>
+        <h1>Remember Remembeer</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/html-css.html">HTML/CSS</a></li>
+                <li><a href="../pages/js.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>HTML / CSS</h2>
+        <!-- $ MENÚ DESPLEGABLE -->
+        <div>
+            <h3>Menú desplegable</h3>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="#news">Noticias</a>
+                        <ul class="submenu">
+                            <li><a href="../pages/html-css.html">html/css</a></li>
+                            <li><a href="../pages/js.html">js</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- $ LISTAS -->
+         <div>
+            <h3>LISTAS</h3>
+            <h4>Ordenadas</h4>
+            <ol>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ol>
+            <h4>No ordenadas</h4>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+            <h4>Anidadas</h4>
+            <ol>
+                <li>Elemento 1</li>
+                <ul class="otroTipo">
+                    <li>Elemento 1.1</li>
+                    <li>Elemento 1.2</li>
+                    <li>Elemento 1.3</li>
+                </ul>
+                <li>Elemento 4</li>
+                <li>Elemento 5</li>
+            </ol>
+            <h4>Ordenadas/Desordenas sin tipo</h4>
+            <ul class="sinTipo">
+                <li>Elemento sin tipo 1</li>
+                <li>Elemento sin tipo 2</li>
+                <li>Elemento sin tipo 3</li>
+            </ul>
+         </div>
+        <div>
+            <!-- $ TABLAS -->
+            <table>
+                <h3>TABLAS</h3>
+                <colgroup>
+                    <!--// asigna clases a columnas y el span es la cantidad de col que coge -->
+                    <col span="1" class="col1">
+                    <col span="1" class="col2">
+                    <col span="1" class="col3">
+                </colgroup>
+                <caption>Título de la tabla</caption>
+                <!-- // Al usar colspan / rowspan desplaza los elementos que ocupa -->
+                <tr>
+                    <th colspan="2">Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Joaquín</td>
+                    <td>Márquez</td>
+                    <td>48 años</td>
+                </tr>
+                <tr>
+                    <td>Manuel</td>
+                    <td>García</td>
+                    <td>22 años</td>
+                </tr>
+                <tr>
+                    <td>Pepe</td>
+                    <td>Macías</td>
+                    <td>35 años</td>
+                </tr>
+            </table>
+        </div>
+        
+    </main>
+    <footer>&#169; kinrgdev</footer>
+</body>
+
+</html>

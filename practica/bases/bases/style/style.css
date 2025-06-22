@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  color: #c0c0c0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+header, footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: rgb(32, 32, 31);
+}
+
+nav {
+  width: fit-content;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  padding: 5px;
+}
+
+main {
+  min-height: 80vh;
+  background-color: #343535
+}
+
+div {
+  width: 80%;
+  margin: 3vh auto;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+div:nth-of-type(odd) {
+  background-color: #222;
+}
+
+div:nth-of-type(even) {
+  background-color: #444;
+}
+
+h4 {
+  margin: 2vh 0;
+  font-style: italic;
+}
+
+
+/* ****************** */
+
+nav {
+  width: fit-content;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  list-style: none;
+  position: relative;
+}
+
+.menu>li>a {
+  display: block;
+  padding: 15px 20px;
+  transition: background 0.7s;
+}
+
+.menu>li>a:hover {
+  color: red;
+}
+
+.submenu {
+  display: none;
+  min-width: fit-content;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: #444;
+  box-shadow: 0 3px 5px rgba(22, 22, 22, 0.2);
+}
+
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+  transition: background 0.3s;
+}
+
+.submenu li:last-child a {
+  border-bottom: none;
+}
+
+.submenu li a:hover {
+  background: #666;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/*$ **********************************************************/
+/*$ ************************ LISTAS **************************/
+/*$ **********************************************************/
+
+ol, ul {
+  margin: 3vh 0;
+  padding: 1em;
+}
+
+.otroTipo {
+  list-style: square;
+}
+
+.sinTipo {
+  list-style: none;
+}
+
+/* & &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/*$ **********************************************************/
+/*$ ************************ TABLAS **************************/
+/*$ **********************************************************/
+
+
+table {
+  width: 100%;
+  height: 150px;
+}
+
+caption {
+  color: #c0c0c0;
+}
+
+table,
+th,
+td {
+  border: 3px ridge slategrey;
+  border-collapse: collapse;
+  color: black;
+  /* ? Separa los datos. Como un gap */
+  /* border-spacing: 25px; */
+}
+
+td {
+  padding-left: 10px;
+}
+
+/* .col */
+
+.col1 {
+  background-color: rgb(21, 73, 116);
+}
+
+.col2 {
+  background-color: rgb(109, 109, 214);
+}
+
+.col3 {
+  background-color: rgb(63, 121, 81);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
