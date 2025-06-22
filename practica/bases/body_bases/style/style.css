@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+header {
+    height: 10vh;
+    background-color: rgb(236, 77, 37);
+}
+
+main{
+    min-height: 80vh;
+    background-color: rgb(22, 90, 22);
+}
+
+footer{
+    height: 10vh;
+    background-color: rgb(73, 82, 216);
+}
