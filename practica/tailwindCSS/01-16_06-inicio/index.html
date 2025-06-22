@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Empezando a aprender TailwindCSS" />
+    <!-- CDN TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com?version=3.4.1"></script>
+    <script src="app/tailwind-config.js"></script>
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers:regular" rel="stylesheet">
+    <title>Aprendiendo TailwindCSS</title>
+</head>
+
+<body class="font-tektur text-text_primary bg-body overflow-x-hidden">
+    <main class="min-h-screen grid grid-rows-[auto_1fr_auto] gap-3">
+
+        <!-- $ Encabezado -->
+        <header class="min-h-16 bg-[#c0c0c0] text-[#333] flex justify-between items-center px-5">
+            <h1 class="text-4xl font-bangers tracking-wider">KinRG</h1>
+            <nav class="text-lg">
+                <ul class="flex justify-center items-center gap-5">
+                    <a href="index.html" class="hover:text-[red] hover:underline active:text-[white]">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#" class="hover:text-[red] hover:underline active:text-[white]">
+                        <li class="border-x-2 border-[#333] px-5">Noticias</li>
+                    </a>
+                    <a href="#" class="hover:text-[red] hover:underline active:text-[white]">
+                        <li class="border-r-2 border-[#333] pr-5">Blog</li>
+                    </a>
+                    <a href="#" class="hover:text-[red] hover:underline active:text-[white]">
+                        <li>Contacto</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- $ Contenido -->
+
+        <!-- * Sección 1 -->
+        <section class="min-h-screen my-3 flex items-center ">
+            <article
+                class="w-5/6 m-auto p-10 bg-[#70225e] rounded-3xl">
+                <h2 class="block w-full text-center text-3xl mb-6">Propiedades por defecto</h2>
+                <div class="flex md:flex-row gap-6 items-start">
+                    <p class="text-justify hover:text-[#178962]">
+                        <img src="img/bills.png" alt="Bills" class=" float-left w-2/6 h-auto mb-4 md:mr-7 object-cover hover:[filter:drop-shadow(0_4px_36px_rgba(125,125,1,0.5))]">
+                        *,
+                        *::before,
+                        *::after {
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        }
+                        <br>
+                        Todo esto lo hace TailwindCSS por defecto
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam recusandae veritatis adipisci
+                        minus maiores neque perspiciatis molestiae. Dolorem quibusdam ipsa commodi suscipit, minus
+                        consequuntur error dignissimos dolores laudantium autem? Hic.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolor commodi est rem consequuntur
+                        modi delectus architecto deleniti, natus voluptate corrupti quod. Illo porro impedit cum excepturi
+                        doloribus ullam beatae eos ducimus nihil! Quae culpa odit expedita optio sequi! Cumque natus harum
+                        dicta hic reprehenderit, perspiciatis minus consectetur, velit inventore animi modi fuga architecto
+                        maiores suscipit autem corrupti, consequatur itaque vero placeat exercitationem mollitia soluta
+                        laudantium labore. Animi quibusdam perspiciatis ut ab quas repellat voluptate quaerat itaque
+                        officia. Eveniet iusto recusandae, sapiente laborum aliquam accusantium ea non! Error similique
+                        nobis deserunt, in, a dolorem ut aspernatur officiis inventore quas saepe.
+                    </p>
+                </div>
+                <a href="https://www.filmaffinity.com/es/main.html" target="_blank"
+                class="block text-right font-roboto text-[#98c24a] hover:text-[red] hover:underline active:text-[white] mt-5">
+                Filmaffinty</a>
+            </article>
+        </section>
+
+        <hr class="w-1/2 block m-auto">
+
+        <!-- * Sección 2 -->
+        <section class="min-h-screen my-3 flex items-center ">
+            <article
+                class="w-5/6 m-auto p-10 bg-[#70225e] rounded-3xl">
+                <h2 class="block w-full text-center text-3xl mb-6">Propiedades por defecto</h2>
+                <div class="flex md:flex-row gap-6 items-start">
+                    <p class="text-justify hover:text-[#178962]">
+                        <img src="img/gohanSSJ2.gif" alt="Gohan SSJ2" class=" float-left w-3/6 h-auto mb-4 md:mr-7 object-cover hover:[filter:drop-shadow(0_4px_36px_rgba(125,125,1,0.5))]">
+                        *,
+                        *::before,
+                        *::after {
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        }
+                        <br>
+                        Todo esto lo hace TailwindCSS por defecto
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam recusandae veritatis adipisci
+                        minus maiores neque perspiciatis molestiae. Dolorem quibusdam ipsa commodi suscipit, minus
+                        consequuntur error dignissimos dolores laudantium autem? Hic.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolor commodi est rem consequuntur
+                        modi delectus architecto deleniti, natus voluptate corrupti quod. Illo porro impedit cum excepturi
+                        doloribus ullam beatae eos ducimus nihil! Quae culpa odit expedita optio sequi! Cumque natus harum
+                        dicta hic reprehenderit, perspiciatis minus consectetur, velit inventore animi modi fuga architecto
+                        maiores suscipit autem corrupti, consequatur itaque vero placeat exercitationem mollitia soluta
+                        laudantium labore. Animi quibusdam perspiciatis ut ab quas repellat voluptate quaerat itaque
+                        officia. Eveniet iusto recusandae, sapiente laborum aliquam accusantium ea non! Error similique
+                        nobis deserunt, in, a dolorem ut aspernatur officiis inventore quas saepe.
+                    </p>
+                </div>
+                <a href="https://www.filmaffinity.com/es/main.html" target="_blank"
+                class="block text-right font-roboto text-[#98c24a] hover:text-[red] hover:underline active:text-[white] mt-5">
+                Filmaffinty</a>
+            </article>
+        </section>
+
+        <!-- $ Footer -->
+        <footer class="min-h-16 bg-[#c0c0c0] text-[#333] flex justify-center items-center">
+            <h3>Footer</h3>
+        </footer>
+
+    </main>
+</body>
+
+</html>
