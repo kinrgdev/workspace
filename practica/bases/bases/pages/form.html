@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Repaso de lo esencial de HTML" />
+    <meta name="author" content="kinrgdev" />
+    <link rel="stylesheet" href="../style/form.css">
+    <title>Vuelta a lo esencial</title>
+</head>
+
+<body>
+    <header>
+        <h1>Remember Remembeer</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a class="active" href="../pages/html-css.html">HTML/CSS</a></li>
+                <li><a href="../pages/js.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>HTML / CSS</h2>
+        <section id="contact">
+            <form action="sendForm.php" method="post" name="miFormulario" id="formulario" novalidate>
+                <h2 class="textContainer">— Contacto —</h2>
+                <fieldset>
+                    <legend>Rellene el formulario:</legend>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+                    <hr>
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido">
+                    <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+                    <hr>
+
+                    <label for="email">e-mail</label>
+                    <input type="email" name="email" id="email" autocomplete="email">
+                    <p id="error" class="mensaje-error">Debe introducir un correo electrónico válido</p>
+                    <hr>
+
+                    <label for="edad">Ingrese su edad</label>
+                    <input type="number" name="edad" id="edad"><br>
+                    <p id="error" class="mensaje-error">Debe de introducir una edad</p>
+                    <p id="error" class="mensaje-error">Hay que ser mayor de 18 años...</p>
+                    <hr>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <p id="error" class="mensaje-error">
+                        Password inválido. <br>
+                        Debe de introducir entre un mínimo de 7 caracteres y un máximo de 32. <br>
+                        Debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter
+                        especial.
+                    </p>
+                    <hr>
+
+                    <label for="confirmPassword">Confirmar Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword">
+                    <p id="error" class="mensaje-error">Las contraseñas no coinciden...</p>
+                    <hr>
+
+                    <legend for="plataforma" class="reinicio">¿Cómo me encontraste?</legend>
+                    <label for="google" class="radio-label">
+                        <input type="radio" name="plataforma" id="google" value="Google"> Google
+                    </label>
+                    <label for="gitHub" class="radio-label">
+                        <input type="radio" name="plataforma" id="gitHub" value="GitHub"> GitHub
+                    </label>
+                    <label for="codepen" class="radio-label">
+                        <input type="radio" name="plataforma" id="codepen" value="Codepen"> Codepen
+                    </label>
+                    <label for="bluesky" class="radio-label">
+                        <input type="radio" name="plataforma" id="bluesky" value="bluesky"> BlueSky
+                    </label>
+                    <label for="otros" class="radio-label">
+                        <input type="radio" name="plataforma" id="otros" value="otros"> Otros
+                    </label>
+                    <p id="error" class="mensaje-error">Debe seleccionar una opción</p>
+                    <hr>
+
+                    <label for="numProjects">¿Cuántos proyectos te gustaría ver?</label>
+                    <input type="number" min="1" max="3" name="numProjects" id="numProjects">
+                    <p id="error" class="mensaje-error">Debe introducir un valor entre 1 y 3</p>
+                    <hr>
+
+                    <label for="privacidad" class="checkbox-container">
+                        <span>Acpeto la declaración de privacidad</span>
+                        <a href="pages/privacidad.html" target="_blank">Declaración de privacidad</a>
+                        <input type="checkbox" name="privacidad" id="privacidad" value="aceptado">
+                    </label>
+                    <p id="error" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
+                    <hr>
+
+                    <label for="seleccion">¿Qué tipo de proyecto te interesa ver?</label>
+                    <select name="seleccion" id="seleccion">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="web">Sitio web</option>
+                        <option value="codepen">Codepen</option>
+                    </select>
+                    <p id="error" class="mensaje-error">Debe elegir una opción</p>
+                    <hr>
+
+                    <label for="seleccion">Elija el fondo de pantalla que tendrá su perfil:</label>
+                    <select name="seleccion" id="seleccion">
+                        <option value="" disabled selected>Seleccione un fondo de pantalla</option>
+                        <option value="img/db1.webp">Fondo 1</option>
+                        <option value="img/db2.webp">Fondo 2</option>
+                        <option value="img/db3.webp">Fondo 3</option>
+                    </select>
+                    <p id="error" class="mensaje-error">Debe seleccionar un fondo de pantalla</p>
+                    <p class="campos">Todos los campos son obligatorios.</p>
+                    <hr>
+
+                    <textarea name="comentarios" id="comentarios" placeholder="¿Comentarios?"></textarea>
+                    <p class="required">Todos los campos son obligatorios</p>
+                    
+                </fieldset>
+
+                <!-- //// Botones de envío y reset *-->
+                <div class="contact">
+                    <div class="button-wrap button-Margin">
+                        <button type="submit" class="send">Enviar</button>
+                    </div>
+                    <div class="button-wrap">
+                        <button type="reset" class="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div>
+            <div class="formText">
+                <a href="../pages/html-css.html">
+                    <h2>Volver a atrás</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>&#169; kinrgdev</footer>
+</body>
+
+</html>

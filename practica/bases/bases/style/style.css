@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Tektur:regular,500,600,700,800,900");
+
+
 *,
 *::before,
 *::after {
@@ -81,8 +84,26 @@ h4 {
   font-style: italic;
 }
 
+.heroLink, .formLink {
+  color: rgb(20, 109, 57);
+  font-size: 2rem;
+  font-family: "Tektur", sans-serif;
+}
+
+h2+a {
+  font-size: 1.5rem;
+  font-family: "Tektur", sans-serif;
+}
+
+h2+a:hover {
+  color: rgb(20, 109, 57);
+}
 
 /* ****************** */
+
+nav a.active {
+  color: rgb(26, 206, 206);
+}
 
 nav {
   width: fit-content;
@@ -205,4 +226,120 @@ td {
   background-color: rgb(63, 121, 81);
 }
 
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* & &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/*$ **********************************************************/
+/*$ ******************** HERO VIDEO **************************/
+/*$ **********************************************************/
+
+
+
+.heroVideo {
+  all: unset;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+}
+
+.textVideo {
+  background-color: #6d656559 !important;
+  padding: 3em;
+  border-radius: 1em;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+/* & &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/*$ **********************************************************/
+/*$ ********************* HERO IMG ***************************/
+/*$ **********************************************************/
+
+.heroImg {
+  all: unset;
+  min-height: 100vh;
+  background: url(../img/firegirl.png), linear-gradient(rgba(202, 161, 99, 0.5)), no-repeat center center;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  background-attachment: scroll;
+  display: flex;
+  align-items: baseline;
+}
+
+.textImg{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color:rgba(37, 41, 41, 0.623) !important;
+  text-align: right;
+  padding: 3em;
+  border-radius: 1em;
+}
+
+/* & &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/*$ **********************************************************/
+/*$ ***************** IMAGEN ENCUADRADA **********************/
+/*$ **********************************************************/
+
+.cuadroImg {
+  width: 50%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-img {
+  position: relative;
+  width: 60%;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: 5px ridge rgb(102, 13, 13);
+  overflow: hidden;
+  border-radius: 50% 50% 0 0;
+}
+
+.contain-img img {
+  width: 250%;
+  height: 250%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.contain-img img:hover {
+  width: 100%;
+  height: 100%;
+}
+
+.cuadroImg .contain-img h3 {
+  width: 100%;
+  padding: 5%;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border-top: 2px solid rgb(189, 183, 183);
+  background-color: rgba(17, 16, 16, 0.603);
+  color: #ccc;
+  text-align: justify;
+}
+
+.cuadroImg .contain-img:hover h3 {
+  bottom: 0;
+}
