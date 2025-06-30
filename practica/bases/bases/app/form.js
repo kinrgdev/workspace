@@ -16,6 +16,8 @@ const rangoInput = document.getElementById('satisfaccion');
 const outputSatisfaccion = document.getElementById('outputSatisfaccion');
 const colorInput = document.getElementById('colorFavorito');
 const archivoInput = document.getElementById('archivo');
+const archivoNombre = document.getElementById('archivoNombre');
+const previewImg = document.getElementById('previewImagen');
 const urlInput = document.getElementById('paginaWeb');
 const navegadorInput = document.getElementById('navegador');
 
@@ -317,43 +319,55 @@ function vSatisfaccion() {
 }
 
 function vColor() {
-  const valor = colorInput.value.trim().toUpperCase();
-  
-  const esNegro = (
-    valor === '#000000' || 
-    valor === '#000' || 
-    valor === 'BLACK' || 
-    valor === 'RGB(0,0,0)'
-  );
-  
-  errorColor.classList.toggle('visible', esNegro);
-  return !esNegro;
+    const valor = colorInput.value.trim().toUpperCase();
+
+    const esNegro = (
+        valor === '#000000' ||
+        valor === '#000' ||
+        valor === 'BLACK' ||
+        valor === 'RGB(0,0,0)'
+    );
+
+    errorColor.classList.toggle('visible', esNegro);
+    return !esNegro;
 }
 
 
 function vArchivo() {
-    const archivo = archivoInput.files[0];
-    if (!archivo) {
-        errorArchivo.textContent = 'Debe subir un archivo.';
-        errorArchivo.classList.add('visible');
-        archivoInput.classList.add('backgroundColorError');
-        archivoInput.classList.remove('backgroundColorOk');
-        return false;
-    }
+  const archivo = archivoInput.files[0];
 
-    if (!archivo.type.startsWith('image/') || archivo.size > 2 * 1024 * 1024) {
-        errorArchivo.textContent = 'El archivo debe ser una imagen menor de 2MB.';
-        errorArchivo.classList.add('visible');
-        archivoInput.classList.add('backgroundColorError');
-        archivoInput.classList.remove('backgroundColorOk');
-        return false;
-    }
+  if (!archivo) {
+    errorArchivo.classList.add('visible');
+    archivoInput.classList.add('backgroundColorError');
+    archivoInput.classList.remove('backgroundColorOk');
+    previewImg.src = '';
+    previewImg.classList.remove('visible');
+    return false;
+  }
 
-    errorArchivo.classList.remove('visible');
-    archivoInput.classList.add('backgroundColorOk');
-    archivoInput.classList.remove('backgroundColorError');
-    return true;
+  if (archivo.size > 2 * 1024 * 1024) {
+    errorArchivo.classList.add('visible');
+    archivoInput.classList.add('backgroundColorError');
+    archivoInput.classList.remove('backgroundColorOk');
+    archivoNombre.textContent = 'Archivo demasiado grande';
+    previewImg.classList.remove('visible');
+    return false;
+  }
+
+  errorArchivo.classList.remove('visible');
+  archivoInput.classList.add('backgroundColorOk');
+  archivoInput.classList.remove('backgroundColorError');
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    previewImg.src = e.target.result;
+    previewImg.classList.add('visible');
+  };
+  reader.readAsDataURL(archivo);
+
+  return true;
 }
+
 
 function vUrl() {
     const valor = urlInput.value.trim();
@@ -373,7 +387,7 @@ function vUrl() {
 
 function vDatalist() {
     const valor = navegadorInput.value.trim().toLowerCase();
-    const opciones = ['chrome', 'firefox', 'safari', 'edge'];
+    const opciones = ['brave', 'chrome', 'firefox', 'safari', 'edge'];
 
     if (!opciones.includes(valor)) {
         errorNavegador.classList.add('visible');
@@ -429,14 +443,14 @@ passwordInput.addEventListener('input', vPassword);
 passwordInput.addEventListener('blur', vPassword);
 passwordCinput.addEventListener('input', cPassword);
 passwordCinput.addEventListener('blur', cPassword);
-projectsInput.addEventListener('blur', vNumProjects);
-projectsInput.addEventListener('input', vNumProjects);
 
 document.querySelectorAll('input[name="plataforma"]').forEach(radio => {
     radio.addEventListener('change', vRadio);
     radio.addEventListener('blur', vRadio);
 });
 
+projectsInput.addEventListener('blur', vNumProjects);
+projectsInput.addEventListener('input', vNumProjects);
 checkboxInput.addEventListener('change', vCheckbox);
 checkboxInput.addEventListener('blur', vCheckbox);
 seleccionPro.addEventListener('change', vSelectProjects);
@@ -447,6 +461,7 @@ rangoInput.addEventListener('input', vSatisfaccion);
 rangoInput.addEventListener('blur', vSatisfaccion);
 colorInput.addEventListener('change', vColor);
 colorInput.addEventListener('blur', vColor);
+archivoInput.addEventListener('input', vArchivo);
 archivoInput.addEventListener('change', vArchivo);
 archivoInput.addEventListener('blur', vArchivo);
 urlInput.addEventListener('input', vUrl);
@@ -504,6 +519,16 @@ edadInput.addEventListener('blur', function () {
     this.classList.remove('foco');
 });
 
+telefonoInput.addEventListener('focus', function () {
+    this.setAttribute('placeholder', 'Ej: 600000000');
+    this.classList.add('foco');
+});
+
+telefonoInput.addEventListener('blur', function () {
+    this.removeAttribute('placeholder');
+    this.classList.remove('foco');
+});
+
 passwordInput.addEventListener('focus', function () {
     this.setAttribute('placeholder', 'xX_1xxx');
     this.classList.add('foco');
@@ -539,6 +564,10 @@ urlInput.addEventListener('focus', function () {
     this.classList.add('foco');
 });
 
+urlInput.addEventListener('blur', function () {
+    this.removeAttribute('placeholder');
+    this.classList.remove('foco');
+});
 
 miFormulario.addEventListener('submit', function (evento) {
     if (!validarFormulario()) {

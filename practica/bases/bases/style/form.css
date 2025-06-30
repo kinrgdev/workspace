@@ -88,7 +88,7 @@ a>h2 {
   font-size: 1.5rem;
   font-family: "Tektur", sans-serif;
   text-align: end;
-  margin: 5vh 0;
+  margin: 5vh 1vw;
 }
 
 a:hover {
@@ -121,12 +121,15 @@ legend {
 }
 
 .reinicio {
-  all: unset;
+  text-shadow: none;
+  letter-spacing: normal;
+  font-weight: initial;
   margin-bottom: .5em;
 }
 
 label {
-  margin: 0 20%;
+  margin-bottom: 1vh;
+  font-size: 1.5rem;
 }
 
 fieldset {
@@ -235,16 +238,62 @@ input[type="color"] {
   cursor: pointer;
 }
 
-/*? Comentario de obligatoriedad de todos los campos */
-textarea+p {
-  margin-top: .7em;
-  font-size: 1.1rem;
-  line-height: 3;
+/**** Archivo ****/
+.file-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.file-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
+.file-label {
+  background-color: #5d6263;
+  color: #181717;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.file-label:hover {
+  background-color: rgb(40, 92, 13);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#archivoNombre {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+#previewImagen {
+  max-width: 200px;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  display: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#previewImagen.visible {
+  display: block;
+}
+
+
 .required {
-  color: rgb(197, 16, 16);
-  font-weight: 700;
+  color: rgb(247, 2, 2);
+  font-size: 1.5rem;
+  margin: 2vh 0;
 }
 
 .mensaje-error {

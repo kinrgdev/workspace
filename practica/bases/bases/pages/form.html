@@ -63,7 +63,7 @@
                     <hr>
 
                     <label for="telefono">Número de teléfono</label>
-                    <input type="number" name="telefono" id="telefono"><br>
+                    <input type="text" name="telefono" id="telefono"><br>
                     <p id="errTelefono" class="mensaje-error">Debe introducir un teléfono válido (9 cifras)</p>
                     <hr>
 
@@ -141,22 +141,35 @@
                     <p id="errSatisfaccion" class="mensaje-error">Debe seleccionar un nivel mínimo de satisfacción</p>
                     <hr>
 
-                    <!-- Color -->
                     <label for="colorFavorito">Elige tu color favorito</label>
                     <input type="color" id="colorFavorito">
                     <p id="errColor" class="mensaje-error">Debe elegir un color distinto al negro puro</p>
+                    <hr>
 
-                    <!-- Archivo -->
                     <label for="archivo">Sube una imagen de perfil</label>
-                    <input type="file" id="archivo" accept="image/*">
-                    <p id="errArchivo" class="mensaje-error">Debe subir una imagen menor de 2MB</p>
 
-                    <!-- URL -->
+                    <div class="file-wrapper">
+                        <label for="archivo"></label>
+
+                        <div class="file-container">
+                            <label for="archivo" class="file-label">Elegir imagen</label>
+                            <span id="archivoNombre"></span>
+                            <input type="file" id="archivo" accept="image/*">
+                        </div>
+
+                        <img id="previewImagen" alt="Vista previa de la imagen">
+                        <p id="errArchivo" class="mensaje-error">Debe subir una imagen menor de 2MB</p>
+                    </div>
+
+                    <hr>
+
+
+
                     <label for="paginaWeb">Introduce tu página web personal</label>
                     <input type="url" id="paginaWeb">
                     <p id="errUrl" class="mensaje-error">Debe introducir una URL válida</p>
+                    <hr>
 
-                    <!-- Datalist -->
                     <label for="navegador">Selecciona tu navegador habitual</label>
                     <input list="navegadores" id="navegador">
                     <datalist id="navegadores">
@@ -167,13 +180,14 @@
                         <option value="Safari">
                     </datalist>
                     <p id="errNavegador" class="mensaje-error">Debe elegir un navegador de la lista</p>
+                    <hr>
 
                     <textarea name="comentarios" id="comentarios" placeholder="¿Comentarios?"></textarea>
-                    <p class="required">Todos los campos son obligatorios</p>
 
                 </fieldset>
 
                 <!-- //// Botones de envío y reset *-->
+                <p class="required">Todos los campos son obligatorios</p>
                 <div class="contact">
                     <div class="button-wrap button-Margin">
                         <button type="submit" class="send">Enviar</button>
