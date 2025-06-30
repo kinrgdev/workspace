@@ -32,28 +32,44 @@
 
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre">
-                    <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+                    <p id="errNombre" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
                     <hr>
 
                     <label for="apellido">Apellido</label>
                     <input type="text" name="apellido" id="apellido">
-                    <p id="error" class="mensaje-error">El nombre debe tener al menos 3 caracteres</p>
+                    <p id="errApellido" class="mensaje-error">El apellido debe tener al menos 3 caracteres</p>
                     <hr>
 
                     <label for="email">e-mail</label>
                     <input type="email" name="email" id="email" autocomplete="email">
-                    <p id="error" class="mensaje-error">Debe introducir un correo electrónico válido</p>
+                    <p id="errEmail" class="mensaje-error">Debe introducir un correo electrónico válido</p>
+                    <hr>
+
+                    <label for="confirmEmail">Repita su e-mail</label>
+                    <input type="email" name="confirmEmail" id="confirmEmail" autocomplete="email">
+                    <p id="errCemail" class="mensaje-error">Los correos electrónicos no coinciden...</p>
                     <hr>
 
                     <label for="edad">Ingrese su edad</label>
                     <input type="number" name="edad" id="edad"><br>
-                    <p id="error" class="mensaje-error">Debe de introducir una edad</p>
-                    <p id="error" class="mensaje-error">Hay que ser mayor de 18 años...</p>
+                    <p id="errIntEdad" class="mensaje-error">Debe de introducir una edad</p>
+                    <p id="errMayorEdad" class="mensaje-error">Hay que ser mayor de 18 años...</p>
+                    <hr>
+
+                    <label for="fecha">Ingrese su fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha"><br>
+                    <p id="errFecha" class="mensaje-error">Debe de introducir una fecha válida</p>
+                    <p id="errMayorFecha" class="mensaje-error">Hay que ser mayor de 18 años...</p>
+                    <hr>
+
+                    <label for="telefono">Número de teléfono</label>
+                    <input type="number" name="telefono" id="telefono"><br>
+                    <p id="errTelefono" class="mensaje-error">Debe introducir un teléfono válido (9 cifras)</p>
                     <hr>
 
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">
-                    <p id="error" class="mensaje-error">
+                    <p id="errPassword" class="mensaje-error">
                         Password inválido. <br>
                         Debe de introducir entre un mínimo de 7 caracteres y un máximo de 32. <br>
                         Debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter
@@ -63,7 +79,7 @@
 
                     <label for="confirmPassword">Confirmar Password</label>
                     <input type="password" name="confirmPassword" id="confirmPassword">
-                    <p id="error" class="mensaje-error">Las contraseñas no coinciden...</p>
+                    <p id="errCpassword" class="mensaje-error">Las contraseñas no coinciden...</p>
                     <hr>
 
                     <legend for="plataforma" class="reinicio">¿Cómo me encontraste?</legend>
@@ -82,12 +98,12 @@
                     <label for="otros" class="radio-label">
                         <input type="radio" name="plataforma" id="otros" value="otros"> Otros
                     </label>
-                    <p id="error" class="mensaje-error">Debe seleccionar una opción</p>
+                    <p id="errRadio" class="mensaje-error">Debe seleccionar una opción</p>
                     <hr>
 
                     <label for="numProjects">¿Cuántos proyectos te gustaría ver?</label>
                     <input type="number" min="1" max="3" name="numProjects" id="numProjects">
-                    <p id="error" class="mensaje-error">Debe introducir un valor entre 1 y 3</p>
+                    <p id="errNumProjects" class="mensaje-error">Debe introducir un valor entre 1 y 3</p>
                     <hr>
 
                     <label for="privacidad" class="checkbox-container">
@@ -95,32 +111,66 @@
                         <a href="pages/privacidad.html" target="_blank">Declaración de privacidad</a>
                         <input type="checkbox" name="privacidad" id="privacidad" value="aceptado">
                     </label>
-                    <p id="error" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
+                    <p id="errPrivacidad" class="mensaje-error">Debe aceptar la declaración de privacidad</p>
                     <hr>
 
-                    <label for="seleccion">¿Qué tipo de proyecto te interesa ver?</label>
-                    <select name="seleccion" id="seleccion">
+                    <label for="seleccionProjects">¿Qué tipo de proyecto te interesa ver?</label>
+                    <select name="seleccionProjects" id="seleccionProjects">
                         <option value="">-- Selecciona una opción --</option>
                         <option value="web">Sitio web</option>
                         <option value="codepen">Codepen</option>
                     </select>
-                    <p id="error" class="mensaje-error">Debe elegir una opción</p>
+                    <p id="errSelPro" class="mensaje-error">Debe elegir una opción</p>
                     <hr>
 
-                    <label for="seleccion">Elija el fondo de pantalla que tendrá su perfil:</label>
-                    <select name="seleccion" id="seleccion">
+                    <label for="seleccionImg">Elija el fondo de pantalla que tendrá su perfil:</label>
+                    <select name="seleccionImg" id="seleccionImg">
                         <option value="" disabled selected>Seleccione un fondo de pantalla</option>
-                        <option value="img/db1.webp">Fondo 1</option>
-                        <option value="img/db2.webp">Fondo 2</option>
-                        <option value="img/db3.webp">Fondo 3</option>
+                        <option value="../img/db1.webp">Fondo 1</option>
+                        <option value="../img/db2.webp">Fondo 2</option>
+                        <option value="../img/db3.webp">Fondo 3</option>
+                        <option value="../img/firegirl.png">Fondo 4</option>
                     </select>
-                    <p id="error" class="mensaje-error">Debe seleccionar un fondo de pantalla</p>
+                    <p id="errSelImg" class="mensaje-error">Debe seleccionar un fondo de pantalla</p>
                     <p class="campos">Todos los campos son obligatorios.</p>
                     <hr>
 
+                    <label for="satisfaccion">¿Cuál es su nivel de satisfacción?</label>
+                    <input type="range" id="satisfaccion" min="0" max="10" value="0">
+                    <output id="outputSatisfaccion">0</output>
+                    <p id="errSatisfaccion" class="mensaje-error">Debe seleccionar un nivel mínimo de satisfacción</p>
+                    <hr>
+
+                    <!-- Color -->
+                    <label for="colorFavorito">Elige tu color favorito</label>
+                    <input type="color" id="colorFavorito">
+                    <p id="errColor" class="mensaje-error">Debe elegir un color distinto al negro puro</p>
+
+                    <!-- Archivo -->
+                    <label for="archivo">Sube una imagen de perfil</label>
+                    <input type="file" id="archivo" accept="image/*">
+                    <p id="errArchivo" class="mensaje-error">Debe subir una imagen menor de 2MB</p>
+
+                    <!-- URL -->
+                    <label for="paginaWeb">Introduce tu página web personal</label>
+                    <input type="url" id="paginaWeb">
+                    <p id="errUrl" class="mensaje-error">Debe introducir una URL válida</p>
+
+                    <!-- Datalist -->
+                    <label for="navegador">Selecciona tu navegador habitual</label>
+                    <input list="navegadores" id="navegador">
+                    <datalist id="navegadores">
+                        <option value="Brave">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Edge">
+                        <option value="Safari">
+                    </datalist>
+                    <p id="errNavegador" class="mensaje-error">Debe elegir un navegador de la lista</p>
+
                     <textarea name="comentarios" id="comentarios" placeholder="¿Comentarios?"></textarea>
                     <p class="required">Todos los campos son obligatorios</p>
-                    
+
                 </fieldset>
 
                 <!-- //// Botones de envío y reset *-->
@@ -141,6 +191,7 @@
                 </a>
             </div>
         </div>
+        <script src="../app/form.js"></script>
     </main>
     <footer>&#169; kinrgdev</footer>
 </body>

@@ -23,9 +23,14 @@ body {
 body {
   overflow-x: hidden;
   display: grid;
-  min-height: 100dvh;
+  min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   color: #c0c0c0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 0.5s ease-in-out;
 }
 
 a {
@@ -64,9 +69,13 @@ nav {
   padding: 5px;
 }
 
+nav a.active {
+  color: rgb(26, 206, 206);
+}
+
 main {
   min-height: 80vh;
-  background-color: #343535
+  background-color: #343535eb;
 }
 
 .heroLink, .formLink {
@@ -75,7 +84,7 @@ main {
   font-family: "Tektur", sans-serif;
 }
 
-a > h2 {
+a>h2 {
   font-size: 1.5rem;
   font-family: "Tektur", sans-serif;
   text-align: end;
@@ -87,7 +96,7 @@ a:hover {
 }
 
 
-#contact { 
+#contact {
   width: 70%;
   margin: 0 auto;
 }
@@ -209,6 +218,23 @@ input[type="checkbox"] {
   accent-color: rgba(10, 155, 10, 0.800);
 }
 
+input[type="range"] {
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  outline: none;
+  margin: 1em 0;
+}
+
+input[type="color"] {
+  width: 4em;
+  height: 2em;
+  padding: 0;
+  border-radius: 0.5em;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /*? Comentario de obligatoriedad de todos los campos */
 textarea+p {
   margin-top: .7em;
@@ -239,25 +265,23 @@ textarea+p {
 }
 
 #contact fieldset input.backgroundColorOk {
-  all: unset !important;
-  padding: 1% !important;
-  border: 3px ridge var(--color-secondary) !important;
-  border-radius: 1em !important;
-  background-color: rgb(19, 75, 14) !important;
-  color: var(--color-primary) !important;
-  font-size: 1.5rem !important;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  padding: 1%;
+  border: 3px ridge var(--color-secondary);
+  border-radius: 1em;
+  background-color: rgb(19, 75, 14);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 #contact fieldset input.backgroundColorError {
-  all: unset !important;
-  padding: 1% !important;
-  border: 3px ridge var(--color-secondary) !important;
-  border-radius: 1em !important;
-  background-color: rgb(231, 9, 9) !important;
-  color: var(--color-primary) !important;
-  font-size: 1.5rem !important;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  padding: 1%;
+  border: 3px ridge var(--color-secondary);
+  border-radius: 1em;
+  background-color: rgb(231, 9, 9);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /*? Comentarios */
