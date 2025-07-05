@@ -27,11 +27,9 @@ font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 1s;
 }
 
-html,
-body {
+html {
   scroll-behavior: smooth;
 }
 
@@ -41,7 +39,14 @@ body {
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
   font-size: 1.5rem;
-  background-color: #171818;
+  background-image: url(../img/ice.jpg), url(../img/firegirl2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: exclusion;
+  background-size: cover;
+  background-position-y: 0;
+  background-position-x: center;
+  background-color: #26291b;
   color: #c0c0c0;
 }
 
@@ -50,23 +55,36 @@ a {
   color: inherit;
 }
 
-img,
-video {
+img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+.arcoiris{
+  filter: sepia(50%);
+  margin: 1%;
+}
+
 header {
-    height: 10dvh;
-    border-bottom: 1px solid #c0c0c0;
+  height: 10dvh;
+  border-bottom: 1px solid #c0c0c0;
 }
 
-main{
-    min-height: 80dvh;
-
+main {
+  min-height: 80dvh;
 }
 
-footer{
-    height: 10dvh;
-    border-top: 1px solid #c0c0c0;
+section {
+  border: 1px solid #c0c0c0;
+  margin: 1%;
+}
+
+section img {
+  width: 20%;
+}
+
+footer {
+  height: 10dvh;
+  border-top: 1px solid #c0c0c0;
 }
