@@ -17,6 +17,7 @@ body {
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
+  color: #c0c0c0;
 }
 
 a {
@@ -31,16 +32,16 @@ video {
 }
 
 header {
-    height: 10vh;
+    height: 10dvh;
     background-color: rgb(236, 77, 37);
 }
 
 main{
-    min-height: 80vh;
+    min-height: 80dvh;
     background-color: rgb(22, 90, 22);
 }
 
 footer{
-    height: 10vh;
+    height: 10dvh;
     background-color: rgb(73, 82, 216);
 }
