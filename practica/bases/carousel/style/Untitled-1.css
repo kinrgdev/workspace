@@ -1,0 +1,169 @@
+:root {
+    /* Colores */
+    --primary-color: #ff5252;
+    --secondary-color: #3a86ff;
+    --bg-dark: #171818;
+    --card-bg: #252727;
+    --text-color: #e0e0e0;
+    
+    /* Tamaños */
+    --card-height-lg: 450px;
+    --card-height-sm: 600px;
+    
+    /* Tiempos */
+    --transition-duration: 0.8s;
+    
+    /* Efectos */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --transition: all var(--transition-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Reset mejorado */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos base del body */
+body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Contenedor principal del carrusel */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto; /* Margen para separar del header/footer */
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+/* Carrusel */
+.carousel {
+    display: flex;
+    height: var(--card-height-lg);
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de scroll en IE/Edge */
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome/Safari */
+}
+
+/* Tarjetas */
+.card {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 1rem; /* Espacio para que la sombra no se corte */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.card-content i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Controles */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Para que no interfiera con el scroll */
+    padding: 0 0.5rem; /* Evita que los botones se peguen a los bordes */
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all; /* Reactivar eventos en los botones */
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Indicadores */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.progress-icons {
+    display: flex;
+    gap: 10px;
+}
+.progress-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.progress-icon.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .carousel {
+        height: var(--card-height-sm);
+    }
+}
+
+/* Clase para accesibilidad (ocultar visualmente) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

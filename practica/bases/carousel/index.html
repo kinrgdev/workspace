@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--$ Base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--$ SEO: Metadatos -->
+    <meta name="description" content="Estructura base web" />
+    <meta name="author" content="kinrgdev" />
+    <meta name="keywords" content="footer, html, css, diseño web">
+    <meta name="theme-color" content="#fff">
+    <!--$ Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--$ Hoja de estilo -->
+    <link rel="stylesheet" href="style/style.css">
+    <title>Carousel con contenido</title>
+</head>
+
+<body>
+    <header>
+        <h1>Carousel</h1>
+    </header>
+    <main>
+        <!-- ? Contenedor de progrso -->
+        <div class="progress-container">
+            <div class="progress-icons" id="progressIcons">
+                <div class="progress-icon active" data-index="0" aria-label="Card 1"></div>
+                <div class="progress-icon" data-index="1" aria-label="Card 2"></div>
+                <div class="progress-icon" data-index="2" aria-label="Card 3"></div>
+                <div class="progress-icon" data-index="3" aria-label="Card 4"></div>
+                <div class="progress-icon" data-index="4" aria-label="Card 5"></div>
+            </div>
+        </div>
+
+        <!--? Botones externos de navegación -->
+        <div class="external-nav-I">
+            <button class="external-btn" id="prevBtnExternal" aria-label="Card anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <div class="external-nav-D">
+            <button class="external-btn" id="nextBtnExternal" aria-label="Card siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <section class="carousel-section animate-in delay-1">
+            <div class="wrapped" id="carousel" tabindex="0">
+
+                <article class="card">
+                    <h2>Card 1</h2>
+                    <img src="https://goo.su/NY2a3" alt="mujer haciendo fotos con cámara">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed tenetur nulla eius esse
+                        quaerat ducimus et, facere ab provident itaque nemo dolore libero temporibus aperiam cumque
+                        error reiciendis ipsam dolor! Facilis error magnam possimus cumque, obcaecati doloremque
+                        iure pariatur officiis, quasi voluptates incidunt dolorem dicta, nihil amet cupiditate
+                        optio?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus perferendis, voluptate illo
+                        dolores maiores consequuntur modi delectus quas velit nulla inventore veritatis ex deserunt
+                        culpa repellat incidunt impedit obcaecati nostrum?
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2>Elemento 2</h2>
+                    <img src="https://goo.su/tGztX22" alt="gatito jugando">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed tenetur nulla eius esse
+                        quaerat ducimus et, facere ab provident itaque nemo dolore libero temporibus aperiam cumque
+                        error reiciendis ipsam dolor! Facilis error magnam possimus cumque, obcaecati doloremque
+                        iure pariatur officiis, quasi voluptates incidunt dolorem dicta, nihil amet cupiditate
+                        optio?</p>
+                </article>
+                <article class="card">
+                    <h2>Elemento 3</h2>
+                    <img src="https://goo.su/VHEfpvU" alt="Husky feliz guiñando ojo" class="img_16-9">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed tenetur nulla eius esse
+                        quaerat ducimus et, facere ab provident itaque nemo dolore libero temporibus aperiam cumque
+                        error reiciendis ipsam dolor! Facilis error magnam possimus cumque, obcaecati doloremque
+                        iure pariatur officiis, quasi voluptates incidunt dolorem dicta, nihil amet cupiditate
+                        optio?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus perferendis, voluptate illo
+                        dolores maiores consequuntur modi delectus quas velit nulla inventore veritatis ex deserunt
+                        culpa repellat incidunt impedit obcaecati nostrum?
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2>Elemento 4</h2>
+                    <img src="https://goo.su/GQU888" alt="Husky tumbado a los pies de una mujer en un sofá">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed tenetur nulla eius esse
+                        quaerat ducimus et, facere ab provident itaque nemo dolore libero temporibus aperiam cumque
+                        error reiciendis ipsam dolor! Facilis error magnam possimus cumque, obcaecati doloremque
+                        iure pariatur officiis, quasi voluptates incidunt dolorem dicta, nihil amet cupiditate
+                        optio?</p>
+                </article>
+
+                <article class="card">
+                    <h2>Elemento 5</h2>
+                    <img src="https://goo.su/rLIX0o7" alt="Aurora boreal">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed tenetur nulla eius esse
+                        quaerat ducimus et, facere ab provident itaque nemo dolore libero temporibus aperiam cumque
+                        error reiciendis ipsam dolor! Facilis error magnam possimus cumque, obcaecati doloremque
+                        iure pariatur officiis, quasi voluptates incidunt dolorem dicta, nihil amet cupiditate
+                        optio?</p>
+                </article>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <article>
+            <i class="fa-regular fa-copyright"> kinrgdev &#x2022; <span id="year"></span></i><br />
+            <p>Todos los derechos reservados</p>
+        </article>
+    </footer>
+    <!-- Librería GSAP y su plugin ScrollTo -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
