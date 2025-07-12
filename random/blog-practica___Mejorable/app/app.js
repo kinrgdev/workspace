@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+﻿document.addEventListener("DOMContentLoaded", function() {
     const previewBtn = document.querySelector("#preview-button");
     const saveBtn = document.querySelector("#save-button");
     const output = document.querySelector(".output");

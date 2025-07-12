@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
     fetch('../config/config-quill.json')
       .then(response => {
         if (!response.ok) {

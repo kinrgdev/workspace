@@ -1,4 +1,4 @@
-console.log('Hola Mundo')
+﻿console.log('Hola Mundo')
 //Tipos de datos en JS
 //String con comillas '' o ""
 //Boolean: true o false

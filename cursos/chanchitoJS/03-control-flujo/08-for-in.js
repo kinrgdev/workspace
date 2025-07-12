@@ -1,4 +1,4 @@
-let user = {
+﻿let user = {
     id: 1,
     name: 'Goku',
     edad: 45,

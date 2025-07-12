@@ -1,4 +1,4 @@
-//window //?Es nuestro universo. A partir de aquí está la existencia, después ordenes y objetos.
+﻿//window //?Es nuestro universo. A partir de aquí está la existencia, después ordenes y objetos.
 let miSalida = window.document.getElementById("salida");
 
 //window.alert(typeof miSalida);

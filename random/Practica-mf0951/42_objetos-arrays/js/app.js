@@ -1,4 +1,4 @@
-let array = document.getElementById('array');
+﻿let array = document.getElementById('array');
 
 const miObjeto = {
     nombre: "Joaquín",

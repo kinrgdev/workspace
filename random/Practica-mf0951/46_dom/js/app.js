@@ -1,4 +1,4 @@
-//Tagname 
+﻿//Tagname 
 let salida = document.getElementById('salida');
 let articuloUno = document.querySelector('#uno article');
 // HTML Collection

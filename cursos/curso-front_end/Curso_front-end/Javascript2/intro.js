@@ -1,4 +1,4 @@
-//Alerta en Js
+﻿//Alerta en Js
 //alert("Hola Mundo");
 //alert("Hola Mundo 2");
 

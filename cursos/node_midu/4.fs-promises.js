@@ -1,4 +1,4 @@
-//Esto sólo en los módulos nativos que no tienen promesas nativas
+﻿//Esto sólo en los módulos nativos que no tienen promesas nativas
 //const { promisify } = require('node:util')
 //const readFilePromise = promisify(fs.readFile)
 

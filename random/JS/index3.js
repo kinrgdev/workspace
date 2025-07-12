@@ -1,4 +1,4 @@
-//Operadores de comparación
+﻿//Operadores de comparación
 
 //Comparación: De vuelven true o false
 

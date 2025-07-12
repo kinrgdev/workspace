@@ -1,4 +1,4 @@
-let botones = document.querySelectorAll('button');
+﻿let botones = document.querySelectorAll('button');
 let banner = document.getElementById('bannerCookies');
 
 addEventListener('load', checkCookies);

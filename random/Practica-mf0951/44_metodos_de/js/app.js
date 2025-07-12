@@ -1,4 +1,4 @@
-let salida = document.getElementById("cascos");
+﻿let salida = document.getElementById("cascos");
 let boton = document.querySelector("button");
 
 let a = 36; //

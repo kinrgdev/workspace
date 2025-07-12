@@ -1,4 +1,4 @@
-//*Aritméticos
+﻿//*Aritméticos
 let salida = document.getElementById('salida');
 let boton = document.querySelector('button');
 let input = document.querySelector('input');

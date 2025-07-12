@@ -1,4 +1,4 @@
-const fs = require('node:fs') //A partir de node 16, se recomienda poner node: antes de fs
+﻿const fs = require('node:fs') //A partir de node 16, se recomienda poner node: antes de fs
 
 const stats = fs.statSync('./archivo.txt')
 

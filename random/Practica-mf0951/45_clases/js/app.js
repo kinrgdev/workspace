@@ -1,4 +1,4 @@
-let boton = document.querySelector('button');
+﻿let boton = document.querySelector('button');
 //let boton2 = document.querySelector('button:nth-of-type(2)');
 let output = document.getElementById('salida');
 

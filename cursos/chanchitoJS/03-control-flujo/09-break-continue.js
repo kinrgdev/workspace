@@ -1,4 +1,4 @@
-let i = 0;
+﻿let i = 0;
 while (i<6){
     i++;
     if (i === 2) {

@@ -1,4 +1,4 @@
-//*function nombreFuncion(){
+﻿//*function nombreFuncion(){
 //?codigo a ejecutar
 //*}
 

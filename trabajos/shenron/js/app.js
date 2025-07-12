@@ -1,4 +1,4 @@
-const container = document.getElementById('animate');
+﻿const container = document.getElementById('animate');
 const shenron = document.querySelector('#animate img:nth-of-type(2)');
 const dragonBalls = Array.from(document.querySelectorAll('#animate div img'));
 const textContainer = document.getElementById('textContainer');

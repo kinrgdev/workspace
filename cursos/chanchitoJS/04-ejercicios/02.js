@@ -1,4 +1,4 @@
-function nombreResolucion(ancho, alto) {
+﻿function nombreResolucion(ancho, alto) {
     if (ancho > 7680 && alto > 4320) {
         return '8k';
     } else if (ancho > 3840 && alto > 2160) {

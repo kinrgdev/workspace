@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
     // Guardamos la imagen original y su contenedor
     var originalImage = $(".image").clone();  // Clonamos el HTML original de la imagen
 

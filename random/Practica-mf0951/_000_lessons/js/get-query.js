@@ -1,4 +1,4 @@
-//01_get-query
+﻿//01_get-query
 let lesson = document.getElementById('lesson');
 
 lesson.innerHTML = "Hola Mundo"; 

@@ -1,4 +1,4 @@
- // Seleccionar elementos
+﻿ // Seleccionar elementos
         const image = document.getElementById('image');
         const textContainer = document.getElementById('textContainer');
         const progressText = document.getElementById('progressText');

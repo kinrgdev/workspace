@@ -1,4 +1,4 @@
-function getByIdx(arr, idx) {
+﻿function getByIdx(arr, idx) {
     if (idx < 0 || arr.length <= idx) {
         return 'Elemento no existe';
     }

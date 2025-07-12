@@ -1,4 +1,4 @@
-let salida = document.getElementById('salida');
+﻿let salida = document.getElementById('salida');
 let btn = document.querySelectorAll('button');
 
 function sumacion(num1, num2) {

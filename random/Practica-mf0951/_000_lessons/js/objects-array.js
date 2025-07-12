@@ -1,4 +1,4 @@
-let salida = document.getElementById('array');
+﻿let salida = document.getElementById('array');
 let salida2 = document.getElementById('array2');
 let salida3 = document.getElementById('array3');
 const objetos = {

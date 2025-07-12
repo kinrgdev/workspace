@@ -1,4 +1,4 @@
-const gifContainer = document.getElementById('gifContainer');
+﻿const gifContainer = document.getElementById('gifContainer');
 const bouncingGif = document.getElementById('bouncingGif');
 
 // Variables de estado para la animación

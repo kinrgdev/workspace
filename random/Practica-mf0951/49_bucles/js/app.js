@@ -1,4 +1,4 @@
-let salida = document.getElementById('salida');
+﻿let salida = document.getElementById('salida');
 let boton = document.querySelector('button');
 
 //Bucles

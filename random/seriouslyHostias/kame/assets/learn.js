@@ -1,4 +1,4 @@
-let escritura = document.getElementById('containerJS');
+﻿let escritura = document.getElementById('containerJS');
 let img = document.createElement('img');
 let h2 = document.createElement('h2');
 let parrafo = document.createElement('p');

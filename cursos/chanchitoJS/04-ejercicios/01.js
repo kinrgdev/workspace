@@ -1,4 +1,4 @@
-function cualEsMayor(a, b) {
+﻿function cualEsMayor(a, b) {
     return (a > b) ? a : b;
 }
 

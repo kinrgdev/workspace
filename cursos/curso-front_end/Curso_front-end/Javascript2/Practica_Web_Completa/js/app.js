@@ -1,4 +1,4 @@
-//MENÚ RESPONSIVE
+﻿//MENÚ RESPONSIVE
 var btnMenuOpen = document.getElementById("btnMenuOpen"),
     btnMenuClose = document.getElementById("btnMenuClose"),
     menuResponsive = document.getElementById("menu-bar"),

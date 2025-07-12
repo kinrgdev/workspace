@@ -1,4 +1,4 @@
-//? Funciones
+﻿//? Funciones
 let salida = document.getElementById('salida');
 
 //*creación de la función

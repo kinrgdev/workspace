@@ -1,4 +1,4 @@
-const canvas = document.getElementById('spaceCanvas');
+﻿const canvas = document.getElementById('spaceCanvas');
 const ctx = canvas.getContext('2d');
 
 // Ajustar el tamaño del canvas a la pantalla

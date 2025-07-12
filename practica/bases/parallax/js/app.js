@@ -1,4 +1,4 @@
-function parallax() {
+﻿function parallax() {
   let scroll = window.pageYOffset;
   let altura =
     document.documentElement.scrollHeight -

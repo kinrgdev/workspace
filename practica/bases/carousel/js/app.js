@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     // Configuración
     const config = {
         ////autoSlideInterval: 8000, // 8 segundos

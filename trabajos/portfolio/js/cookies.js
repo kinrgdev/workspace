@@ -1,4 +1,4 @@
-const botones = document.querySelectorAll('button');
+﻿const botones = document.querySelectorAll('button');
 const banner = document.getElementById('bannerCookies');
 
 // Al cargar la página

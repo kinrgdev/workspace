@@ -1,4 +1,4 @@
-//console.log('Hola Mundo')
+﻿//console.log('Hola Mundo')
 //Tipos de datos
 //String
 //Boolean true false

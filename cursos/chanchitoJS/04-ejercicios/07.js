@@ -1,4 +1,4 @@
-function precioCompleto(precio, impuesto) {
+﻿function precioCompleto(precio, impuesto) {
     return precio + precio * impuesto;
 
 }

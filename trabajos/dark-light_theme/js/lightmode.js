@@ -1,4 +1,4 @@
-// Obtener estado del tema del DOM al cargar la web
+﻿// Obtener estado del tema del DOM al cargar la web
 let lightmode = localStorage.getItem('lightmode') //'active' si el tema claro estaba activado
 const themeSwitch = document.getElementById('theme-switch') //Botón interruptor del tema
 

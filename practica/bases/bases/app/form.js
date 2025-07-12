@@ -1,4 +1,4 @@
-const miFormulario = document.getElementById('formulario');
+﻿const miFormulario = document.getElementById('formulario');
 const nombreInput = document.getElementById('nombre');
 const apellidoInput = document.getElementById('apellido');
 const emailInput = document.getElementById('email');

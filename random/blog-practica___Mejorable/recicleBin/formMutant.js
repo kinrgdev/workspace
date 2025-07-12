@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
   // Inicialización de Quill desde un archivo JSON
   fetch('../config/config-quill.json')
     .then(response => {

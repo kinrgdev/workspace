@@ -1,4 +1,4 @@
-//Operadores matemáticos
+﻿//Operadores matemáticos
 const suma = 1+2
 const restar = 1-2
 const multiplicar = 2*3

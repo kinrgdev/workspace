@@ -1,4 +1,4 @@
-let accion = 'actualizar';
+﻿let accion = 'actualizar';
 
 switch (accion) {
     case 'listar':

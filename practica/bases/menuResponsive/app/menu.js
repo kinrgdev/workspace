@@ -1,4 +1,4 @@
-const mediaQuery = matchMedia('(max-width: 768px)');
+﻿const mediaQuery = matchMedia('(max-width: 768px)');
 const menu = document.getElementById('nav');
 const icons = document.getElementById('hamb');
 const links = document.querySelectorAll('#nav a');

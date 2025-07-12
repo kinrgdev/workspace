@@ -1,4 +1,4 @@
-class Operaciones {
+﻿class Operaciones {
     constructor(c, d) {
       this.c = c;
       this.d = d;

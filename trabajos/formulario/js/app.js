@@ -1,4 +1,4 @@
-let miFormulario = document.querySelector('form');
+﻿let miFormulario = document.querySelector('form');
 let inputs = document.querySelectorAll('input');
 const seleccion = document.getElementById('seleccion');
 const error = document.querySelectorAll('fieldset p');
