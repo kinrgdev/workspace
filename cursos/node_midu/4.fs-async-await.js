@@ -4,8 +4,8 @@
 
 const { readFile } = require('node:fs/promises');
 
-    //IIFE = Immediately Invoked Function Expression
-    (
+    //IIFE = Immediately Invoked Function Expression //$Función autoinvocada
+    ( 
         async () => {
             console.log('Leyendo el primer archivo ...')
             const text = await readFile('./archivo.txt', 'utf-8')  //ejecutas este callback

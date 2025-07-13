@@ -1,8 +1,1 @@
-Goku
-Vegeta
-Gohan
-Piccolo
-C-18
-C-17
-Freezer
-Krillin
+Goku, Vegeta, Gohan, Piccolo, C-18, C-17, Freezer, Krillin
