@@ -1,6 +1,6 @@
 const fs = require('node:fs/promises')
 const path = require('node:path')
-const folder = process.argv[2] ?? '.' //Si no se pasa el argumento, se usa el directorio actual
+const folder = process.argv[2] ?? '.' // Si no se pasa el argumento, se usa el directorio actual
 const piccolo = require('picocolors')
 
 async function ls(folder) {
@@ -17,7 +17,7 @@ async function ls(folder) {
         let stats
 
         try {
-            stats = await fs.stat(filePath) //status - infomración del archivo
+            stats = await fs.stat(filePath) // status - infomración del archivo
         } catch {
             console.error(piccolo.red(`Error al leer el archivo: ${filePath}`))
             process.exit(1)

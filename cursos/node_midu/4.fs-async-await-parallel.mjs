@@ -1,6 +1,6 @@
-//Esto sólo en los módulos nativos que no tienen promesas nativas
-//const { promisify } = require('node:util')
-//const readFilePromise = promisify(fs.readFile)
+// Esto sólo en los módulos nativos que no tienen promesas nativas
+// const { promisify } = require('node:util')
+// const readFilePromise = promisify(fs.readFile)
 
 import { readFile } from 'node:fs/promises'
 
@@ -11,6 +11,6 @@ Promise.allSettled([
     .then(([text, secondText]) => {
         console.log('primer texto:', text)
         console.log('segundo texto:', secondText)
-})
+    })
 
-//Lo bueno de esto es que es más rápido y no bloquea el hilo principal
+// Lo bueno de esto es que es más rápido y no bloquea el hilo principal
