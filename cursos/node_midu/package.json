@@ -1,0 +1,29 @@
+{
+  "name": "curso-node-midu",
+  "version": "1.0.0",
+  "description": "Aprendiendo node gratuitamente gracias al gran Midudev ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinrgdev/workspace.git#main"
+  },
+  "keywords": [
+    "curso",
+    "node",
+    "node.js",
+    "midudev",
+    "kinrgdev"
+  ],
+  "author": "Joaquín Rodríguez García - Made in  Midudev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinrgdev/workspace/issues"
+  },
+  "homepage": "https://github.com/kinrgdev/workspace/tree/main#readme",
+  "dependencies": {
+    "picocolors": "1.1.1"
+  }
+}
