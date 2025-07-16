@@ -13,3 +13,4 @@ console.log(fileName)
 
 const extensión = path.extname('/cursos/node_midu/img/node-sync.jpg') // Da la extensión del archivo
 console.log(extensión)
+
