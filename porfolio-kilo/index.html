@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Quantum - Senior Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text"></> Alex Quantum</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Alex Quantum</span>
+                </h1>
+                <h2 class="hero-subtitle">Senior Full-Stack Developer</h2>
+                <p class="hero-description">
+                    Crafting digital experiences with 8+ years of expertise in cutting-edge technologies. 
+                    From quantum algorithms to distributed systems, I build the future of web.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <span class="window-title">portfolio.js</span>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</div>
+                        <div class="code-line">  <span class="code-property">name</span>: <span class="code-string">'Alex Quantum'</span>,</div>
+                        <div class="code-line">  <span class="code-property">role</span>: <span class="code-string">'Senior Full-Stack Developer'</span>,</div>
+                        <div class="code-line">  <span class="code-property">experience</span>: <span class="code-string">'8+ years'</span>,</div>
+                        <div class="code-line">  <span class="code-property">technologies</span>: [</div>
+                        <div class="code-line">    <span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'TypeScript'</span>,</div>
+                        <div class="code-line">    <span class="code-string">'GraphQL'</span>, <span class="code-string">'Docker'</span>, <span class="code-string">'AWS'</span></div>
+                        <div class="code-line">  ],</div>
+                        <div class="code-line">  <span class="code-property">status</span>: <span class="code-string">'Available for hire'</span></div>
+                        <div class="code-line">};</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating exceptional digital experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>From Quantum Physics to Full-Stack Development</h3>
+                    <p>
+                        With a background in quantum computing research, I bring a unique perspective to software development. 
+                        My journey started 8 years ago, and since then I've architected scalable systems handling millions of users, 
+                        led development teams at Fortune 500 companies, and contributed to open-source projects that power the modern web.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="floating-card">
+                            <i class="fas fa-rocket"></i>
+                            <span>Performance First</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Focused</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-users"></i>
+                            <span>Team Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">Mastering the tools that shape tomorrow's web</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Mastery</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React & Next.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js & Nuxt</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-sass"></i>
+                            <span>Tailwind & Sass</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Architecture</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js & Express</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL & MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 91%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>GraphQL & REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python & Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Cloud</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker & Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS & Serverless</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>CI/CD & Jenkins</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Monitoring & Analytics</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions that push boundaries</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>QuantumCommerce Platform</h3>
+                        <p>Next-gen e-commerce platform handling 2M+ daily transactions with AI-powered recommendations and real-time inventory management.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-users"></i> 500K+ Users</span>
+                            <span><i class="fas fa-rocket"></i> 99.9% Uptime</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>NeuralVision AI</h3>
+                        <p>Advanced computer vision system for medical diagnosis with 98.7% accuracy in detecting early-stage diseases.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SocialFlow Analytics</h3>
+                        <p>Real-time social media analytics dashboard processing 10M+ posts daily with sentiment analysis and trend prediction.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CryptoWallet Pro</h3>
+                        <p>Secure cryptocurrency wallet with biometric authentication and DeFi integration supporting 50+ cryptocurrencies.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>alex@quantumdev.io</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/alexquantum</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/alex-quantum</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Project Type">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Alex Quantum. Built with passion and pixels.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
